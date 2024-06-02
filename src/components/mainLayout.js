@@ -11,7 +11,7 @@ import Stack from 'react-bootstrap/Stack';
 
 const NavigationBar = function() {
     return (
-        <Navbar fixed="top" expand="lg" className="main_layout_navbar bg-dark-subtle">
+        <Navbar fixed="top" expand="lg" className="bg-dark-subtle" as="nav">
             <Container fluid>
                 <Navbar.Brand href="/" className='fs-3'>Jotham Teshome</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -37,6 +37,7 @@ const MainLayout = function({ children }) {
                 <Container as="main" className='bg-body' fluid>
                     {children}
                 </Container>
+                <footer className='bg-dark-subtle d-flex justify-content-center align-items-center mt-auto'>Made by Jotham Teshome</footer>
             </Stack>
         </html>
     );
