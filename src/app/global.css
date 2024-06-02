@@ -2,7 +2,6 @@
 * {
     margin: 0;
     font-family: "Share Tech", sans-serif;
-    color: #FFFFFF;
 }
 
 body {
@@ -13,9 +12,9 @@ body {
 .social-media-icon {
     width: 2.5rem;
     transition: 0.5s;
+}
 
-    &:hover {
-        transition: 0.5s;
-        transform: scale(1.1);
-    }
+.social-media-icon:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
 }

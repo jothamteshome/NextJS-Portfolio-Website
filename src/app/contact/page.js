@@ -10,23 +10,25 @@ import SocialLinks from '@/components/socialLinks';
 
 const FormLayout = function () {
     return (
-        <Form>
-            <Form.Group className='mb-3' controlId="formGroupName">
-                <Form.Label>Full Name</Form.Label>
-                <Form.Control type="text" placeholder="Jotham Teshome" />
-            </Form.Group>
-            <Form.Group className='mb-3' controlId="formGroupEmail">
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control type="email" placeholder="jothamteshome@gmail.com" />
-            </Form.Group>
-            <Form.Group className='mb-3' controlId="formGroupTextarea">
-                <Form.Label>Comments</Form.Label>
-                <Form.Control as="textarea" placeholder="Comments" />
-            </Form.Group>
-            <Form.Group className='mb-3 d-flex justify-content-end' controlId='formGroupSubmitButton'>
-                <Button as="input" type="submit" value="Submit" />
-            </Form.Group>
-        </Form>
+        <Col>
+            <Form>
+                <Form.Group className='mb-3' controlId="formGroupName">
+                    <Form.Label>Full Name</Form.Label>
+                    <Form.Control type="text" placeholder="Jotham Teshome" />
+                </Form.Group>
+                <Form.Group className='mb-3' controlId="formGroupEmail">
+                    <Form.Label>Email Address</Form.Label>
+                    <Form.Control type="email" placeholder="jothamteshome@gmail.com" />
+                </Form.Group>
+                <Form.Group className='mb-3' controlId="formGroupTextarea">
+                    <Form.Label>Comments</Form.Label>
+                    <Form.Control as="textarea" placeholder="Comments" />
+                </Form.Group>
+                <Form.Group className='mb-3 d-flex justify-content-end' controlId='formGroupSubmitButton'>
+                    <Button as="input" type="submit" value="Submit" />
+                </Form.Group>
+            </Form>
+        </Col>
     );
 };
 
@@ -53,14 +55,12 @@ const ContactInfo = function () {
 
 const ContactPage = function () {
     return (
-        <Container className="d-flex flex-column ${styles.contact_page}" fluid="xxl">
+        <Container className="d-flex flex-column" fluid="lg">
             <Row>
                 <p className='fs-3'>Reach out</p>
             </Row>
             <Row lg={2} md={1} sm={1} xs={1}>
-                <Col className>
-                    <FormLayout />
-                </Col>
+                <FormLayout />
                 <ContactInfo />
             </Row>
         </Container>

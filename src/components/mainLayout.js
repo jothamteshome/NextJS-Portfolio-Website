@@ -1,23 +1,27 @@
 "use client"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { navigationRoutes } from '@/constants';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Stack from 'react-bootstrap/Stack';
 
+
 const CustomNavigation = function() {
     return (
-        <Navbar expand="lg" bg="dark-subtle">
+        <Navbar expand="lg" className="bg-dark-subtle">
             <Container fluid>
                 <Navbar.Brand href="/">Jotham Teshome</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link href="/about">About</Nav.Link>
-                        <Nav.Link href="/projects">Projects</Nav.Link>
-                        <Nav.Link href="/experience">Experience</Nav.Link>
-                        <Nav.Link href="/contact">Contact</Nav.Link>
+                        {
+                            navigationRoutes.map((navigation, i) => (
+                                <Nav.Link key={i} href={navigation.route}>{navigation.name}</Nav.Link>
+                            ))
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>
@@ -30,7 +34,7 @@ const MainLayout = function({ children }) {
         <html lang="en" data-bs-theme="dark">
             <Stack as="body">
                 <CustomNavigation></CustomNavigation>
-                <Container as="main" bg="dark" className='flex-grow-1' fluid>
+                <Container as="main" className='flex-grow-1 bg-body' fluid>
                     {children}
                 </Container>
             </Stack>
