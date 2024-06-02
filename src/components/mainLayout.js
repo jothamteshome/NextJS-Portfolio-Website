@@ -9,17 +9,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import Stack from 'react-bootstrap/Stack';
 
 
-const CustomNavigation = function() {
+const NavigationBar = function() {
     return (
-        <Navbar expand="lg" className="bg-dark-subtle">
+        <Navbar fixed="top" expand="lg" className="main_layout_navbar bg-dark-subtle">
             <Container fluid>
-                <Navbar.Brand href="/">Jotham Teshome</Navbar.Brand>
+                <Navbar.Brand href="/" className='fs-3'>Jotham Teshome</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mx-auto">
+                    <Nav className="ms-auto">
                         {
                             navigationRoutes.map((navigation, i) => (
-                                <Nav.Link key={i} href={navigation.route}>{navigation.name}</Nav.Link>
+                                <Nav.Link key={i} className="fs-5" href={navigation.route}>{navigation.name}</Nav.Link>
                             ))
                         }
                     </Nav>
@@ -33,8 +33,8 @@ const MainLayout = function({ children }) {
     return (
         <html lang="en" data-bs-theme="dark">
             <Stack as="body">
-                <CustomNavigation></CustomNavigation>
-                <Container as="main" className='flex-grow-1 bg-body' fluid>
+                <NavigationBar/>
+                <Container as="main" className='bg-body' fluid>
                     {children}
                 </Container>
             </Stack>

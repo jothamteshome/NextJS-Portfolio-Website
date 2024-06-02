@@ -14,7 +14,7 @@ const ContentSection = function ({ section_title, children }) {
             <Col xs={12}>
                 <h1 className="fs-1 text-primary mt-5">{section_title}</h1>
             </Col>
-            <Col className="mx-auto mt-2" xs={11}>
+            <Col className="mx-auto mt-2" xs={12} lg={11}>
                 {children}
             </Col>
         </Row>

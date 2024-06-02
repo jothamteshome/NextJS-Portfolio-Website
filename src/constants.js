@@ -38,6 +38,7 @@ export const serviceData = [
 ];
 
 export const navigationRoutes = [
+    { name: 'Home', route: '/'},
     { name: 'About', route: '/about' },
     { name: 'Projects', route: '/projects' },
     { name: 'Experience', route: '/experience' },

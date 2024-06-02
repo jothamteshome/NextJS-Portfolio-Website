@@ -8,6 +8,13 @@ body {
     min-height: 100vh;
 }
 
+main {
+    padding-top: 5vh;
+}
+
+.main_layout_navbar {
+    height: 5vh;
+}
 
 .social-media-icon {
     width: 2.5rem;
