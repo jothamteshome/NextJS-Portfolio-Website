@@ -1,27 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&family=Share+Tech+Mono&display=swap');
+
 * {
     margin: 0;
     font-family: "Share Tech", sans-serif;
 }
 
 body {
+    height: auto;
     min-height: 100vh;
 }
 
 main {
+    min-height: 92vh;
     padding-top: 5vh;
+    padding-bottom: 3vh;
 }
 
-.main_layout_navbar {
+footer {
+    height: 3vh;
+}
+
+nav {
     height: 5vh;
 }
 
 .social-media-icon {
     width: 2.5rem;
     transition: 0.5s;
-}
 
-.social-media-icon:hover {
-    transition: 0.5s;
-    transform: scale(1.1);
+    &:hover {
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
 }

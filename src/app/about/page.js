@@ -1,5 +1,5 @@
 "use client"
-import styles from './about_page.module.css'
+import styles from './about_page.module.scss'
 
 import { skills } from '@/constants';
 
@@ -9,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import ContentSection from '@/components/ContentSection';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+
 
 /**
  * Represents a card containing a skill's name and icon
