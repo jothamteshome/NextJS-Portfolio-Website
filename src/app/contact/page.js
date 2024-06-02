@@ -2,6 +2,7 @@
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import ContentSection from '@/components/contentSection';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
@@ -56,13 +57,12 @@ const ContactInfo = function () {
 const ContactPage = function () {
     return (
         <Container className="d-flex flex-column" fluid="lg">
-            <Row>
-                <p className='fs-3'>Reach out</p>
-            </Row>
-            <Row lg={2} md={1} sm={1} xs={1}>
-                <FormLayout />
-                <ContactInfo />
-            </Row>
+            <ContentSection section_title="How To Reach Me">
+                <Row lg={2} md={1} sm={1} xs={1}>
+                    <FormLayout />
+                    <ContactInfo />
+                </Row>
+            </ContentSection>
         </Container>
     );
 };

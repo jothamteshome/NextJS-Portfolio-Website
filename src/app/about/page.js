@@ -6,6 +6,7 @@ import { skills } from '@/constants';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
+import ContentSection from '@/components/contentSection';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 
@@ -50,8 +51,8 @@ const SkillsGrid = function () {
  */
 const AboutMeImgCol = function () {
     return (
-        <Col className='d-flex justify-content-center flex-shrink-1'>
-            <Image className={styles.self_image} alt="Image of Jotham Teshome" src="/images/jotham-teshome.jpg" roundedCircle />
+        <Col className='d-flex justify-content-center flex-shrink-1' lg={{ span: 5 }}>
+            <Image className={`border border-3 border-primary ${styles.self_image}`} alt="Image of Jotham Teshome" src="/images/jotham-teshome.jpg" roundedCircle />
         </Col>
     );
 };
@@ -63,7 +64,7 @@ const AboutMeImgCol = function () {
  */
 const AboutMeShortDesc = function () {
     return (
-        <Col>
+        <Col lg={{ span: 7 }}>
             Im Jotham!
         </Col>
     );
@@ -76,8 +77,8 @@ const AboutMeShortDesc = function () {
 const AboutMeRow = function () {
     return (
         <Row lg={2} md={1} sm={1} xs={1}>
-            <AboutMeImgCol />
             <AboutMeShortDesc />
+            <AboutMeImgCol />
         </Row>
     );
 };
@@ -89,20 +90,12 @@ const AboutMeRow = function () {
 const AboutPage = function () {
     return (
         <Container className="d-flex flex-column w-75" fluid="lg">
-            <Row>
-                <Col xs={12}>About Me</Col>
-                <Col xs={12}>
-                    <AboutMeRow />
-                </Col>
-            </Row>
-            <Row>
-                <Col xs={12}>
-                    Skills
-                </Col>
-                <Col xs={12}>
-                    <SkillsGrid />
-                </Col>
-            </Row>
+            <ContentSection section_title="Who Am I?">
+                <AboutMeRow />
+            </ContentSection>
+            <ContentSection section_title="What Do I Know?">
+                <SkillsGrid />
+            </ContentSection>
         </Container>
     );
 };
