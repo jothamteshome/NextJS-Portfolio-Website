@@ -93,7 +93,7 @@ const AboutPage = function () {
             <ContentSection section_title="Who Am I?">
                 <AboutMeRow />
             </ContentSection>
-            <ContentSection section_title="What Do I Know?">
+            <ContentSection section_title="What I Know">
                 <SkillsGrid />
             </ContentSection>
         </Container>

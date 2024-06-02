@@ -38,9 +38,13 @@ export const serviceData = [
 ];
 
 export const navigationRoutes = [
-    { name: 'Home', route: '/'},
     { name: 'About', route: '/about' },
     { name: 'Projects', route: '/projects' },
     { name: 'Experience', route: '/experience' },
     { name: 'Contact', route: '/contact' }
+];
+
+export const experiences = [
+    { employer: "Michigan State Univerity", logo: "https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg", start_date: "Aug 2023", end_date: "May 2024", role: "Graduate Teaching Assistant", tasks_completed: []},
+    { employer: "Michigan State University Federal Credit Union", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2c/MSU_Federal_Credit_Union_Logo_%282021%29.svg", start_date: "Aug 2022", end_date: "Dec 2022", role: "Software Engineering Intern", tasks_completed: ["coding"]}
 ];
