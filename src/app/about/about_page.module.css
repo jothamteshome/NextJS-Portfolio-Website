@@ -4,5 +4,5 @@
 }
 
 .self_image {
-    width: 20rem;
+    width: min(20rem, 80vw);
 }

@@ -6,7 +6,7 @@ import { skills } from '@/constants';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import ContentSection from '@/components/contentSection';
+import ContentSection from '@/components/ContentSection';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 
@@ -62,7 +62,7 @@ const AboutMeImgCol = function () {
  * Represents a column containing a short description about me
  * @returns {JSX.Element} A column element to display a short description about me
  */
-const AboutMeShortDesc = function () {
+const AboutMeDescriptionCol = function () {
     return (
         <Col lg={{ span: 7 }}>
             Im Jotham!
@@ -76,9 +76,9 @@ const AboutMeShortDesc = function () {
  */
 const AboutMeRow = function () {
     return (
-        <Row lg={2} md={1} sm={1} xs={1}>
-            <AboutMeShortDesc />
+        <Row lg={2} md={1} sm={1} xs={1} className='flex-lg-row-reverse'>
             <AboutMeImgCol />
+            <AboutMeDescriptionCol />
         </Row>
     );
 };
