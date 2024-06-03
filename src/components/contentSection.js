@@ -1,3 +1,8 @@
+"use client"
+
+import { content_section_variant } from "@/animation_variants";
+import { motion } from "framer-motion";
+
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
@@ -10,14 +15,17 @@ import Row from 'react-bootstrap/Row';
  */
 const ContentSection = function ({ section_title, children }) {
     return (
-        <Row>
-            <Col xs={12}>
-                <h1 className="fs-1 text-primary mt-5">{section_title}</h1>
-            </Col>
-            <Col className="mx-auto mt-2" xs={12} lg={11}>
-                {children}
-            </Col>
-        </Row>
+        <motion.div variants={content_section_variant}>
+            <Row>
+                <Col xs={12}>
+                    <h1 className="fs-1 text-primary mt-5">{section_title}</h1>
+                </Col>
+                <Col className="mx-auto mt-2" xs={12} lg={11}>
+                    {children}
+                </Col>
+
+            </Row>
+        </motion.div>
     );
 }
 

@@ -1,7 +1,9 @@
 "use client"
 import styles from './experience_page.module.scss';
 
+import { route_page_variant } from '@/animation_variants';
 import { experience_items, education_items } from '@/constants';
+import { motion } from 'framer-motion';
 
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -114,17 +116,23 @@ const ExperiencesPageCardList = function ({ list_items, ListCard }) {
 const ExperiencesPage = function () {
     return (
         <Container className="d-flex flex-column w-75" fluid="lg">
-            <ContentSection section_title="Experiences">
-                <ExperiencesPageCardList
-                    list_items={experience_items}
-                    ListCard={({ item }) => <ExperienceCard experience={item} />} />
-            </ContentSection>
+            <motion.div
+                variants={route_page_variant}
+                initial="initial"
+                animate="animate"
+            >
+                <ContentSection section_title="Experiences">
+                    <ExperiencesPageCardList
+                        list_items={experience_items}
+                        ListCard={({ item }) => <ExperienceCard experience={item} />} />
+                </ContentSection>
 
-            <ContentSection section_title="Education">
-                <ExperiencesPageCardList
-                    list_items={education_items}
-                    ListCard={({ item }) => <EducationCard education={item} />} />
-            </ContentSection>
+                <ContentSection section_title="Education">
+                    <ExperiencesPageCardList
+                        list_items={education_items}
+                        ListCard={({ item }) => <EducationCard education={item} />} />
+                </ContentSection>
+            </motion.div>
         </Container>
     );
 };

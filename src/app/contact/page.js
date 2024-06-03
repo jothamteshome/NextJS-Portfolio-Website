@@ -1,4 +1,8 @@
 "use client"
+
+import { route_page_variant } from '@/animation_variants';
+import { motion } from 'framer-motion';
+
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -57,12 +61,18 @@ const ContactInfo = function () {
 const ContactPage = function () {
     return (
         <Container className="d-flex flex-column" fluid="lg">
-            <ContentSection section_title="How To Reach Me">
-                <Row lg={2} md={1} sm={1} xs={1}>
-                    <FormLayout />
-                    <ContactInfo />
-                </Row>
-            </ContentSection>
+            <motion.div
+                variants={route_page_variant}
+                initial="initial"
+                animate="animate"
+            >
+                <ContentSection section_title="How To Reach Me">
+                    <Row lg={2} md={1} sm={1} xs={1}>
+                        <FormLayout />
+                        <ContactInfo />
+                    </Row>
+                </ContentSection>
+            </motion.div>
         </Container>
     );
 };
