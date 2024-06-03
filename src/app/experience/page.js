@@ -1,8 +1,8 @@
 "use client"
 import styles from './experience_page.module.scss';
 
-import { route_page_variant } from '@/animation_variants';
-import { experience_items, education_items } from '@/constants';
+import { route_page_variant } from '@/constants/animationVariants';
+import { experience_items, education_items } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
 
 import Card from 'react-bootstrap/Card';

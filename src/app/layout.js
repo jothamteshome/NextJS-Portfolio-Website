@@ -1,5 +1,5 @@
 import "./global.scss";
-import MainLayout from "@/components/mainLayout";
+import MainLayout from "@/components/MainLayout";
 
 export const metadata = {
   title: "Jotham Teshome",

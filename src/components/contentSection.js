@@ -1,6 +1,6 @@
 "use client"
 
-import { content_section_variant } from "@/animation_variants";
+import { content_section_variant } from "@/constants/animationVariants";
 import { motion } from "framer-motion";
 
 import Col from 'react-bootstrap/Col';

@@ -5,9 +5,9 @@ import {
     route_page_variant,
     about__page_skill_card_variant,
     about__page_skill_grid_variant
-} from '@/animation_variants';
+} from '@/constants/animationVariants';
 
-import { skills } from '@/constants';
+import { skills } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
 
 import Col from 'react-bootstrap/Col';

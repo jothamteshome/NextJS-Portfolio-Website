@@ -1,7 +1,7 @@
 "use client"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { navigationRoutes } from '@/constants';
+import { navigationRoutes } from '@/constants/profileConstants';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';

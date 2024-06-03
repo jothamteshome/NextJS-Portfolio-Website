@@ -1,6 +1,6 @@
 "use client"
 
-import { route_page_variant } from '@/animation_variants';
+import { route_page_variant } from '@/constants/animationVariants';
 import { motion } from 'framer-motion';
 
 import Container from 'react-bootstrap/Container';

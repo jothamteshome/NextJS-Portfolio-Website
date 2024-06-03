@@ -1,3 +1,6 @@
+/**
+ * List containing navigation route names and urls
+ */
 export const navigationRoutes = [
     { name: 'Home', route: '/' },
     { name: 'About', route: '/about' },
@@ -6,6 +9,10 @@ export const navigationRoutes = [
     { name: 'Contact', route: '/contact' }
 ];
 
+
+/**
+ * List containing skill names and icons that I am familiar with
+ */
 export const skills = [
     { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
     { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
@@ -14,6 +21,7 @@ export const skills = [
     { name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
     { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" },
     { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
+    { name: "Framer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg"},
     { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
     { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
     { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
@@ -25,6 +33,10 @@ export const skills = [
     { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" }
 ];
 
+
+/**
+ * List containing past job experiences that I have had
+ */
 export const experience_items = [
     {
         employer: "Michigan State Univerity",
@@ -49,6 +61,10 @@ export const experience_items = [
     }
 ];
 
+
+/**
+ * List containing past academic institutions that I have attended
+ */
 export const education_items = [
     {
         institution: "Michigan State University",
@@ -76,22 +92,11 @@ export const education_items = [
     }
 ];
 
+
+/**
+ * List containing links to my social media pages
+ */
 export const socialMediaLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" },
     { name: "Github", url: "https://github.com/jothamteshome", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" }
-];
-
-export const serviceData = [
-    {
-        name: "Web Development",
-        description: "Web development description"
-    },
-    {
-        name: "Machine Learning",
-        description: "Machine Learning description"
-    },
-    {
-        name: "Backend Development",
-        description: "backend description"
-    }
 ];

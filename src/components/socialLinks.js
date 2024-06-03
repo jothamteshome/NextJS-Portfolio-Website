@@ -1,4 +1,4 @@
-import { socialMediaLinks } from "@/constants";
+import { socialMediaLinks } from "@/constants/profileConstants";
 
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';

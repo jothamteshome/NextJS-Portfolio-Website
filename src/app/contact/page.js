@@ -1,6 +1,6 @@
 "use client"
 
-import { route_page_variant } from '@/animation_variants';
+import { route_page_variant } from '@/constants/animationVariants';
 import { motion } from 'framer-motion';
 
 import Button from 'react-bootstrap/Button';
@@ -10,7 +10,7 @@ import ContentSection from '@/components/ContentSection';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
-import SocialLinks from '@/components/socialLinks';
+import SocialLinks from '@/components/SocialLinks';
 
 
 const FormLayout = function () {
