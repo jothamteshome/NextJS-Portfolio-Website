@@ -44,6 +44,26 @@ export const about__page_content_section_variant = {
     }
 }
 
+/**
+ * Animation variant for AboutPage Image
+ */
+export const about__page_self_image = {
+    initial: {
+        opacity: 0,
+        scale: 0
+    },
+    animate: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delay: 0.7,
+            type: "spring",
+            damping: 12,
+            ease: 'linear'
+        }
+    }
+}
+
 
 /**
  * Animation variant for an AboutPage SkillGrid element
@@ -54,6 +74,7 @@ export const about__page_skill_grid_variant = {
         opacity: 1,
         transition: {
             staggerChildren: 0.1,
+            delayChildren: 0.6,
             when: "beforeChildren"
         }
     }
@@ -66,7 +87,7 @@ export const about__page_skill_grid_variant = {
 export const about__page_skill_card_variant = {
     initial: {
         opacity: 0,
-        scale: 0.5
+        scale: 0
     },
     animate: {
         opacity: 1,
