@@ -26,10 +26,11 @@ nav {
 
 .social-media-icon {
     width: 2.5rem;
+    height: 2.5rem;
     transition: 0.5s;
 }
 
 .social-media-icon:hover {
     transition: 0.5s;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }

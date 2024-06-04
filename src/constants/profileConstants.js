@@ -117,6 +117,6 @@ export const contactInformation = {
  * List containing links to my social media pages
  */
 export const socialMediaLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" },
-    { name: "Github", url: "https://github.com/jothamteshome", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" }
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: "/icons/linkedin.svg", bg_color: "#0072b1" },
+    { name: "Github", url: "https://github.com/jothamteshome", icon: "/icons/github.svg", bg_color: "#2d3748"}
 ];
