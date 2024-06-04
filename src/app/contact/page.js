@@ -67,7 +67,7 @@ const ContactPage = function () {
                 animate="animate"
             >
                 <ContentSection section_title="How To Reach Me">
-                    <Row lg={2} md={1} sm={1} xs={1}>
+                    <Row lg={2} md={1} sm={1} xs={1} className="justify-content-center align-items-center">
                         <FormLayout />
                         <ContactInfo />
                     </Row>
