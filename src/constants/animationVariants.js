@@ -2,9 +2,8 @@
  * Base animation variant for a route page element (AboutPage, ExperiencesPage, ...)
  */
 export const route_page_variant = {
-    initial: { x: "0%" },
+    initial: {},
     animate: {
-        x: "0%",
         transition: {
             ease: "easeIn",
             type: "spring",
@@ -24,25 +23,11 @@ export const content_section_variant = {
         x: "0%",
         transition: {
             type: "spring",
-            damping: 12
+            damping: 15
         }
     }
 };
 
-
-/**
- * Animation variant for AboutPage ContentSection element
- */
-export const about__page_content_section_variant = {
-    initial: { y: "-200%" },
-    animate: {
-        y: "0%",
-        transition: {
-            type: "spring",
-            damping: 12
-        }
-    }
-}
 
 /**
  * Animation variant for AboutPage Image
@@ -50,7 +35,7 @@ export const about__page_content_section_variant = {
 export const about__page_self_image = {
     initial: {
         opacity: 0,
-        scale: 0
+        scale: 0.3
     },
     animate: {
         opacity: 1,
@@ -58,8 +43,8 @@ export const about__page_self_image = {
         transition: {
             delay: 0.7,
             type: "spring",
-            damping: 12,
-            ease: 'linear'
+            damping: 15,
+            ease: 'easeInOut'
         }
     }
 }
@@ -69,9 +54,8 @@ export const about__page_self_image = {
  * Animation variant for an AboutPage SkillGrid element
  */
 export const about__page_skill_grid_variant = {
-    initial: { opacity: 1 },
+    initial: {},
     animate: {
-        opacity: 1,
         transition: {
             staggerChildren: 0.1,
             delayChildren: 0.6,
@@ -104,11 +88,11 @@ export const about__page_skill_card_variant = {
  * Animation variant for an ExperiencePage ExperiencesPageCardList element
  */
 export const experience__page_card_list_variant = {
-    initial: { x: "0%" },
+    initial: {},
     animate: {
-        x: "0%",
         transition: {
-            staggerChildren: 0.2
+            staggerChildren: 0.2,
+            delayChildren: 0.7
         }
     }
 }
@@ -124,7 +108,55 @@ export const experience__page_card_variant = {
         transition: {
             ease: "easeIn",
             type: "spring",
-            damping: 12
+            damping: 15
+        }
+    }
+}
+
+
+/**
+ * Animation variant for an ContactPage ContentSection element
+ */
+export const contact__page_content_section_variant = {
+    initial: {},
+    animate: {
+        transition: {
+            ease: "easeIn",
+            damping: 20,
+            staggerChildren: 0.2,
+        }
+    }
+}
+
+
+/**
+ * Animation variant for an ContactPage FormLayout element
+ */
+export const contact__page_form_variant = {
+    initial: { x: "-200%" },
+    animate: {
+        x: "0%",
+        transition: {
+            ease: "easeIn",
+            type: "spring",
+            damping: 15,
+            delay: 0.6
+        }
+    }
+}
+
+
+/**
+ * Animation variant for an ContactPage ContactInfo element
+ */
+export const contact__page_contact_info_variant = {
+    initial: { x: "-200%" },
+    animate: {
+        x: "0%",
+        transition: {
+            ease: "easeIn",
+            type: "spring",
+            damping: 15,
         }
     }
 }
