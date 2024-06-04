@@ -4,7 +4,8 @@ import styles from './about_page.module.scss'
 import {
     route_page_variant,
     about__page_skill_card_variant,
-    about__page_skill_grid_variant
+    about__page_skill_grid_variant,
+    about__page_content_section_variant
 } from '@/constants/animationVariants';
 
 import { skills } from '@/constants/profileConstants';
@@ -107,10 +108,10 @@ const AboutPage = function () {
                 initial="initial"
                 animate="animate"
             >
-                <ContentSection section_title="Who Am I?">
+                <ContentSection section_title="Who Am I?" variants={about__page_content_section_variant}>
                     <AboutMeRow />
                 </ContentSection>
-                <ContentSection section_title="What I Know">
+                <ContentSection section_title="What I Know" variants={about__page_content_section_variant}>
                     <SkillsGrid />
                 </ContentSection>
             </motion.div>

@@ -1,7 +1,12 @@
 "use client"
 import styles from './experience_page.module.scss';
 
-import { route_page_variant } from '@/constants/animationVariants';
+import {
+    route_page_variant,
+    experience__page_card_list_variant,
+    experience__page_card_variant
+} from '@/constants/animationVariants';
+
 import { experience_items, education_items } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
 
@@ -98,13 +103,17 @@ const ExperienceCard = function ({ experience }) {
  */
 const ExperiencesPageCardList = function ({ list_items, ListCard }) {
     return (
-        <Row className='gy-3'>
-            {
-                list_items.map((item, i) => (
-                    <ListCard key={i} item={item} />
-                ))
-            }
-        </Row>
+        <motion.div variants={experience__page_card_list_variant}>
+            <Row className='gy-3'>
+                {
+                    list_items.map((item, i) => (
+                        <motion.div key={i} variants={experience__page_card_variant}>
+                            <ListCard item={item} />
+                        </motion.div>
+                    ))
+                }
+            </Row>
+        </motion.div>
     );
 };
 

@@ -13,9 +13,13 @@ import Row from 'react-bootstrap/Row';
  * @param {JSX.Element} children - The child element containing the section contents to render
  * @returns {JSX.Element} A Row element to display a section's title and contents
  */
-const ContentSection = function ({ section_title, children }) {
+const ContentSection = function ({ section_title, children, variants}) {
+    // If custom animation variant is passed in, use that over the
+    // base content section animation variant options
+    const animation_variant = variants ? variants : content_section_variant
+
     return (
-        <motion.div variants={content_section_variant}>
+        <motion.div variants={animation_variant}>
             <Row>
                 <Col xs={12}>
                     <h1 className="fs-1 text-primary mt-5">{section_title}</h1>

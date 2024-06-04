@@ -16,28 +16,52 @@ export const route_page_variant = {
 };
 
 /**
- * Base animation variant for a `ContentSection` element
+ * Base animation variant for a ContentSection element
  */
 export const content_section_variant = {
     initial: { x: "-200%" },
-    animate: { x: "0%" }
-};
-
-
-/**
- * Animation variant for an AboutPage `SkillGrid`
- */
-export const about__page_skill_grid_variant = {
-    initial: { opacity: 1 },
     animate: {
-        opacity: 1,
-        transition: { staggerChildren: 0.1, when: "beforeChildren" }
+        x: "0%",
+        transition: {
+            type: "spring",
+            damping: 12
+        }
     }
 };
 
 
 /**
- * Animation variant for an AboutPage `SkillCard` element
+ * Animation variant for AboutPage ContentSection element
+ */
+export const about__page_content_section_variant = {
+    initial: { y: "-200%" },
+    animate: {
+        y: "0%",
+        transition: {
+            type: "spring",
+            damping: 12
+        }
+    }
+}
+
+
+/**
+ * Animation variant for an AboutPage SkillGrid element
+ */
+export const about__page_skill_grid_variant = {
+    initial: { opacity: 1 },
+    animate: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            when: "beforeChildren"
+        }
+    }
+};
+
+
+/**
+ * Animation variant for an AboutPage SkillCard element
  */
 export const about__page_skill_card_variant = {
     initial: {
@@ -50,6 +74,36 @@ export const about__page_skill_card_variant = {
         transition: {
             ease: "easeIn",
             type: "spring"
+        }
+    }
+}
+
+
+/**
+ * Animation variant for an ExperiencePage ExperiencesPageCardList element
+ */
+export const experience__page_card_list_variant = {
+    initial: { x: "0%" },
+    animate: {
+        x: "0%",
+        transition: {
+            staggerChildren: 0.2
+        }
+    }
+}
+
+
+/**
+ * Animation variant for an ExperiencesPageCardList card element
+ */
+export const experience__page_card_variant = {
+    initial: { x: "-200%" },
+    animate: {
+        x: "0%",
+        transition: {
+            ease: "easeIn",
+            type: "spring",
+            damping: 12
         }
     }
 }
