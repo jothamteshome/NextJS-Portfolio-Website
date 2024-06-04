@@ -7,7 +7,7 @@ import {
     experience__page_card_variant
 } from '@/constants/animationVariants';
 
-import { experience_items, education_items } from '@/constants/profileConstants';
+import { experienceItems, educationItems } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
 
 import Card from 'react-bootstrap/Card';
@@ -132,13 +132,13 @@ const ExperiencesPage = function () {
             >
                 <ContentSection section_title="Experiences">
                     <ExperiencesPageCardList
-                        list_items={experience_items}
+                        list_items={experienceItems}
                         ListCard={({ item }) => <ExperienceCard experience={item} />} />
                 </ContentSection>
 
                 <ContentSection section_title="Education">
                     <ExperiencesPageCardList
-                        list_items={education_items}
+                        list_items={educationItems}
                         ListCard={({ item }) => <EducationCard education={item} />} />
                 </ContentSection>
             </motion.div>

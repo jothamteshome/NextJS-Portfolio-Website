@@ -7,6 +7,8 @@ import {
     contact__page_contact_info_variant
 } from '@/constants/animationVariants';
 
+import { contactInformation } from '@/constants/profileConstants';
+
 import { motion } from 'framer-motion';
 
 import Button from 'react-bootstrap/Button';
@@ -18,6 +20,10 @@ import Stack from 'react-bootstrap/Stack';
 import SocialLinks from '@/components/SocialLinks';
 
 
+/**
+ * Represents a Form to submit comments or message me
+ * @returns {JSX.Element} A Form element containing fields such as name, email, and comments
+ */
 const FormLayout = function () {
     return (
         <motion.div variants={contact__page_form_variant}>
@@ -43,17 +49,22 @@ const FormLayout = function () {
 };
 
 
+/**
+ * Represents a stack containing information regarding 
+ * where I am and how to get in contact with me
+ * @returns {JSX.Element} A Stack element containing my email, location, and social links
+ */
 const ContactInfo = function () {
     return (
         <motion.div variants={contact__page_contact_info_variant}>
             <Stack className="mt-3 text-start text-lg-end contact_info" gap={4}>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Email</h2>
-                    <h5 className="mb-0">jothamteshome@gmail.com</h5>
+                    <h5 className="mb-0">{contactInformation.email}</h5>
                 </Stack>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Location</h2>
-                    <h5 className="mb-0">East Lansing, Michigan</h5>
+                    <h5 className="mb-0">{contactInformation.location}</h5>
                 </Stack>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Social</h2>
@@ -65,6 +76,10 @@ const ContactInfo = function () {
 };
 
 
+/**
+ * Represents a Container containing my contact information and a form to send me a message
+ * @returns {JSX.Element} A container displaying a `Contact` section
+ */
 const ContactPage = function () {
     return (
         <Container className="d-flex flex-column" fluid="lg">

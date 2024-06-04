@@ -37,7 +37,7 @@ export const skills = [
 /**
  * List containing past job experiences that I have had
  */
-export const experience_items = [
+export const experienceItems = [
     {
         employer: "Michigan State Univerity",
         start_date: "Aug 2023",
@@ -65,7 +65,7 @@ export const experience_items = [
 /**
  * List containing past academic institutions that I have attended
  */
-export const education_items = [
+export const educationItems = [
     {
         institution: "Michigan State University",
         start_date: "Jan 2023",
@@ -91,6 +91,15 @@ export const education_items = [
         logo: "https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg"
     }
 ];
+
+
+/**
+ * Object containing my contact information
+ */
+export const contactInformation = {
+    email: "jothamteshome@gmail.com",
+    location: "East Lansing, Michigan"
+}
 
 
 /**
