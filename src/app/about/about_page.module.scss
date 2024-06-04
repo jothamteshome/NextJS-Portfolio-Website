@@ -1,8 +1,12 @@
 .skill_card {
     border-radius: 0.75rem;
-    width: 8rem;
+    width: 7rem;
+
+    .skill_card_footer {
+        height: 4rem;
+    }
 }
 
 .self_image {
-    width: 20rem;
+    width: min(20rem, 60vw);
 }
