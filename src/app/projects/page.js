@@ -22,7 +22,7 @@ import Row from 'react-bootstrap/Row';
  * Represents the accordion describing details about a project that
  * appears on below the image when pages are small
  * @param {object} props - The props object 
- * @param {object} project - An object containing information about a give project
+ * @param {object} props.project - An object containing information about a give project
  * @returns {JSX.Element} An accordion containing the name, description, and 
  * additional details of where to find a project
  */
@@ -42,7 +42,7 @@ const ProjectCardAccordionDescription = function ({ project }) {
  * Represents the overlay describing details about a project that
  * appears on hover when the page is large
  * @param {object} props - The props object 
- * @param {object} project - An object containing information about a give project
+ * @param {object} props.project - An object containing information about a give project
  * @returns {JSX.Element} An card image overlay containing the name, description, and 
  * additional details of where to find a project
  */
@@ -65,7 +65,7 @@ const ProjectCardOverlayDescription = function ({ project }) {
  * Represents a project card with a description that displays on hover when
  * page is large and in an accordion when pages are small
  * @param {object} props - The props object
- * @param {object} project - An object containing information about a given project
+ * @param {object} props.project - An object containing information about a given project
  * @returns {JSX.Element} A column element to display a project and its description
  */
 const ProjectCard = function ({ project }) {
