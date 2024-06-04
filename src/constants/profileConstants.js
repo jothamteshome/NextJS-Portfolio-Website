@@ -35,6 +35,17 @@ export const skills = [
 
 
 /**
+ * List containing projects I have worked on
+ */
+export const projectItems = [
+    { name: "Machines 1", description: "New Desc....", image: "/images/jotham-teshome.jpg"},
+    { name: "Machines 2", description: "New Desc....", image: "/images/jotham-teshome.jpg"},
+    { name: "Machines 3", description: "New Desc....", image: "/images/jotham-teshome.jpg"},
+    { name: "Machines 4", description: "New Desc....", image: "/images/jotham-teshome.jpg"}
+];
+
+
+/**
  * List containing past job experiences that I have had
  */
 export const experienceItems = [

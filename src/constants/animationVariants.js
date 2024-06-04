@@ -160,3 +160,29 @@ export const contact__page_contact_info_variant = {
         }
     }
 }
+
+
+/**
+ * Animation variant for ProjectsPage ProjectCard to act as parent for ProjectCardOverlayDescription
+ */
+export const projects__page_project_card_variant = {
+    initial: {},
+    hover: {}
+}
+
+
+/**
+ * Animation variant for ProjectsPage ProjectCardOverlayDescription to allow visibility on hover
+ */
+export const projects__page_project_card_overlay_variant = {
+    initial: {
+        y: "100%",
+        visibility: "hidden",
+        transition: { duration: 0.6 }
+    },
+    hover: {
+        y: "0%",
+        visibility: "visible",
+        transition: { duration: 0.6 }
+    }
+}
