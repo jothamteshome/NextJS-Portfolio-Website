@@ -5,7 +5,8 @@ import {
     route_page_variant,
     about__page_skill_card_variant,
     about__page_skill_grid_variant,
-    about__page_content_section_variant
+    about__page_content_section_variant,
+    about__page_self_image
 } from '@/constants/animationVariants';
 
 import { skills } from '@/constants/profileConstants';
@@ -30,7 +31,9 @@ const SkillCard = function ({ skill }) {
         <motion.div variants={about__page_skill_card_variant}>
             <Card className={`bg-body-secondary ${styles.skill_card}`}>
                 <Card.Img className={styles.icon} src={skill.icon} alt={`Icon for ${skill.name}`} />
-                <Card.Footer className="text-body text-center">{skill.name}</Card.Footer>
+                <Card.Footer className={`d-flex align-items-center justify-content-center ${styles.skill_card_footer}`}>
+                    <p className='mb-0 text-body text-center'>{skill.name}</p>
+                </Card.Footer>
             </Card>
         </motion.div>
     );
@@ -65,7 +68,9 @@ const SkillsGrid = function () {
 const AboutMeImgCol = function () {
     return (
         <Col className='d-flex justify-content-center flex-shrink-1' lg={{ span: 5 }}>
-            <Image className={`border border-3 border-primary ${styles.self_image}`} alt="Image of Jotham Teshome" src="/images/jotham-teshome.jpg" roundedCircle />
+            <motion.div variants={about__page_self_image}>
+                <Image className={`border border-3 bg-secondary border-primary ${styles.self_image}`} alt="Image of Jotham Teshome" src="/images/jotham-teshome.jpg" roundedCircle />
+            </motion.div>
         </Col>
     );
 };
