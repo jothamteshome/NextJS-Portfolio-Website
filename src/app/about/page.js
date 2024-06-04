@@ -5,7 +5,6 @@ import {
     route_page_variant,
     about__page_skill_card_variant,
     about__page_skill_grid_variant,
-    about__page_content_section_variant,
     about__page_self_image
 } from '@/constants/animationVariants';
 
@@ -113,10 +112,10 @@ const AboutPage = function () {
                 initial="initial"
                 animate="animate"
             >
-                <ContentSection section_title="Who Am I?" variants={about__page_content_section_variant}>
+                <ContentSection section_title="Who Am I?">
                     <AboutMeRow />
                 </ContentSection>
-                <ContentSection section_title="What I Know" variants={about__page_content_section_variant}>
+                <ContentSection section_title="What I Know">
                     <SkillsGrid />
                 </ContentSection>
             </motion.div>

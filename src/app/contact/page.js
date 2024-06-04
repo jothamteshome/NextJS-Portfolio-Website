@@ -1,10 +1,15 @@
 "use client"
 
-import { route_page_variant } from '@/constants/animationVariants';
+import {
+    route_page_variant,
+    contact__page_content_section_variant,
+    contact__page_form_variant,
+    contact__page_contact_info_variant
+} from '@/constants/animationVariants';
+
 import { motion } from 'framer-motion';
 
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ContentSection from '@/components/ContentSection';
 import Form from 'react-bootstrap/Form';
@@ -15,7 +20,7 @@ import SocialLinks from '@/components/SocialLinks';
 
 const FormLayout = function () {
     return (
-        <Col>
+        <motion.div variants={contact__page_form_variant}>
             <Form>
                 <Form.Group className='mb-3' controlId="formGroupName">
                     <Form.Label>Full Name</Form.Label>
@@ -33,27 +38,29 @@ const FormLayout = function () {
                     <Button as="input" type="submit" value="Submit" />
                 </Form.Group>
             </Form>
-        </Col>
+        </motion.div>
     );
 };
 
 
 const ContactInfo = function () {
     return (
-        <Stack className="mt-3 text-start text-lg-end contact_info" gap={4}>
-            <Stack className='flex-grow-0'>
-                <h2 className="fw-bold mb-0">Email</h2>
-                <h5 className="mb-0">jothamteshome@gmail.com</h5>
+        <motion.div variants={contact__page_contact_info_variant}>
+            <Stack className="mt-3 text-start text-lg-end contact_info" gap={4}>
+                <Stack className='flex-grow-0'>
+                    <h2 className="fw-bold mb-0">Email</h2>
+                    <h5 className="mb-0">jothamteshome@gmail.com</h5>
+                </Stack>
+                <Stack className='flex-grow-0'>
+                    <h2 className="fw-bold mb-0">Location</h2>
+                    <h5 className="mb-0">East Lansing, Michigan</h5>
+                </Stack>
+                <Stack className='flex-grow-0'>
+                    <h2 className="fw-bold mb-0">Social</h2>
+                    <SocialLinks />
+                </Stack>
             </Stack>
-            <Stack className='flex-grow-0'>
-                <h2 className="fw-bold mb-0">Location</h2>
-                <h5 className="mb-0">East Lansing, Michigan</h5>
-            </Stack>
-            <Stack className='flex-grow-0'>
-                <h2 className="fw-bold mb-0">Social</h2>
-                <SocialLinks />
-            </Stack>
-        </Stack>
+        </motion.div>
     );
 };
 
@@ -67,10 +74,12 @@ const ContactPage = function () {
                 animate="animate"
             >
                 <ContentSection section_title="How To Reach Me">
-                    <Row lg={2} md={1} sm={1} xs={1} className="justify-content-center align-items-center">
-                        <FormLayout />
-                        <ContactInfo />
-                    </Row>
+                    <motion.div variants={contact__page_content_section_variant}>
+                        <Row lg={2} md={1} sm={1} xs={1} className="justify-content-center align-items-center">
+                            <FormLayout />
+                            <ContactInfo />
+                        </Row>
+                    </motion.div>
                 </ContentSection>
             </motion.div>
         </Container>
