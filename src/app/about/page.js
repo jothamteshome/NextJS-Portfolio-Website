@@ -1,5 +1,5 @@
 "use client"
-import styles from './about_page.module.scss'
+import styles from './about_page.module.css'
 
 import {
     route_page_variant,
