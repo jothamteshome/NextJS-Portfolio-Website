@@ -35,13 +35,22 @@ export const skills = [
 
 
 /**
+ * Object containing details for different project badge types
+ */
+export const projectBadgeDetails = {
+    "Web": {bg_color: "orange", txt_color: "white"},
+    "ML": {bg_color: "blue", txt_color: "white"}
+}
+
+
+/**
  * List containing projects I have worked on
  */
 export const projectItems = [
-    { name: "Machines 1", description: "New Desc....", image: "/images/jotham-teshome.jpg"},
-    { name: "Machines 2", description: "New Desc....", image: "/images/jotham-teshome.jpg"},
-    { name: "Machines 3", description: "New Desc....", image: "/images/jotham-teshome.jpg"},
-    { name: "Machines 4", description: "New Desc....", image: "/images/jotham-teshome.jpg"}
+    { name: "Machines 1", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: ["Web"]},
+    { name: "Machines 2", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: ["ML"]},
+    { name: "Machines 3", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: []},
+    { name: "Machines 4", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: ["Web", "ML"]}
 ];
 
 
