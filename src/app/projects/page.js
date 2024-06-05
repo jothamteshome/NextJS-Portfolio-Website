@@ -302,9 +302,13 @@ const ProjectCardOverlayDescription = function ({ project }) {
 const ProjectCard = function ({ project }) {
     return (
         <Col className={styles.project_card}>
-            <motion.div variants={projects__page_project_card_variant} initial="initial" whileHover="hover" animate="initial">
+            <motion.div variants={projects__page_project_card_variant}
+                initial="initial"
+                animate="animate"
+                whileHover="hover">
                 <Card className="ratio ratio-16x9 h-100 w-100 overflow-hidden">
-                    <Card.Img alt="machines" src={project.image} className='w-100 h-100 object-fit-cover' />
+                    <Card.Img alt={`Image of ${project.name}`} src={project.image}
+                        className='w-100 h-100 object-fit-cover' />
                     <ProjectCardOverlayDescription project={project} />
                 </Card>
 
@@ -322,12 +326,12 @@ const ProjectCard = function ({ project }) {
 const ProjectCardList = function () {
     return (
         <Row xl={3} lg={2} xs={1} className='gy-4'>
-            {
-                projectItems.map((project, i) => (
-                    <ProjectCard key={i} project={project} />
-                ))
-            }
-        </Row>
+                {
+                    projectItems.map((project, i) => (
+                        <ProjectCard key={i} project={project} />
+                    ))
+                }
+            </Row>
     );
 }
 
