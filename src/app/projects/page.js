@@ -7,7 +7,7 @@ import {
     projects__page_project_card_overlay_variant
 } from '@/constants/animationVariants';
 
-import { projectItems, projectBadgeDetails } from '@/constants/profileConstants';
+import { projectIcons, projectItems, projectBadgeDetails } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
 
 import Accordion from 'react-bootstrap/Accordion';
@@ -16,6 +16,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ContentSection from '@/components/ContentSection';
+import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
 
@@ -69,6 +70,61 @@ const ProjectBadgeRow = function ({ project, className }) {
 
 
 /**
+ * Represents an icon link to an external site
+ * @param {object} props - The props object
+ * @param {object} props.link_info - An object containng information about an external link 
+ * @returns {JSX.Element} Returns a column containing an icon link to an external site
+ */
+const ProjectLink = function ({ link_info }) {
+    // Take lowercase identifier of link type and use in image alt text
+    let alt_text_link_type = link_info.link_type.split("_");
+    alt_text_link_type = alt_text_link_type.map((word) => (word.charAt(0).toUpperCase() + word.substr(1))).join(" ")
+
+    return (
+        <Col className='p-0 pe-1'>
+            <a href={link_info.link}>
+                <Image alt={`${alt_text_link_type} link for ${link_info.project_name}`} src={projectIcons[link_info.link_type]}
+                    className={styles.project_link_icon} />
+            </a>
+        </Col>
+    );
+};
+
+
+/**
+ * Represents a row containing links to external sites related to project
+ * @param {object} props - The props object
+ * @param {object} props.project - An object containing information about a project
+ * @returns {JSX.Element} A Row element containing links related to a project if they exist
+ */
+const ProjectLinksRow = function ({ project }) {
+    // Store a list of project links associated with a given project
+    const project_links = [];
+
+    // Check if github link exists for project
+    if (project.links.github) {
+        project_links.push({ link_type: "github", project_name: project.name, link: project.links.github });
+    }
+
+    // Check if live demo link exists for project
+    if (project.links.live_demo) {
+        project_links.push({ link_type: "live_demo", project_name: project.name, link: project.links.live_demo })
+    }
+
+
+    return (
+        <Row className='w-100 ps-3' xs="auto">
+            {
+                project_links.map((link, i) => (
+                    <ProjectLink key={i} link_info={link} />
+                ))
+            }
+        </Row>
+    );
+};
+
+
+/**
  * Represents the accordion describing details about a project that
  * appears on below the image when pages are small
  * @param {object} props - The props object 
@@ -112,7 +168,10 @@ const ProjectCardOverlayDescription = function ({ project }) {
                     <Card.Title className='mb-1'>{project.name}</Card.Title>
                     <ProjectBadgeRow project={project} className="mb-2" />
                 </Stack>
-                <Card.Text>{project.description}</Card.Text>
+                <Container className='h-100 p-0 pb-4 d-flex flex-column justify-content-between'>
+                    <Card.Text>{project.description}</Card.Text>
+                    <ProjectLinksRow project={project} />
+                </Container>
             </Card.ImgOverlay>
         </motion.div>
     );

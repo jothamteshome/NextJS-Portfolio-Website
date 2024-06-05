@@ -21,7 +21,7 @@ export const skills = [
     { name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
     { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" },
     { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
-    { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg"},
+    { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
     { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
     { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
     { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
@@ -35,11 +35,19 @@ export const skills = [
 
 
 /**
+ * Object containing paths for links on ProjectsPage
+ */
+export const projectIcons = {
+    'github': '/icons/github.svg',
+    'live_demo': '/icons/link-45deg.svg'
+}
+
+/**
  * Object containing details for different project badge types
  */
 export const projectBadgeDetails = {
-    "Web": {bg_color: "orange", txt_color: "white"},
-    "ML": {bg_color: "blue", txt_color: "white"}
+    "Web": { bg_color: "orange", txt_color: "white" },
+    "ML": { bg_color: "blue", txt_color: "white" }
 }
 
 
@@ -47,10 +55,45 @@ export const projectBadgeDetails = {
  * List containing projects I have worked on
  */
 export const projectItems = [
-    { name: "Machines 1", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: ["Web"]},
-    { name: "Machines 2", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: ["ML"]},
-    { name: "Machines 3", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: []},
-    { name: "Machines 4", description: "New Desc....", image: "/images/jotham-teshome.jpg", badges: ["Web", "ML"]}
+    {
+        name: "Machines 1",
+        description: "New Desc....",
+        image: "/images/jotham-teshome.jpg",
+        badges: ["Web"],
+        links: {
+            github: "https://www.github.com"
+        }
+    },
+    {
+        name: "Machines 2",
+        description: "New Desc....",
+        image: "/images/jotham-teshome.jpg",
+        badges: ["ML"],
+        links: {
+            github: "https://www.github.com",
+            live_demo: "https://www.google.com"
+        }
+    },
+    {
+        name: "Machines 3",
+        description: "New Desc....",
+        image: "/images/jotham-teshome.jpg",
+        badges: [],
+        links: {
+            github: "https://www.github.com",
+            live_demo: "https://www.google.com"
+        }
+    },
+    {
+        name: "Machines 4",
+        description: "New Desc....",
+        image: "/images/jotham-teshome.jpg",
+        badges: ["Web", "ML"],
+        links: {
+            github: "https://www.github.com",
+            live_demo: "https://www.google.com"
+        }
+    }
 ];
 
 
@@ -127,5 +170,5 @@ export const contactInformation = {
  */
 export const socialMediaLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: "/icons/linkedin.svg", bg_color: "#0072b1" },
-    { name: "Github", url: "https://github.com/jothamteshome", icon: "/icons/github.svg", bg_color: "#2d3748"}
+    { name: "Github", url: "https://github.com/jothamteshome", icon: "/icons/github.svg", bg_color: "#2d3748" }
 ];

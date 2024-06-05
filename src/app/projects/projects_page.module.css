@@ -2,4 +2,12 @@
     height: min(13rem, 100%);
 }
 
+.project_card .project_link_icon {
+    width: 1.75rem;
+    transition: 0.5s;
+}
 
+.project_link_icon:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
