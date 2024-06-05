@@ -1,5 +1,9 @@
 import "./global.css";
-import MainLayout from "@/components/MainLayout";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Container from "react-bootstrap/Container";
+import NavigationBar from "@/components/NavigationBar";
+import Stack from 'react-bootstrap/Stack';
 
 export const metadata = {
   title: "Jotham Teshome",
@@ -11,5 +15,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <MainLayout>{children}</MainLayout>
+  return <html lang="en" data-bs-theme="dark">
+    <Stack as="body">
+      <NavigationBar />
+      <Container as="main" className='bg-body' fluid>
+        {children}
+      </Container>
+      <footer className='bg-dark-subtle d-flex justify-content-center 
+      align-items-center mt-auto'>Made by Jotham Teshome</footer>
+    </Stack>
+  </html>
 };
