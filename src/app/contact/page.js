@@ -10,42 +10,12 @@ import { contactInformation } from '@/constants/profileConstants';
 
 import { motion } from 'framer-motion';
 
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import ContentSection from '@/components/ContentSection';
-import Form from 'react-bootstrap/Form';
+import FeedbackForm from "./FeedbackForm.js";
 import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
 import SocialLinks from '@/components/SocialLinks';
-
-
-/**
- * Represents a Form to submit comments or message me
- * @returns {JSX.Element} A Form element containing fields such as name, email, and comments
- */
-const FormLayout = function () {
-    return (
-        <motion.div variants={contact__page_column_variant}>
-            <Form>
-                <Form.Group className='mb-3' controlId="formGroupName">
-                    <Form.Label>Full Name</Form.Label>
-                    <Form.Control type="text" placeholder="Jotham Teshome" />
-                </Form.Group>
-                <Form.Group className='mb-3' controlId="formGroupEmail">
-                    <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="email" placeholder="jothamteshome@gmail.com" />
-                </Form.Group>
-                <Form.Group className='mb-3' controlId="formGroupTextarea">
-                    <Form.Label>Comments</Form.Label>
-                    <Form.Control as="textarea" placeholder="Comments" />
-                </Form.Group>
-                <Form.Group className='mb-3 d-flex justify-content-end' controlId='formGroupSubmitButton'>
-                    <Button as="input" type="submit" value="Submit" />
-                </Form.Group>
-            </Form>
-        </motion.div>
-    );
-};
 
 
 /**
@@ -119,13 +89,13 @@ const ContactPage = function () {
                     {/* Builds a row in correct order for animation when page is large */}
                     <ReachMeRow flex_row_reverse={true} display_classes={["d-none", "d-lg-block"]}>
                         <ContactInfo />
-                        <FormLayout />
+                        <FeedbackForm />
                     </ReachMeRow>
 
 
                     {/* Builds a row in correct order for animation when page is small */}
                     <ReachMeRow display_classes={["d-block", "d-lg-none"]}>
-                        <FormLayout />
+                        <FeedbackForm />
                         <ContactInfo />
                     </ReachMeRow>
                 </ContentSection>
