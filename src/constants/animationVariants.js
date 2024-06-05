@@ -115,7 +115,7 @@ export const experience__page_card_variant = {
 
 
 /**
- * Animation variant for an ContactPage ContentSection element
+ * Animation variant for a ContactPage ContentSection element
  */
 export const contact__page_content_section_variant = {
     initial: {},
@@ -130,26 +130,9 @@ export const contact__page_content_section_variant = {
 
 
 /**
- * Animation variant for an ContactPage FormLayout element
+ * Animation variant for a ContactPage column element
  */
-export const contact__page_form_variant = {
-    initial: { x: "-200%" },
-    animate: {
-        x: "0%",
-        transition: {
-            ease: "easeIn",
-            type: "spring",
-            damping: 15,
-            delay: 0.6
-        }
-    }
-}
-
-
-/**
- * Animation variant for an ContactPage ContactInfo element
- */
-export const contact__page_contact_info_variant = {
+export const contact__page_column_variant = {
     initial: { x: "-200%" },
     animate: {
         x: "0%",

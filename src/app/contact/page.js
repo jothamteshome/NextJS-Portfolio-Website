@@ -3,8 +3,7 @@
 import {
     route_page_variant,
     contact__page_content_section_variant,
-    contact__page_form_variant,
-    contact__page_contact_info_variant
+    contact__page_column_variant
 } from '@/constants/animationVariants';
 
 import { contactInformation } from '@/constants/profileConstants';
@@ -26,7 +25,7 @@ import SocialLinks from '@/components/SocialLinks';
  */
 const FormLayout = function () {
     return (
-        <motion.div variants={contact__page_form_variant}>
+        <motion.div variants={contact__page_column_variant}>
             <Form>
                 <Form.Group className='mb-3' controlId="formGroupName">
                     <Form.Label>Full Name</Form.Label>
@@ -56,7 +55,7 @@ const FormLayout = function () {
  */
 const ContactInfo = function () {
     return (
-        <motion.div variants={contact__page_contact_info_variant}>
+        <motion.div variants={contact__page_column_variant}>
             <Stack className="mt-3 text-start text-lg-end contact_info" gap={4}>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Email</h2>
@@ -77,6 +76,33 @@ const ContactInfo = function () {
 
 
 /**
+ * Represents a row containing form element to send a message and my personal contact information
+ * @param {object} props - The props object
+ * @param {Array.<String>} props.display_classes - The display class options to add to the motion.div element
+ * @param {boolean} props.flex_row_reverse - Boolean value to determine whether to reverse row
+ * @param {JSX.Element} props.children - Children elements of the current element 
+ * @returns {JSX.Element} Row element containing contact information and form
+ */
+const ReachMeRow = function ({ display_classes, flex_row_reverse, children }) {
+    // Add display classes if list is not empty
+    const add_display_classes = display_classes ? display_classes.join(" ") : "";
+
+
+    // Add flex-row-reverse if true
+    const add_reverse = flex_row_reverse ? "flex-row-reverse" : "";
+
+
+    return (
+        <motion.div variants={contact__page_content_section_variant} className={add_display_classes}>
+            <Row lg={2} md={1} sm={1} xs={1} className={`${add_reverse} justify-content-center align-items-center`}>
+                {children}
+            </Row>
+        </motion.div>
+    );
+};
+
+
+/**
  * Represents a Container containing my contact information and a form to send me a message
  * @returns {JSX.Element} A container displaying a `Contact` section
  */
@@ -89,12 +115,19 @@ const ContactPage = function () {
                 animate="animate"
             >
                 <ContentSection section_title="How To Reach Me">
-                    <motion.div variants={contact__page_content_section_variant}>
-                        <Row lg={2} md={1} sm={1} xs={1} className="justify-content-center align-items-center">
-                            <FormLayout />
-                            <ContactInfo />
-                        </Row>
-                    </motion.div>
+
+                    {/* Builds a row in correct order for animation when page is large */}
+                    <ReachMeRow flex_row_reverse={true} display_classes={["d-none", "d-lg-block"]}>
+                        <ContactInfo />
+                        <FormLayout />
+                    </ReachMeRow>
+
+
+                    {/* Builds a row in correct order for animation when page is small */}
+                    <ReachMeRow display_classes={["d-block", "d-lg-none"]}>
+                        <FormLayout />
+                        <ContactInfo />
+                    </ReachMeRow>
                 </ContentSection>
             </motion.div>
         </Container>
