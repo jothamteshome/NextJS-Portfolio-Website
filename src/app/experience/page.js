@@ -97,8 +97,8 @@ const ExperienceCard = function ({ experience }) {
 /**
  * Represents a list of cards containing information specified by the list_items and ListCard parameters
  * @param {object} props - The props object
- * @param {Array.<Object>} list_items - Array containing objects containing information to display on a Card element
- * @param {JSX.Element} ListCard - Generic card placeholder for card element belonging to this list
+ * @param {Array.<Object>} props.list_items - Array containing objects containing information to display on a Card element
+ * @param {JSX.Element} props.ListCard - Generic card placeholder for card element belonging to this list
  * @returns {JSX.Element} Returns a Row element containing a list of cards
  */
 const ExperiencesPageCardList = function ({ list_items, ListCard }) {
