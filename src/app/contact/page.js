@@ -78,7 +78,7 @@ const ContactInfo = function () {
 /**
  * Represents a row containing form element to send a message and my personal contact information
  * @param {object} props - The props object
- * @param {Array.<String>} props.display_classes - The display class options to add to the motion.div element
+ * @param {Array.<string>} props.display_classes - The display class options to add to the motion.div element
  * @param {boolean} props.flex_row_reverse - Boolean value to determine whether to reverse row
  * @param {JSX.Element} props.children - Children elements of the current element 
  * @returns {JSX.Element} Row element containing contact information and form
