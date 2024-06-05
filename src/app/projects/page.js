@@ -9,14 +9,15 @@ import {
 
 import { projectIcons, projectItems, projectBadgeDetails } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 import Accordion from 'react-bootstrap/Accordion';
-import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ContentSection from '@/components/ContentSection';
 import Image from 'react-bootstrap/Image';
+import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
 
@@ -35,12 +36,12 @@ const ProjectBadge = function ({ badge_type, className }) {
 
     return (
         // Override the text and background color of the badge
-        <Badge style={{
-            color: `${badge_details.txt_color}!important`,
-            backgroundColor: `${badge_details.bg_color}!important`
-        }} className={`${className} me-1`}>
+        <span style={{
+            color: `${badge_details.txt_color}`,
+            backgroundColor: `${badge_details.bg_color}`
+        }} className={`${className ? className : ""} me-1 badge`}>
             {badge_type}
-        </Badge>
+        </span>
     );
 };
 
@@ -49,16 +50,18 @@ const ProjectBadge = function ({ badge_type, className }) {
  * Represents the row of badges showing the type of the subject matter of the project e.g ("Web", "ML", ...)
  * @param {object} props - The props object
  * @param {object} props.project - An object containing information about a give project
- * @param {string} props.className - A string to pass class stylings down to child
+ * @param {string} props.className - A string to pass class stylings down to ProjectBadgeRow
+ * @param {string} props.projectBadgeClassName - A string to pass classes down to ProjectBadge
  * @returns {JSX.Element} A row element containing multiple badges for the given project
  */
-const ProjectBadgeRow = function ({ project, className }) {
+const ProjectBadgeRow = function ({ project, className, projectBadgeClassName }) {
     return (
-        <Row className="ps-2" xs="auto">
+        <Row className={`${className ? className : ""} ps-2`} xs="auto">
             {
                 project.badges.map((badge_type, i) => (
                     <Col key={i} className='p-0'>
-                        <ProjectBadge badge_type={badge_type} className={className} />
+                        <ProjectBadge badge_type={badge_type}
+                            className={projectBadgeClassName ? projectBadgeClassName : ""} />
                     </Col>
                 ))
 
@@ -66,6 +69,92 @@ const ProjectBadgeRow = function ({ project, className }) {
         </Row>
     );
 
+};
+
+
+/**
+ * Represents a list of links and project types for a ProjectDescriptionExpandModal element
+ * @param {object} props - The props object
+ * @param {object} props.project - An object containing information about a project 
+ * @returns {JSX.Element} Returns Row element containing links and project 
+ * types to place in ProjectDescriptionExpandModal footer
+ */
+const ProjectModalFooterRow = function ({ project }) {
+    const footer_row_elements = [];
+
+    // Check if github link exists for project
+    if (project.links.github) {
+        footer_row_elements.push(
+            <ProjectLink link_info={{
+                link_type: "github",
+                project_name: project.name,
+                link: project.links.github
+            }} />
+        );
+    }
+
+    // Check if live demo link exists for project
+    if (project.links.live_demo) {
+        footer_row_elements.push(
+            <ProjectLink link_info={{
+                link_type: "live_demo",
+                project_name: project.name,
+                link: project.links.live_demo
+            }}
+                className={styles.project_link_icon} />
+        );
+    }
+
+    // Add badges to footer row list
+    project.badges.map(badge_type => (
+        footer_row_elements.push(<ProjectBadge badge_type={badge_type} />)
+    ))
+
+    return (
+        <Row>
+            {
+                footer_row_elements.map((element, i) => (
+                    <Col key={i} className='p-0 my-auto'>
+                        {element}
+                    </Col>
+                ))
+            }
+        </Row>
+    );
+};
+
+
+/**
+ * Represents an icon button that can be clicked to bring up a modal dialog
+ * @param {object} props - The props object
+ * @param {object} props.project - An object containing information about a project 
+ * @returns {JSX.Element} Returns an icon button that when clicked creates a
+ * modal for more information about a project
+ */
+const ProjectDescriptionExpandModal = function ({ project }) {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+    return (
+        <>
+            <Col className='p-0 pe-1'>
+                <Image alt="alt" src="/icons/box-arrow-up-right.svg"
+                    className={`${styles.project_link_icon} ${styles.modal_expand_icon}`} onClick={handleShow} />
+            </Col>
+
+            <Modal show={show} onHide={handleClose} centered>
+                <Modal.Header closeButton><Modal.Title>{project.name}</Modal.Title></Modal.Header>
+                <Modal.Body>{project.description}</Modal.Body>
+                <Modal.Footer className={`justify-content-start ${styles.modal_footer}`}>
+                    <ProjectModalFooterRow project={project} />
+                </Modal.Footer>
+
+            </Modal>
+        </>
+    );
 };
 
 
@@ -83,7 +172,8 @@ const ProjectLink = function ({ link_info }) {
     return (
         <Col className='p-0 pb-2 pe-md-1 pb-md-0 col-auto'>
             <a href={link_info.link}>
-                <Image alt={`${alt_text_link_type} link for ${link_info.project_name}`} src={projectIcons[link_info.link_type]}
+                <Image alt={`${alt_text_link_type} link for ${link_info.project_name}`}
+                    src={projectIcons[link_info.link_type]}
                     className={styles.project_link_icon} />
             </a>
         </Col>
@@ -119,6 +209,7 @@ const ProjectLinksRow = function ({ project }) {
                     <ProjectLink key={i} link_info={link} />
                 ))
             }
+            <ProjectDescriptionExpandModal project={project} />
         </Row>
     );
 };
@@ -162,7 +253,7 @@ const ProjectCardAccordionDescription = function ({ project }) {
                 <Accordion.Header>
                     <Stack>
                         {project.name}
-                        <ProjectBadgeRow project={project} className='mb-1' />
+                        <ProjectBadgeRow project={project} projectBadgeClassName='mb-1' />
                     </Stack>
                 </Accordion.Header>
                 <ProjectCardAccordionBody project={project} />
@@ -189,7 +280,7 @@ const ProjectCardOverlayDescription = function ({ project }) {
             <Card.ImgOverlay className='bg-dark bg-opacity-50'>
                 <Stack direction="horizontal" className='d-flex justify-content-between'>
                     <Card.Title className='mb-1'>{project.name}</Card.Title>
-                    <ProjectBadgeRow project={project} className="mb-2" />
+                    <ProjectBadgeRow project={project} projectBadgeClassName="mb-2" />
                 </Stack>
                 <Container className='h-100 p-0 pb-4 d-flex flex-column justify-content-between'>
                     <Card.Text className='text-wrap text-truncate'>{project.description}</Card.Text>
@@ -213,7 +304,7 @@ const ProjectCard = function ({ project }) {
         <Col className={styles.project_card}>
             <motion.div variants={projects__page_project_card_variant} initial="initial" whileHover="hover" animate="initial">
                 <Card className="ratio ratio-16x9 h-100 w-100 overflow-hidden">
-                    <Card.Img alt="machines" src={project.image} className='w-100 h-100 object-fit-cover' rounded />
+                    <Card.Img alt="machines" src={project.image} className='w-100 h-100 object-fit-cover' />
                     <ProjectCardOverlayDescription project={project} />
                 </Card>
 
@@ -253,11 +344,8 @@ const ProjectsPage = function () {
                 initial="initial"
                 animate="animate"
             >
-                <ContentSection section_title="Machine Learning">
+                <ContentSection section_title="What I've Worked On">
                     <ProjectCardList />
-                </ContentSection>
-
-                <ContentSection section_title="Web Applications">
                 </ContentSection>
             </motion.div>
         </Container>

@@ -1,13 +1,42 @@
+/* Set the minimum height for a ProjectCard element */
 .project_card {
     height: min(13rem, 100%);
 }
 
+/* Styling for a ProjectLink icon found on a ProjectCard element */
 .project_card .project_link_icon {
     width: 1.75rem;
+    height: 1.75rem;
     transition: 0.5s;
 }
 
+/* Styling for a ProjectLink icon found on a ProjectCard when hovered over */
 .project_link_icon:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+/* Styling for a modal expand icon found on a ProjectCard */
+.project_card .modal_expand_icon {
+    cursor: pointer;
+}
+
+/* Styling for a modal footer that is a descendant of a ProjectCard */
+.project_card .modal_footer {
+    height: 5rem;
+}
+
+
+/* Styling for a ProjectLink icon found on a modal footer */
+.modal_footer .project_link_icon {
+    height: 2rem;
+    width: 2rem;
+    transition: 0.5s;
+}
+
+
+/* Styling for a ProjectLink icon found on a modal footer when hovered over */
+.modal_footer .project_link_icon:hover {
     transition: 0.5s;
     transform: scale(1.2);
 }
