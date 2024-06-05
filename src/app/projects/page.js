@@ -81,7 +81,7 @@ const ProjectLink = function ({ link_info }) {
     alt_text_link_type = alt_text_link_type.map((word) => (word.charAt(0).toUpperCase() + word.substr(1))).join(" ")
 
     return (
-        <Col className='p-0 pe-1'>
+        <Col className='p-0 pb-2 pe-md-1 pb-md-0 col-auto'>
             <a href={link_info.link}>
                 <Image alt={`${alt_text_link_type} link for ${link_info.project_name}`} src={projectIcons[link_info.link_type]}
                     className={styles.project_link_icon} />
@@ -113,13 +113,36 @@ const ProjectLinksRow = function ({ project }) {
 
 
     return (
-        <Row className='w-100 ps-3' xs="auto">
+        <Row className='w-100 mx-auto' xs={1} sm={1} md="auto">
             {
                 project_links.map((link, i) => (
                     <ProjectLink key={i} link_info={link} />
                 ))
             }
         </Row>
+    );
+};
+
+
+/**
+ * Represents the AccordionBody for describing a project on small screens
+ * @param {object} props - The props object 
+ * @param {object} props.project - An object containing information about a project
+ * @returns {JSX.Element} Returns an AccordionBody element containing the description and links of a project
+ * for the ProjectCardAccordionDescription
+ */
+const ProjectCardAccordionBody = function ({ project }) {
+    return (
+        <Accordion.Body>
+            <Row className='justify-content-sm-between'>
+                <Col xs={{ span: 9 }}>
+                    {project.description}
+                </Col>
+                <Col xs={{ span: 2 }}>
+                    <ProjectLinksRow project={project} />
+                </Col>
+            </Row>
+        </Accordion.Body>
     );
 };
 
@@ -142,7 +165,7 @@ const ProjectCardAccordionDescription = function ({ project }) {
                         <ProjectBadgeRow project={project} className='mb-1' />
                     </Stack>
                 </Accordion.Header>
-                <Accordion.Body>{project.description}</Accordion.Body>
+                <ProjectCardAccordionBody project={project} />
             </Accordion.Item>
         </Accordion>
     );
@@ -169,7 +192,7 @@ const ProjectCardOverlayDescription = function ({ project }) {
                     <ProjectBadgeRow project={project} className="mb-2" />
                 </Stack>
                 <Container className='h-100 p-0 pb-4 d-flex flex-column justify-content-between'>
-                    <Card.Text>{project.description}</Card.Text>
+                    <Card.Text className='text-wrap text-truncate'>{project.description}</Card.Text>
                     <ProjectLinksRow project={project} />
                 </Container>
             </Card.ImgOverlay>
