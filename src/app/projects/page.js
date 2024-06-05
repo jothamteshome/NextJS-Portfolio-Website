@@ -23,8 +23,8 @@ import Stack from 'react-bootstrap/Stack';
 /**
  * Represents a badge icon denoting the type of project
  * @param {object} props - The props object
- * @param {String} props.badge_type - A string denoting the type of badge to create
- * @param {String} props.className - A string to pass class stylings down to child 
+ * @param {string} props.badge_type - A string denoting the type of badge to create
+ * @param {string} props.className - A string to pass class stylings down to child 
  * @returns {JSX.Element} Returns a Badge element with its text and coloring modified for a specific badge_type
  */
 const ProjectBadge = function ({ badge_type, className }) {
@@ -37,7 +37,7 @@ const ProjectBadge = function ({ badge_type, className }) {
         <Badge style={{
             color: `${badge_details.txt_color}!important`,
             backgroundColor: `${badge_details.bg_color}!important`
-        }} className={className}>
+        }} className={`${className} me-1`}>
             {badge_type}
         </Badge>
     );
@@ -48,15 +48,16 @@ const ProjectBadge = function ({ badge_type, className }) {
  * Represents the row of badges showing the type of the subject matter of the project e.g ("Web", "ML", ...)
  * @param {object} props - The props object
  * @param {object} props.project - An object containing information about a give project
+ * @param {string} props.className - A string to pass class stylings down to child
  * @returns {JSX.Element} A row element containing multiple badges for the given project
  */
-const ProjectBadgeRow = function ({ project }) {
+const ProjectBadgeRow = function ({ project, className }) {
     return (
-        <Row>
+        <Row className="ps-2" xs="auto">
             {
                 project.badges.map((badge_type, i) => (
-                    <Col key={i}>
-                        <ProjectBadge badge_type={badge_type} className="mb-2" />
+                    <Col key={i} className='p-0'>
+                        <ProjectBadge badge_type={badge_type} className={className} />
                     </Col>
                 ))
 
@@ -79,7 +80,12 @@ const ProjectCardAccordionDescription = function ({ project }) {
     return (
         <Accordion defaultActiveKey={0} className='d-block d-md-none'>
             <Accordion.Item eventKey={1}>
-                <Accordion.Header>{project.name}</Accordion.Header>
+                <Accordion.Header>
+                    <Stack>
+                        {project.name}
+                        <ProjectBadgeRow project={project} className='mb-1' />
+                    </Stack>
+                </Accordion.Header>
                 <Accordion.Body>{project.description}</Accordion.Body>
             </Accordion.Item>
         </Accordion>
@@ -104,7 +110,7 @@ const ProjectCardOverlayDescription = function ({ project }) {
             <Card.ImgOverlay className='bg-dark bg-opacity-50'>
                 <Stack direction="horizontal" className='d-flex justify-content-between'>
                     <Card.Title className='mb-1'>{project.name}</Card.Title>
-                    <ProjectBadgeRow project={project} />
+                    <ProjectBadgeRow project={project} className="mb-2" />
                 </Stack>
                 <Card.Text>{project.description}</Card.Text>
             </Card.ImgOverlay>
