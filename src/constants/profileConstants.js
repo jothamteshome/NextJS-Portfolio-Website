@@ -53,7 +53,13 @@ export const icons = {
  */
 export const aboutMeDescription = {
     about_me: [
-        "I'm Jotham, "
+        "I'm Jotham, a recent Computer Science graduate with a Master of Science from Michigan State University. \
+        I specialize in Software Engineering and Machine Learning, with my current interests being Natural \
+        Language Processing and Computer Vision.", 
+        "Driven by curiosity, I enjoy the challenge of tackling projects, both large and small. Each one provides me a unique \
+        opportunity to expand my knowledge on new technologies.",
+        "I'm always excited to explore new opportunities and discuss how I can contribute to innovative projects. If you're \
+        a recruiter or a professional looking to collaborate, feel free to reach out. I look forward to hearing from you!"
     ]
 };
 
