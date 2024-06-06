@@ -1,7 +1,7 @@
 "use client"
 import { contact__page_column_variant } from '@/constants/animationVariants';
 
-import { contactInformation } from '@/constants/profileConstants';
+import { generalInfo } from '@/constants/profileConstants';
 
 import { motion } from 'framer-motion';
 
@@ -20,11 +20,11 @@ const ContactInfo = function () {
             <Stack className="mt-3 text-start text-lg-end contact_info" gap={4}>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Email</h2>
-                    <h5 className="mb-0">{contactInformation.email}</h5>
+                    <h5 className="mb-0">{generalInfo.contact_info.email}</h5>
                 </Stack>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Location</h2>
-                    <h5 className="mb-0">{contactInformation.location}</h5>
+                    <h5 className="mb-0">{generalInfo.contact_info.location}</h5>
                 </Stack>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Social</h2>

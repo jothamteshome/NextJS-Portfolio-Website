@@ -11,7 +11,7 @@ export const navigationRoutes = [
 
 
 /**
- * Object containing general information needed throughout the site
+ * Object containing general information used throughout the site
  */
 export const generalInfo = {
     resume: {
@@ -27,6 +27,11 @@ export const generalInfo = {
             src: "/images/jotham-teshome.jpg",
             alt: "Image of Jotham at Mackinac Island"
         }
+    },
+    contact_info: {
+        name: "Jotham Teshome",
+        email: "jothamteshome@gmail.com",
+        location: "East Lansing, Michigan"
     }
 }
 
@@ -192,15 +197,6 @@ export const educationItems = [
         logo: "https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg"
     }
 ];
-
-
-/**
- * Object containing my contact information
- */
-export const contactInformation = {
-    email: "jothamteshome@gmail.com",
-    location: "East Lansing, Michigan"
-}
 
 
 /**
