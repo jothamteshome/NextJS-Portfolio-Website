@@ -1,6 +1,6 @@
 "use client"
 
-import { socialMediaLinks, importantFiles, icons } from "@/constants/profileConstants";
+import { socialMediaLinks } from "@/constants/profileConstants";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';

@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 
 import { home__page_background } from "@/constants/animationVariants";
-import { socialMediaLinks, importantFiles, icons } from "@/constants/profileConstants";
+import { socialMediaLinks, generalInfo, icons } from "@/constants/profileConstants";
 
 import { useEffect } from 'react'
 import { motion } from 'framer-motion';
@@ -66,7 +66,7 @@ const HomeContainerLinks = function () {
 
 
 const HomePageContainer = function () {
-    const home_image = importantFiles.images.home_image;
+    const home_image = generalInfo.images.home_image;
     return (
         <Container className={`m-0 ${styles.content_overlay} d-flex align-items-center justify-content-center`} fluid>
             <div className="d-flex flex-column align-items-center justify-content-center h-50">

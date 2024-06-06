@@ -10,7 +10,10 @@ export const navigationRoutes = [
 ];
 
 
-export const importantFiles = {
+/**
+ * Object containing general information needed throughout the site
+ */
+export const generalInfo = {
     resume: {
         src: '/files/2024-04__Jotham_Teshome_Resume.pdf',
         name: 'Jotham Teshome Resume.pdf'
@@ -28,6 +31,9 @@ export const importantFiles = {
 }
 
 
+/**
+ * Object containing icons necessary for loading webpage
+ */
 export const icons = {
     file_pdf: '/icons/file-pdf.svg',
     github: '/icons/github.svg',
@@ -203,5 +209,5 @@ export const contactInformation = {
 export const socialMediaLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: icons.linkedin, bg_color: "#0072b1", title: "Check out my Linkedin profile!" },
     { name: "Github", url: "https://github.com/jothamteshome", icon: icons.github, bg_color: "#2d3748", title: "Check out my Github profile!" },
-    { name: "Resume", url: importantFiles.resume.src, icon: icons.file_pdf, bg_color: "#d86556", title: "Check out my Resume!", download: importantFiles.resume.name}
+    { name: "Resume", url: generalInfo.resume.src, icon: icons.file_pdf, bg_color: "#d86556", title: "Check out my Resume!", download: generalInfo.resume.name}
 ];
