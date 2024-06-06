@@ -4,7 +4,9 @@ import styles from './projects_page.module.css';
 import {
     route_page_variant,
     projects__page_project_card_variant,
-    projects__page_project_card_overlay_variant
+    projects__page_project_card_overlay_variant,
+    projects__page_card_list_variant,
+    projects_page_project_card_entrance_variant
 } from '@/constants/animationVariants';
 
 import { projectIcons, projectItems, projectBadgeDetails } from '@/constants/profileConstants';
@@ -301,20 +303,22 @@ const ProjectCardOverlayDescription = function ({ project }) {
  */
 const ProjectCard = function ({ project }) {
     return (
-        <Col className={styles.project_card}>
-            <motion.div variants={projects__page_project_card_variant}
-                initial="initial"
-                animate="animate"
-                whileHover="hover">
-                <Card className="ratio ratio-16x9 h-100 w-100 overflow-hidden">
-                    <Card.Img alt={`Image of ${project.name}`} src={project.image}
-                        className='w-100 h-100 object-fit-cover' />
-                    <ProjectCardOverlayDescription project={project} />
-                </Card>
+        <motion.div variants={projects_page_project_card_entrance_variant}>
+            <Col className={styles.project_card}>
+                <motion.div variants={projects__page_project_card_variant}
+                    initial="initial"
+                    animate="initial"
+                    whileHover="hover">
+                    <Card className="ratio ratio-16x9 h-100 w-100 overflow-hidden">
+                        <Card.Img alt={`Image of ${project.name}`} src={project.image}
+                            className='w-100 h-100 object-fit-cover' />
+                        <ProjectCardOverlayDescription project={project} />
+                    </Card>
 
-                <ProjectCardAccordionDescription project={project} />
-            </motion.div>
-        </Col>
+                    <ProjectCardAccordionDescription project={project} />
+                </motion.div>
+            </Col>
+        </motion.div>
     );
 };
 
@@ -325,13 +329,17 @@ const ProjectCard = function ({ project }) {
  */
 const ProjectCardList = function () {
     return (
-        <Row xl={3} lg={2} xs={1} className='gy-4'>
+        <motion.div variants={projects__page_card_list_variant}
+            initial="initial"
+            animate="animate">
+            <Row xl={3} lg={2} xs={1} className='gy-4'>
                 {
                     projectItems.map((project, i) => (
                         <ProjectCard key={i} project={project} />
                     ))
                 }
             </Row>
+        </motion.div>
     );
 }
 
