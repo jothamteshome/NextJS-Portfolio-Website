@@ -3,7 +3,7 @@ import styles from '../about_page.module.css'
 
 import { about__page_self_image } from '@/constants/animationVariants';
 
-import { aboutMeDescription } from '@/constants/profileConstants';
+import { aboutMeDescription, importantFiles } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
 
 import Col from 'react-bootstrap/Col';
@@ -16,10 +16,11 @@ import Row from 'react-bootstrap/Row';
  * @returns {JSX.Element} A column element to display roundedCircle selfie image
  */
 const AboutMeImgCol = function () {
+    const about_image = importantFiles.images.about_image;
     return (
         <Col className='d-flex justify-content-center flex-shrink-1' lg={{ span: 5 }}>
             <motion.div variants={about__page_self_image}>
-                <Image className={`border border-3 bg-secondary border-primary ${styles.self_image}`} alt="Image of Jotham Teshome" src="/images/jotham-teshome.jpg" roundedCircle />
+                <Image className={`border border-3 bg-secondary border-primary ${styles.self_image}`} alt={about_image.alt} src={about_image.src} roundedCircle />
             </motion.div>
         </Col>
     );

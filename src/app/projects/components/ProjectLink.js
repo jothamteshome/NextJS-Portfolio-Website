@@ -2,7 +2,7 @@
 import styles from '../projects_page.module.css';
 
 
-import { projectIcons } from '@/constants/profileConstants';
+import { icons } from '@/constants/profileConstants';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
@@ -21,7 +21,7 @@ const ProjectLink = function ({ link_info }) {
         <Col className='p-0 pb-2 pe-md-1 pb-md-0 col-auto'>
             <a href={link_info.link}>
                 <Image alt={`${alt_text_link_type} link for ${link_info.project_name}`}
-                    src={projectIcons[link_info.link_type]}
+                    src={icons[link_info.link_type]}
                     className={styles.project_link_icon} />
             </a>
         </Col>

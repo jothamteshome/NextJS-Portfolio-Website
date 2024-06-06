@@ -1,5 +1,5 @@
 "use client"
-import { navigationRoutes, resumeInfo } from '@/constants/profileConstants';
+import { navigationRoutes, importantFiles } from '@/constants/profileConstants';
 
 import { usePathname } from 'next/navigation';
 
@@ -30,7 +30,7 @@ const NavigationBar = function () {
                     }
                 </Nav>
                 <Button className='ms-auto'>
-                    <a className="text-decoration-none text-white" href={resumeInfo.file_loc} download={resumeInfo.dl_name}>
+                    <a className="text-decoration-none text-white" href={importantFiles.resume.src} download={importantFiles.resume.name}>
                         Resume
                     </a>
                 </Button>

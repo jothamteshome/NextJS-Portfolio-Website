@@ -1,6 +1,6 @@
 "use client"
 
-import { socialMediaLinks } from "@/constants/profileConstants";
+import { socialMediaLinks, importantFiles, icons } from "@/constants/profileConstants";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -19,6 +19,10 @@ const ContactSocialMediaRow = function () {
                         <SocialMediaIcon link={link} />
                     </a>
                 )}
+
+                <a href={importantFiles.resume.src} className="pe-2 pe-lg-0 ps-0 ps-lg-2" download={importantFiles.resume.name}>
+                    <SocialMediaIcon link={{ name: "Resume", url: null, icon: icons.file_pdf, bg_color: "#d86556" }} />
+                </a>
             </Row>
         </Container>
     );
