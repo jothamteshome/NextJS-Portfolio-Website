@@ -1,12 +1,16 @@
+/* Styling for a SkillCard element in the SkillsGrid */
 .skill_card {
     border-radius: 0.75rem;
     width: 7rem;
 }
 
+
+/* Styling for the footer of a SkillCard element */
 .skill_card .skill_card_footer {
     height: 4rem;
 }
 
+/* Styling for the image of myself in the AboutMeRow */
 .self_image {
     width: min(20rem, 60vw);
 }
