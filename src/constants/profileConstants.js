@@ -10,12 +10,29 @@ export const navigationRoutes = [
 ];
 
 
-/**
- * Information about where to find my resume
- */
-export const resumeInfo = {
-    file_loc: '/files/2024-04__Jotham_Teshome_Resume.pdf',
-    dl_name: 'Jotham Teshome Resume.pdf'
+export const importantFiles = {
+    resume: {
+        src: '/files/2024-04__Jotham_Teshome_Resume.pdf',
+        name: 'Jotham Teshome Resume.pdf'
+    },
+    images: {
+        home_image: {
+            src: "/images/jotham-teshome-avatar.png",
+            alt: "Jotham's avatar image"
+        },
+        about_image: {
+            src: "/images/jotham-teshome.jpg",
+            alt: "Image of Jotham at Mackinac Island"
+        }
+    }
+}
+
+
+export const icons = {
+    file_pdf: '/icons/file-pdf.svg',
+    github: '/icons/github.svg',
+    linkedin: '/icons/linkedin.svg',
+    live_demo: '/icons/link-45deg.svg'
 }
 
 
@@ -23,7 +40,7 @@ export const resumeInfo = {
  * Object containing text for About Me section
  */
 export const aboutMeDescription = {
-    about_me : [
+    about_me: [
         "I'm Jotham, "
     ]
 };
@@ -56,10 +73,6 @@ export const skills = [
 /**
  * Object containing paths for links on ProjectsPage
  */
-export const projectIcons = {
-    'github': '/icons/github.svg',
-    'live_demo': '/icons/link-45deg.svg'
-}
 
 /**
  * Object containing details for different project badge types
@@ -188,6 +201,6 @@ export const contactInformation = {
  * List containing links to my social media pages
  */
 export const socialMediaLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: "/icons/linkedin.svg", bg_color: "#0072b1" },
-    { name: "Github", url: "https://github.com/jothamteshome", icon: "/icons/github.svg", bg_color: "#2d3748" }
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: icons.linkedin, bg_color: "#0072b1" },
+    { name: "Github", url: "https://github.com/jothamteshome", icon: icons.github, bg_color: "#2d3748" }
 ];
