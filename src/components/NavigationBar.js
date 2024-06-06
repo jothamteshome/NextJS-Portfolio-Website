@@ -1,9 +1,9 @@
 "use client"
-
-import { navigationRoutes } from '@/constants/profileConstants';
+import { navigationRoutes, resumeInfo } from '@/constants/profileConstants';
 
 import { usePathname } from 'next/navigation';
 
+import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
@@ -29,6 +29,11 @@ const NavigationBar = function () {
                         ))
                     }
                 </Nav>
+                <Button className='ms-auto'>
+                    <a className="text-decoration-none text-white" href={resumeInfo.file_loc} download={resumeInfo.dl_name}>
+                        Resume
+                    </a>
+                </Button>
             </Navbar.Collapse>
         </Navbar>
     );

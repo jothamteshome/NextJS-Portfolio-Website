@@ -11,6 +11,15 @@ export const navigationRoutes = [
 
 
 /**
+ * Information about where to find my resume
+ */
+export const resumeInfo = {
+    file_loc: '/files/2024-04__Jotham_Teshome_Resume.pdf',
+    dl_name: 'Jotham Teshome Resume.pdf'
+}
+
+
+/**
  * Object containing text for About Me section
  */
 export const aboutMeDescription = {
