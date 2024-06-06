@@ -44,7 +44,7 @@ const FeedbackForm = function () {
                 ))
                 }
                 <Form.Group className='mb-3 d-flex justify-content-end' controlId='formGroupSubmitButton'>
-                    <Button as="input" type="submit" value="Submit" />
+                    <Button as="input" type="submit" value="Submit" disabled />
                 </Form.Group>
             </Form>
         </motion.div>
