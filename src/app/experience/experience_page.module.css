@@ -1,6 +1,5 @@
 .logo {
-    width: 15rem;
-    height: 15rem;
+    width: min(15rem, 100%);
     padding: 1rem;
     border-radius: 2rem;
 }
