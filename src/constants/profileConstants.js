@@ -11,6 +11,16 @@ export const navigationRoutes = [
 
 
 /**
+ * Object containing text for About Me section
+ */
+export const aboutMeDescription = {
+    about_me : [
+        "I'm Jotham, "
+    ]
+};
+
+
+/**
  * List containing skill names and icons that I am familiar with
  */
 export const skills = [

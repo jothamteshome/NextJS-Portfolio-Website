@@ -8,7 +8,7 @@ import {
     about__page_self_image
 } from '@/constants/animationVariants';
 
-import { skills } from '@/constants/profileConstants';
+import { skills, aboutMeDescription } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
 
 import Col from 'react-bootstrap/Col';
@@ -82,7 +82,7 @@ const AboutMeImgCol = function () {
 const AboutMeDescriptionCol = function () {
     return (
         <Col lg={{ span: 7 }}>
-            Im Jotham!
+            {aboutMeDescription.about_me}
         </Col>
     );
 }
