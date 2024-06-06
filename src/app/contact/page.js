@@ -63,7 +63,7 @@ const ReachMeRow = function ({ display_classes, flex_row_reverse, children }) {
 
 
     return (
-        <motion.div variants={contact__page_content_section_variant} className={add_display_classes}>
+        <motion.div  className={add_display_classes}>
             <Row lg={2} md={1} sm={1} xs={1} className={`${add_reverse} justify-content-center align-items-center`}>
                 {children}
             </Row>
@@ -84,7 +84,7 @@ const ContactPage = function () {
                 initial="initial"
                 animate="animate"
             >
-                <ContentSection section_title="How To Reach Me">
+                <ContentSection section_title="How To Reach Me" variants={contact__page_content_section_variant}>
 
                     {/* Builds a row in correct order for animation when page is large */}
                     <ReachMeRow flex_row_reverse={true} display_classes={["d-none", "d-lg-block"]}>
