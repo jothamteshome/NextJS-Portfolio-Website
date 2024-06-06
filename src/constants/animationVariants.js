@@ -83,6 +83,66 @@ export const about__page_skill_card_variant = {
     }
 }
 
+/**
+ * Animation variant for ProjectsPage ProjectCardList element
+ */
+export const projects__page_card_list_variant = {
+    initial: {},
+    animate: {
+        transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.4
+        }
+    }
+}
+
+
+/**
+ * Animation variant for ProjectsPage ProjectCard element as a wrapper to have two
+ * separate animations occur on the element independently
+ */
+export const projects_page_project_card_entrance_variant = {
+    initial: {
+        opacity: 0,
+        scale: 0
+    },
+    animate: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 1.4,
+            ease: "easeIn",
+            type: "spring"
+        }
+    }
+}
+
+
+/**
+ * Animation variant for ProjectsPage ProjectCard to act as parent for ProjectCardOverlayDescription
+ */
+export const projects__page_project_card_variant = {
+    initial: {},
+    hover: {}
+}
+
+
+/**
+ * Animation variant for ProjectsPage ProjectCardOverlayDescription to allow visibility on hover
+ */
+export const projects__page_project_card_overlay_variant = {
+    initial: {
+        y: "100%",
+        visibility: "hidden",
+        transition: { duration: 0.4 }
+    },
+    hover: {
+        y: "0%",
+        visibility: "visible",
+        transition: { duration: 0.4 }
+    }
+}
+
 
 /**
  * Animation variant for an ExperiencePage ExperiencesPageCardList element
@@ -141,65 +201,5 @@ export const contact__page_column_variant = {
             type: "spring",
             damping: 15,
         }
-    }
-}
-
-
-/**
- * Animation variant for ProjectsPage ProjectCardList element
- */
-export const projects__page_card_list_variant = {
-    initial: {},
-    animate: {
-        transition: {
-            staggerChildren: 0.2,
-            delayChildren: 0.4
-        }
-    }
-}
-
-
-/**
- * Animation variant for ProjectsPage ProjectCard element as a wrapper to have two
- * separate animations occur on the element independently
- */
-export const projects_page_project_card_entrance_variant = {
-    initial: {
-        opacity: 0,
-        scale: 0
-    },
-    animate: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            duration: 1.4,
-            ease: "easeIn",
-            type: "spring"
-        }
-    }
-}
-
-/**
- * Animation variant for ProjectsPage ProjectCard to act as parent for ProjectCardOverlayDescription
- */
-export const projects__page_project_card_variant = {
-    initial: {},
-    hover: {}
-}
-
-
-/**
- * Animation variant for ProjectsPage ProjectCardOverlayDescription to allow visibility on hover
- */
-export const projects__page_project_card_overlay_variant = {
-    initial: {
-        y: "100%",
-        visibility: "hidden",
-        transition: { duration: 0.4 }
-    },
-    hover: {
-        y: "0%",
-        visibility: "visible",
-        transition: { duration: 0.4 }
     }
 }
