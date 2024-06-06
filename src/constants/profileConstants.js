@@ -83,10 +83,6 @@ export const skills = [
 
 
 /**
- * Object containing paths for links on ProjectsPage
- */
-
-/**
  * Object containing details for different project badge types
  */
 export const projectBadgeDetails = {
@@ -100,42 +96,12 @@ export const projectBadgeDetails = {
  */
 export const projectItems = [
     {
-        name: "Machines 1",
-        description: "New Desc....",
-        image: "/images/jotham-teshome.jpg",
+        name: "Portfolio Website",
+        description: "My portfolio website built using Next.js, React, and Bootstrap. Animations were created using Framer Motion",
+        image: "/images/projects/nextjs-portfolio-website.png",
         badges: ["Web"],
         links: {
             github: "https://www.github.com"
-        }
-    },
-    {
-        name: "Machines 2",
-        description: "New Desc....",
-        image: "/images/jotham-teshome.jpg",
-        badges: ["ML"],
-        links: {
-            github: "https://www.github.com",
-            live_demo: "https://www.google.com"
-        }
-    },
-    {
-        name: "Machines 3",
-        description: "New Desc....",
-        image: "/images/jotham-teshome.jpg",
-        badges: [],
-        links: {
-            github: "https://www.github.com",
-            live_demo: "https://www.google.com"
-        }
-    },
-    {
-        name: "Machines 4",
-        description: "New Desc....",
-        image: "/images/jotham-teshome.jpg",
-        badges: ["Web", "ML"],
-        links: {
-            github: "https://www.github.com",
-            live_demo: "https://www.google.com"
         }
     }
 ];

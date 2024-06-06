@@ -20,6 +20,7 @@ because of the background being absolutely positioned */
 }
 
 
+/* Wrapper for typewriter container */
 .content_overlay .typewriter_wrapper {
   font-size: 2em;
   font-weight: bold;
