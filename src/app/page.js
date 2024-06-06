@@ -18,7 +18,7 @@ import SocialMediaIcon from "@/components/SocialMediaIcon";
 /**
  * Represents the element building the animated background using Thpace
  * @param {object} props - The props object
- * @param {JSX.Element} children - An element containing the future children elements for the page 
+ * @param {JSX.Element} props.children - An element containing the future children elements for the page 
  * @returns {JSX.Element} Returns an element containing an animated background 
  * and the future child elements of the page
  */
