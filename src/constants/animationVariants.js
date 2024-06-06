@@ -31,6 +31,20 @@ export const content_section_variant = {
 
 
 /**
+ * Animation variant for HomePage background
+ */
+export const home__page_background = {
+    initial: { opacity: 0 },
+    animate: { 
+        opacity: 1,
+        transition: {
+            duration: 1.4
+        }
+     }
+};
+
+
+/**
  * Animation variant for AboutPage Image
  */
 export const about__page_self_image = {

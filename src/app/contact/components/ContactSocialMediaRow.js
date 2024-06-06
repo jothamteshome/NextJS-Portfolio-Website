@@ -15,7 +15,7 @@ const ContactSocialMediaRow = function () {
         <Container className="p-0" fluid="lg">
             <Row className="mx-0 p-0 justify-content-lg-end" xs="auto">
                 {socialMediaLinks.map((link, i) =>
-                    <a href={link.url} key={i} className="pe-2 pe-lg-0 ps-0 ps-lg-2">
+                    <a href={link.url} key={i} target="_blank" className="pe-2 pe-lg-0 ps-0 ps-lg-2">
                         <SocialMediaIcon link={link} />
                     </a>
                 )}
