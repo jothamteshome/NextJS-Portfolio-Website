@@ -13,6 +13,7 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import SocialMediaIcon from "@/components/SocialMediaIcon";
+import Typewriter from 'typewriter-effect';
 
 
 /**
@@ -55,7 +56,7 @@ const TriangleBackground = function ({ children }) {
  */
 const HomeContainerLinks = function () {
     return (
-        <Row className={`${styles.media_icons} d-flex justify-content-around`} xs="auto" >
+        <Row className={`${styles.media_icons} d-flex justify-content-around mt-2`} xs="auto" >
             {
                 socialMediaLinks.map((link, i) => (
                     <Col key={i}>
@@ -87,10 +88,17 @@ const HomePage = function () {
                         <Image alt={home_image.alt} src={home_image.src} className={styles.image} />
                     </div>
 
-                    <h1 className="mt-2 fw-bold">Hi, I&apos;m Jotham</h1>
+                    <h1 className="mt-2 fw-bold">Hi, I&apos;m {generalInfo.contact_info.name}</h1>
+                    <Typewriter
+                        options={{
+                            wrapperClassName: styles.typewriter_wrapper,
+                            cursorClassName: styles.typewriter_wrapper,
+                            strings: generalInfo.typewriter_strings,
+                            autoStart: true,
+                            loop: true,
+                            delay: 50,
+                        }} />
                     <HomeContainerLinks />
-
-
                 </div>
             </Container>
         </TriangleBackground>

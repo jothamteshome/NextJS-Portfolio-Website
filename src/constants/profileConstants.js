@@ -32,7 +32,8 @@ export const generalInfo = {
         name: "Jotham Teshome",
         email: "jothamteshome@gmail.com",
         location: "East Lansing, Michigan"
-    }
+    },
+    typewriter_strings: ["Software Engineer", "Machine Learning Engineer", "Full-stack Developer"]
 }
 
 
