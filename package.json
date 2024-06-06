@@ -15,7 +15,8 @@
     "react": "^18",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
-    "thpace": "^2.0.2"
+    "thpace": "^2.0.2",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "eslint": "^8",
