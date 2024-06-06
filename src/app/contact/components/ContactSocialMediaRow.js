@@ -15,14 +15,11 @@ const ContactSocialMediaRow = function () {
         <Container className="p-0" fluid="lg">
             <Row className="mx-0 p-0 justify-content-lg-end" xs="auto">
                 {socialMediaLinks.map((link, i) =>
-                    <a href={link.url} key={i} target="_blank" className="pe-2 pe-lg-0 ps-0 ps-lg-2">
+                    <a href={link.url} key={i} target="_blank" className="pe-2 pe-lg-0 ps-0 ps-lg-2"
+                        title={link.title} download={link.download ? link.download : false}>
                         <SocialMediaIcon link={link} />
                     </a>
                 )}
-
-                <a href={importantFiles.resume.src} className="pe-2 pe-lg-0 ps-0 ps-lg-2" download={importantFiles.resume.name}>
-                    <SocialMediaIcon link={{ name: "Resume", url: null, icon: icons.file_pdf, bg_color: "#d86556" }} />
-                </a>
             </Row>
         </Container>
     );

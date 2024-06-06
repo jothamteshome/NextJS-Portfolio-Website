@@ -201,6 +201,7 @@ export const contactInformation = {
  * List containing links to my social media pages
  */
 export const socialMediaLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: icons.linkedin, bg_color: "#0072b1" },
-    { name: "Github", url: "https://github.com/jothamteshome", icon: icons.github, bg_color: "#2d3748" }
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/jothamteshome/", icon: icons.linkedin, bg_color: "#0072b1", title: "Check out my Linkedin profile!" },
+    { name: "Github", url: "https://github.com/jothamteshome", icon: icons.github, bg_color: "#2d3748", title: "Check out my Github profile!" },
+    { name: "Resume", url: importantFiles.resume.src, icon: icons.file_pdf, bg_color: "#d86556", title: "Check out my Resume!", download: importantFiles.resume.name}
 ];
