@@ -21,7 +21,7 @@ const FormField = function ({ field_data }) {
             <Form.Control type={field_data.type} placeholder={field_data.placeholder} required />
         </FloatingLabel>
     );
-}
+};
 
 
 /**
