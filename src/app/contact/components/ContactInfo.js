@@ -5,8 +5,8 @@ import { contactInformation } from '@/constants/profileConstants';
 
 import { motion } from 'framer-motion';
 
+import ContactSocialMediaRow from './ContactSocialMediaRow';
 import Stack from 'react-bootstrap/Stack';
-import SocialLinks from '@/components/SocialLinks';
 
 
 /**
@@ -28,7 +28,7 @@ const ContactInfo = function () {
                 </Stack>
                 <Stack className='flex-grow-0'>
                     <h2 className="fw-bold mb-0">Social</h2>
-                    <SocialLinks />
+                    <ContactSocialMediaRow />
                 </Stack>
             </Stack>
         </motion.div>
