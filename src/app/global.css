@@ -1,32 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&family=Share+Tech+Mono&display=swap');
 
+/* Applies the custom font for each element in the document */
 * {
     margin: 0;
     font-family: "Share Tech", sans-serif;
 }
 
+/* Sets the height of the body tag to take up at least one view window*/
 body {
     height: auto;
     min-height: 100vh;
 }
 
+/* Sets the height of the main tag to add padding at the top of the 
+page to avoid the navigation bar and bottom of the page to look nice */
 main {
     min-height: 92vh;
     padding-top: 5vh;
     padding-bottom: 3vh;
 }
 
-footer {
-    height: 3vh;
-}
-
-
+/* Styling for a social media icon found on the HomePage and ContactPage */
 .social-media-icon {
     width: 2.5rem;
     height: 2.5rem;
     transition: 0.5s;
 }
 
+/* Styling for when a social media icon is hovered over */
 .social-media-icon:hover {
     transition: 0.5s;
     transform: scale(1.2);

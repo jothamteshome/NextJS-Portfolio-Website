@@ -24,8 +24,6 @@ export default function RootLayout({ children }) {
         <Container as="main" className='bg-body' fluid>
           {children}
         </Container>
-        <footer className='bg-dark-subtle d-flex justify-content-center 
-      align-items-center mt-auto'>Made by Jotham Teshome</footer>
       </Stack>
     </html>
   )

@@ -1,3 +1,4 @@
+/* Styling for the background container of the HomePage*/
 .background {
   position: absolute;
   top: 0;
@@ -5,9 +6,11 @@
   right: 0;
   bottom: 0;
   width: 100vw;
-  height: 97vh;
+  height: 100vh;
 }
 
+/* Container set to match the <main> element's dimensions
+because of the background being absolutely positioned */
 .content_overlay {
   position: relative;
   padding-top: 5vh;
@@ -16,12 +19,15 @@
   z-index: 1;
 }
 
+
+/* Styling for the background circle for the image on the HomePage */
 .content_overlay .image_background {
   width: min(20rem, 60vw);
   border-radius: 50%;
   overflow: hidden;
 }
 
+/* Styling for the image on the HomePage */
 .image_background .image {
   width: 100%;
   height: 100%;
