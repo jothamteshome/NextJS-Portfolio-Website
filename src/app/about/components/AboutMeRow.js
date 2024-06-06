@@ -1,7 +1,7 @@
 "use client"
 import styles from '../about_page.module.css'
 
-import { about__page_self_image } from '@/constants/animationVariants';
+import { about__page_about_me_row } from '@/constants/animationVariants';
 
 import { aboutMeDescription, generalInfo } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
@@ -19,9 +19,7 @@ const AboutMeImgCol = function () {
     const about_image = generalInfo.images.about_image;
     return (
         <Col className='d-flex justify-content-center flex-shrink-1' lg={{ span: 5 }}>
-            <motion.div variants={about__page_self_image}>
-                <Image className={`border border-3 bg-secondary border-primary ${styles.self_image}`} alt={about_image.alt} src={about_image.src} roundedCircle />
-            </motion.div>
+            <Image className={`border border-3 bg-secondary border-primary ${styles.self_image}`} alt={about_image.alt} src={about_image.src} roundedCircle />
         </Col>
     );
 };
@@ -49,10 +47,12 @@ const AboutMeDescriptionCol = function () {
  */
 const AboutMeRow = function () {
     return (
-        <Row lg={2} md={1} sm={1} xs={1} className='flex-lg-row-reverse justify-content-between'>
-            <AboutMeImgCol />
-            <AboutMeDescriptionCol />
-        </Row>
+        <motion.div variants={about__page_about_me_row} className='w-100'>
+            <Row lg={2} md={1} sm={1} xs={1} className='flex-lg-row-reverse justify-content-between'>
+                <AboutMeImgCol />
+                <AboutMeDescriptionCol />
+            </Row>
+        </motion.div>
     );
 };
 

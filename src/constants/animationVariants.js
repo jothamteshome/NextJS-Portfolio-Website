@@ -45,9 +45,9 @@ export const home__page_background = {
 
 
 /**
- * Animation variant for AboutPage Image
+ * Animation variant for AboutPage AboutMeRow
  */
-export const about__page_self_image = {
+export const about__page_about_me_row = {
     initial: {
         opacity: 0,
         scale: 0.3

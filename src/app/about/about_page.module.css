@@ -13,6 +13,7 @@
 /* Styling for the image of myself in the AboutMeRow */
 .self_image {
     width: min(20rem, 60vw);
+    height: min(20rem, 60vw);
 }
 
 /* Styling for the description text column */
