@@ -15,8 +15,13 @@ import Row from 'react-bootstrap/Row';
 import SocialMediaIcon from "@/components/SocialMediaIcon";
 
 
-
-
+/**
+ * Represents the element building the animated background using Thpace
+ * @param {object} props - The props object
+ * @param {JSX.Element} children - An element containing the future children elements for the page 
+ * @returns {JSX.Element} Returns an element containing an animated background 
+ * and the future child elements of the page
+ */
 const TriangleBackground = function ({ children }) {
     const settings = {
         colors: ['#000000', '#19183c', '#681884'],
@@ -65,30 +70,29 @@ const HomeContainerLinks = function () {
 };
 
 
-const HomePageContainer = function () {
-    const home_image = generalInfo.images.home_image;
-    return (
-        <Container className={`m-0 ${styles.content_overlay} d-flex align-items-center justify-content-center`} fluid>
-            <div className="d-flex flex-column align-items-center justify-content-center h-50">
-                <div className={`border border-primary-subtle border-3 bg-body-tertiary opacity-75 ${styles.image_background}`}>
-                    <Image alt={home_image.alt} src={home_image.src} className={styles.image} />
-                </div>
-
-                <h1 className="mt-2 fw-bold">Hi, I&apos;m Jotham</h1>
-                <HomeContainerLinks/>
-
-
-            </div>
-        </Container>
-
-    );
-};
-
-
+/**
+ * Represents a Container containing an animated background and small description
+ * @returns {JSX.Element} A container displaying an animated background and a short description of myself
+ */
 const HomePage = function () {
+    // Gets the information about the home image from the profile constant
+    const home_image = generalInfo.images.home_image;
+
     return (
         <TriangleBackground>
-            <HomePageContainer />
+            <Container className={`m-0 ${styles.content_overlay} d-flex align-items-center justify-content-center`} fluid>
+                <div className="d-flex flex-column align-items-center justify-content-center h-50">
+                    {/* Container for the styling of the image background */}
+                    <div className={`border border-primary-subtle border-3 bg-body-tertiary opacity-75 ${styles.image_background}`}>
+                        <Image alt={home_image.alt} src={home_image.src} className={styles.image} />
+                    </div>
+
+                    <h1 className="mt-2 fw-bold">Hi, I&apos;m Jotham</h1>
+                    <HomeContainerLinks />
+
+
+                </div>
+            </Container>
         </TriangleBackground>
 
     );
