@@ -33,8 +33,12 @@ const AboutMeImgCol = function () {
  */
 const AboutMeDescriptionCol = function () {
     return (
-        <Col lg={{ span: 7 }}>
-            {aboutMeDescription.about_me}
+        <Col lg={{ span: 6 }} className={`mt-3 mt-lg-0 ${styles.description_col} overflow-y-auto`}>
+            {
+                aboutMeDescription.about_me.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                ))
+            }
         </Col>
     );
 };
@@ -45,7 +49,7 @@ const AboutMeDescriptionCol = function () {
  */
 const AboutMeRow = function () {
     return (
-        <Row lg={2} md={1} sm={1} xs={1} className='flex-lg-row-reverse'>
+        <Row lg={2} md={1} sm={1} xs={1} className='flex-lg-row-reverse justify-content-between'>
             <AboutMeImgCol />
             <AboutMeDescriptionCol />
         </Row>

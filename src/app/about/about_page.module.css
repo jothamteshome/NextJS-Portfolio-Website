@@ -14,3 +14,8 @@
 .self_image {
     width: min(20rem, 60vw);
 }
+
+/* Styling for the description text column */
+.description_col {
+    text-align: justify;
+}
