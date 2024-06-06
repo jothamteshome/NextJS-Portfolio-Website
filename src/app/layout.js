@@ -1,21 +1,23 @@
 import "./global.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Script from "next/script";
-
 import Container from "react-bootstrap/Container";
 import NavigationBar from "@/components/NavigationBar";
 import Stack from 'react-bootstrap/Stack';
 
 export const metadata = {
   title: "Jotham Teshome",
-  description: "Jotham Teshome's portfolio website to show off all the projects he's worked on. Build with Next.js, React, and Bootstrap",
-  keywords: ['Next.js', 'React', 'Bootstrap', 'Javascript'],
-  icons: {
-    icon: '/images/jotham-teshome.jpg'
-  }
+  description: "Welcome to Jotham's Portfolio Website. Here you can find a variety of projects I have worked on, as well as the different skills and technologies I know. Please feel free to reach out to discuss more!",
+  keywords: ['next.js 14','portfolio', 'app', 'react', 'bootstrap', 'javascript', 'css'],
 };
 
+
+/**
+ * The root layout for the website
+ * @param {object} props - The props object 
+ * @param {JSX.Element} props.children - The future child elements of the current root layout
+ * @returns {JSX.Element} Returns the root layout for the website
+ */
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-bs-theme="dark">
