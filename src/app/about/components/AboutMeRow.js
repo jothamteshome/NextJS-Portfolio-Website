@@ -1,6 +1,6 @@
 import styles from '../about_page.module.css'
 
-import { about__page_about_me_row } from '@/constants/animationVariants';
+import { content_row_variant } from '@/constants/animationVariants';
 
 import { aboutMeDescription, generalInfo } from '@/constants/profileConstants';
 import { motion } from 'framer-motion';
@@ -46,7 +46,7 @@ const AboutMeDescriptionCol = function () {
  */
 const AboutMeRow = function () {
     return (
-        <motion.div variants={about__page_about_me_row} className='w-100'>
+        <motion.div variants={content_row_variant} className='w-100'>
             <Row lg={2} md={1} sm={1} xs={1} className='flex-lg-row-reverse justify-content-between'>
                 <AboutMeImgCol />
                 <AboutMeDescriptionCol />

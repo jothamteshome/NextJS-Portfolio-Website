@@ -31,16 +31,37 @@ export const content_section_variant = {
 
 
 /**
+ * Base animation variant for a row of content within a ContentSection element
+ */
+export const content_row_variant = {
+    initial: {
+        opacity: 0,
+        scale: 0.3
+    },
+    animate: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            delay: 0.7,
+            duration: 2,
+            ease: 'easeIn',
+            type: 'spring'
+        }
+    }
+}
+
+
+/**
  * Animation variant for HomePage background
  */
 export const home__page_background = {
     initial: { opacity: 0 },
-    animate: { 
+    animate: {
         opacity: 1,
         transition: {
             duration: 1.4
         }
-     }
+    }
 };
 
 
@@ -228,7 +249,8 @@ export const contact__page_column_variant = {
         opacity: 1,
         scale: 1,
         transition: {
-            duration: 1.3,
+            delay: 0.7,
+            duration: 2,
             ease: "easeIn",
             type: "spring"
         }
