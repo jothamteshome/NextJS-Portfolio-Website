@@ -1,9 +1,8 @@
 "use client"
-import { navigationRoutes, generalInfo } from '@/constants/profileConstants';
+import { navigationRoutes } from '@/constants/profileConstants';
 
 import { usePathname } from 'next/navigation';
 
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 

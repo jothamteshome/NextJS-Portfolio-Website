@@ -1,4 +1,3 @@
-"use client"
 import Col from 'react-bootstrap/Col';
 import ProjectBadge from './ProjectBadge';
 import Row from 'react-bootstrap/Row';

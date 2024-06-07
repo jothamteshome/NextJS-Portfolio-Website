@@ -1,4 +1,3 @@
-"use client"
 import { projects__page_project_card_overlay_variant } from '@/constants/animationVariants';
 
 import { motion } from 'framer-motion';

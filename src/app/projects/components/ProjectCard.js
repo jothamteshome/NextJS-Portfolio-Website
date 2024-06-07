@@ -1,4 +1,3 @@
-"use client"
 import styles from '../projects_page.module.css';
 
 import {

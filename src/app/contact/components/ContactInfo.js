@@ -1,4 +1,3 @@
-"use client"
 import { contact__page_column_variant } from '@/constants/animationVariants';
 
 import { generalInfo } from '@/constants/profileConstants';

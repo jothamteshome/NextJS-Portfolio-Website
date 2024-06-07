@@ -1,5 +1,3 @@
-"use client"
-
 import { socialMediaLinks } from "@/constants/profileConstants";
 
 import Container from 'react-bootstrap/Container';

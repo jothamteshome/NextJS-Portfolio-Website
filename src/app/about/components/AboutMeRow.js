@@ -1,4 +1,3 @@
-"use client"
 import styles from '../about_page.module.css'
 
 import { about__page_about_me_row } from '@/constants/animationVariants';

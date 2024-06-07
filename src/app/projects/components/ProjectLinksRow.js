@@ -1,4 +1,3 @@
-"use client"
 import ProjectDescriptionModal from './ProjectModal';
 import ProjectLink from './ProjectLink';
 import Row from 'react-bootstrap/Row';

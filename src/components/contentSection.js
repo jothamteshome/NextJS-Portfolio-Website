@@ -1,5 +1,3 @@
-"use client"
-
 import { content_section_variant } from "@/constants/animationVariants";
 import { motion } from "framer-motion";
 

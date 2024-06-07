@@ -1,4 +1,3 @@
-"use client"
 import Accordion from 'react-bootstrap/Accordion';
 import Col from 'react-bootstrap/Col';
 import ProjectBadgeRow from './ProjectBadgeRow';
