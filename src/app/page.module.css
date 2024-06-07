@@ -32,7 +32,9 @@ because of the background being absolutely positioned */
   width: min(20rem, 60vw);
   border-radius: 50%;
   overflow: hidden;
+  background-color: rgba(43,48,53,0.5)
 }
+
 
 /* Styling for the image on the HomePage */
 .image_background .image {

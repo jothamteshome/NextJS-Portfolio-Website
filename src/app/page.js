@@ -84,7 +84,7 @@ const HomePage = function () {
             <Container className={`m-0 ${styles.content_overlay} d-flex align-items-center justify-content-center`} fluid>
                 <div className="d-flex flex-column align-items-center justify-content-center h-50">
                     {/* Container for the styling of the image background */}
-                    <div className={`border border-primary-subtle border-3 bg-body-tertiary opacity-75 ${styles.image_background}`}>
+                    <div className={`border border-primary-subtle border-3 ${styles.image_background}`}>
                         <Image alt={home_image.alt} src={home_image.src} className={styles.image} />
                     </div>
 
