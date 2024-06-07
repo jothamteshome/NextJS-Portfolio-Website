@@ -1,7 +1,3 @@
-import { contact__page_column_variant } from '@/constants/animationVariants';
-
-import { motion } from 'framer-motion';
-
 import Button from 'react-bootstrap/Button';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
@@ -35,7 +31,6 @@ const FeedbackForm = function () {
     ]
 
     return (
-        <motion.div variants={contact__page_column_variant}>
             <Form>
                 {form_fields.map((field, i) => (
                     <FormField key={i} field_data={field} />
@@ -45,7 +40,6 @@ const FeedbackForm = function () {
                     <Button as="input" type="submit" value="Submit" disabled />
                 </Form.Group>
             </Form>
-        </motion.div>
     );
 };
 
