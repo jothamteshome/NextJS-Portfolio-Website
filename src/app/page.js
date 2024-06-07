@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 
 import { home__page_background } from "@/constants/animationVariants";
-import { socialMediaLinks, generalInfo, icons } from "@/constants/profileConstants";
+import { socialMediaLinks, generalInfo } from "@/constants/profileConstants";
 
 import { useEffect } from 'react'
 import { motion } from 'framer-motion';
