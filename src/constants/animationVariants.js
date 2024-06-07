@@ -14,6 +14,7 @@ export const route_page_variant = {
 
 };
 
+
 /**
  * Base animation variant for a ContentSection element
  */
@@ -48,7 +49,7 @@ export const content_row_variant = {
             type: 'spring'
         }
     }
-}
+};
 
 
 /**
@@ -63,27 +64,6 @@ export const home__page_background = {
         }
     }
 };
-
-
-/**
- * Animation variant for AboutPage AboutMeRow
- */
-export const about__page_about_me_row = {
-    initial: {
-        opacity: 0,
-        scale: 0.3
-    },
-    animate: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            delay: 0.7,
-            duration: 2,
-            ease: 'easeInOut',
-            type: "spring"
-        }
-    }
-}
 
 
 /**
@@ -117,7 +97,7 @@ export const about__page_skill_card_variant = {
             type: "spring"
         }
     }
-}
+};
 
 
 /**
@@ -131,7 +111,7 @@ export const projects__page_card_list_variant = {
             staggerChildren: 0.2
         }
     }
-}
+};
 
 
 /**
@@ -152,7 +132,7 @@ export const projects_page_project_card_entrance_variant = {
             type: "spring"
         }
     }
-}
+};
 
 
 /**
@@ -182,7 +162,7 @@ export const projects__page_project_card_overlay_variant = {
             duration: 0.4
         }
     }
-}
+};
 
 
 /**
@@ -196,7 +176,7 @@ export const experience__page_card_list_variant = {
             staggerChildren: 0.2
         }
     }
-}
+};
 
 
 /**
@@ -216,43 +196,4 @@ export const experience__page_card_variant = {
             type: "spring"
         }
     }
-}
-
-
-/**
- * Animation variant for a ContactPage ContentSection element
- */
-export const contact__page_content_section_variant = {
-    initial: { x: "-200%" },
-    animate: {
-        x: "0%",
-        transition: {
-            delayChildren: 0.7,
-            duration: 1.4,
-            ease: "easeIn",
-            staggerChildren: 0.3,
-            type: "spring"
-        }
-    }
-}
-
-
-/**
- * Animation variant for a ContactPage column element
- */
-export const contact__page_column_variant = {
-    initial: {
-        opacity: 0,
-        scale: 0
-    },
-    animate: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-            delay: 0.7,
-            duration: 2,
-            ease: "easeIn",
-            type: "spring"
-        }
-    }
-}
+};
