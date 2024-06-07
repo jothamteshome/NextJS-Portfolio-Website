@@ -107,7 +107,7 @@ export const projectItems = [
         image: "/images/projects/nextjs-portfolio-website.png",
         badges: ["Web"],
         links: {
-            github: "https://www.github.com"
+            github: "https://github.com/jothamteshome/NextJS-Portfolio-Website"
         }
     }
 ];
