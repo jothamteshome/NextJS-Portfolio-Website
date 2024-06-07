@@ -1,5 +1,5 @@
-import "./global.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "@/styles/main.css";
+import "@/styles/global.css";
 
 import Container from "react-bootstrap/Container";
 import NavigationBar from "@/components/NavigationBar";
