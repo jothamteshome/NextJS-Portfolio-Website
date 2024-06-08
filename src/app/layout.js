@@ -1,4 +1,4 @@
-import "@/styles/main.css";
+import "@/styles/main.scss";
 import "@/styles/global.css";
 
 import Container from "react-bootstrap/Container";
