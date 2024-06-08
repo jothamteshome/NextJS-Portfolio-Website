@@ -22,7 +22,7 @@ const ProjectCardOverlay = function ({ project }) {
         <motion.div
             variants={projects__page_project_card_overlay_variant}
             className='d-none d-md-block'>
-            <Card.ImgOverlay className='bg-dark bg-opacity-50'>
+            <Card.ImgOverlay className='bg-dark bg-opacity-50 text-white'>
                 <Stack direction="horizontal" className='d-flex justify-content-between'>
                     <Card.Title className='mb-1'>{project.name}</Card.Title>
                     <ProjectBadgeRow project={project} projectBadgeClassName="mb-2" />
