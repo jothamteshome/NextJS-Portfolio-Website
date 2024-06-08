@@ -18,7 +18,7 @@ const AboutMeImgCol = function () {
     const about_image = generalInfo.images.about_image;
     return (
         <Col className='d-flex justify-content-center flex-shrink-1' lg={{ span: 5 }}>
-            <Image className={`border border-3 bg-secondary border-primary ${styles.self_image}`} alt={about_image.alt} src={about_image.src} roundedCircle />
+            <Image className={`border border-3 bg-secondary border-primary-subtle ${styles.self_image}`} alt={about_image.alt} src={about_image.src} roundedCircle />
         </Col>
     );
 };
