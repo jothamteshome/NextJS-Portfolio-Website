@@ -13,14 +13,14 @@ import Row from 'react-bootstrap/Row';
  */
 const ExperienceCard = function ({ experience }) {
     return (
-        <Card className="bg-body-secondary">
+        <Card className="bg-body-tertiary">
             <Row lg={2} md={1} sm={1} xs={1}>
                 <Col lg={4} className='d-flex justify-content-center align-items-center'>
                     <Card.Img className={styles.logo} variant="top" alt={`Logo for ${experience.employer}`} src={experience.logo} />
                 </Col>
                 <Col lg={8}>
                     <Card.Body>
-                        <Card.Title className="fs-4 text-primary-emphasis">{experience.employer}</Card.Title>
+                        <Card.Title className="fs-3 text-secondary-emphasis">{experience.employer}</Card.Title>
                         <Card.Subtitle className="fs-5">{`${experience.start_date} - ${experience.end_date}`}</Card.Subtitle>
                         <Card.Subtitle className='my-1 fs-5 fst-italic'>{experience.role}</Card.Subtitle>
                         <Card.Text as="ul">

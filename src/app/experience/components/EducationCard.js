@@ -26,14 +26,14 @@ const EducationCard = function ({ education }) {
     }
 
     return (
-        <Card className="bg-body-secondary">
+        <Card className="bg-body-tertiary">
             <Row lg={2} md={1} sm={1} xs={1}>
                 <Col lg={4} className='d-flex justify-content-center align-items-center'>
                     <Card.Img className={styles.logo} variant="top" alt={`Logo for ${education.institution}`} src={education.logo} />
                 </Col>
                 <Col lg={8}>
                     <Card.Body>
-                        <Card.Title className="fs-4 text-primary-emphasis">{education.institution}</Card.Title>
+                        <Card.Title className="fs-3 text-secondary-emphasis">{education.institution}</Card.Title>
                         <Card.Subtitle className="fs-5">{`${education.start_date} - ${education.end_date}`}</Card.Subtitle>
                         <Card.Subtitle className='my-1 fs-5 fst-italic'>{education.degree_aquired} - GPA: {education.gpa}</Card.Subtitle>
                         <Card.Text as="ul">
