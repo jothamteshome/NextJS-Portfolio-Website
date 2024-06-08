@@ -24,16 +24,38 @@ import Typewriter from 'typewriter-effect';
  * and the future child elements of the page
  */
 const TriangleBackground = function ({ children }) {
-    const settings = {
+    // Settings for background when theme is "dark-blue"
+    const dark_blue_settings = {
         colors: ['#000000', '#19183c', '#681884'],
         triangleSize: 100,
         maxFps: 30,
         particleSettings: {
+            color: "#FFE5BE"
+        }
+    }
 
+    // Settings for background when theme is "vanillia"
+    const vanillia_settings = {
+        colors: ['#FFFFFF', '#FFE5BE', '#3884cc'],
+        triangleSize: 100,
+        maxFps: 30,
+        particleSettings: {
+            color: "#111827"
         }
     }
 
     useEffect(() => {
+        // Get theme value from html tag
+        const html = document.getElementsByTagName('html')[0];
+        const theme = html.attributes['data-bs-theme'].value;
+        
+        let settings = dark_blue_settings;
+
+        // Set settings to vanillia settings if vanillia theme is activated
+        if (theme === "vanillia") {
+            settings = vanillia_settings;
+        }
+        
         const canvas = document.getElementById('triangleBackground');
         ThpaceGL.create(canvas, settings);
     })
