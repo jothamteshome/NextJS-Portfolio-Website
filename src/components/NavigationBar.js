@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import ThemeSwitch from "@/components/ThemeSwitch";
 
 
 /**
@@ -29,6 +30,7 @@ const NavigationBar = function () {
                     }
                 </Nav>
             </Navbar.Collapse>
+            <ThemeSwitch />
         </Navbar>
     );
 };

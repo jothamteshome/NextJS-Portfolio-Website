@@ -32,3 +32,9 @@ main {
     transition: 0.5s;
     transform: scale(1.2);
 }
+
+/* Styling for the theme switching toggle in NavigationBar */
+#theme-switch {
+    width: 4em;
+    height: 2em;
+}
