@@ -12,7 +12,7 @@ import Form from 'react-bootstrap/Form';
 const FormField = function ({ field_data }) {
     return (
         <FloatingLabel className='mb-3' controlId={field_data.id} label={field_data.label}>
-            <Form.Control type={field_data.type} placeholder={field_data.placeholder} required />
+            <Form.Control type={field_data.type} placeholder={field_data.placeholder} required disabled />
         </FloatingLabel>
     );
 };
@@ -37,7 +37,7 @@ const FeedbackForm = function () {
                 ))
                 }
                 <Form.Group className='mb-3 d-flex justify-content-end' controlId='formGroupSubmitButton'>
-                    <Button as="input" type="submit" value="Submit" disabled />
+                    <Button as="input" type="submit" value="Submit" className='btn-primary' disabled />
                 </Form.Group>
             </Form>
     );
