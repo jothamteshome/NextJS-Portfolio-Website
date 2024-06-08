@@ -20,7 +20,7 @@ export const metadata = {
  */
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-bs-theme="dark">
+    <html lang="en" data-bs-theme="dark-blue">
       <Stack as="body">
         <NavigationBar />
         <Container as="main" className='bg-body' fluid>
