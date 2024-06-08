@@ -11911,5 +11911,8 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: rgba(255, 229, 190, 0.9);
   --bs-btn-disabled-border-color: #ffe5be;
 }
+[data-bs-theme=dark-blue] .accordion {
+  --bs-accordion-active-color: #111827;
+}
 
 /*# sourceMappingURL=main.css.map */
