@@ -1,5 +1,6 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import "./variables-dark-blue";
+@import "./variables-vanillia";
 
 
 [data-bs-theme="dark-blue"] {
@@ -89,4 +90,95 @@
 
 
 }
+
+
+
+[data-bs-theme="vanillia"] {
+    --bs-body-color: #{$body-color-vanillia};
+    --bs-body-color-rgb: #{to-rgb($body-color-vanillia)};
+    --bs-body-bg: #{$body-bg-vanillia};
+    --bs-body-bg-rgb: #{to-rgb($body-bg-vanillia)};
+    --bs-secondary-color: #{$body-secondary-color-vanillia};
+    --bs-secondary-color-rgb: #{to-rgb($body-secondary-color-vanillia)};
+    --bs-secondary-bg: #{$body-secondary-bg-vanillia};
+    --bs-secondary-bg-rgb: #{to-rgb($body-secondary-bg-vanillia)};
+    --bs-tertiary-bg: #{$body-tertiary-bg-vanillia};
+    --bs-tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-vanillia)};
+
+    // Text Emphasis
+    --bs-primary-text-emphasis: #{$primary-text-emphasis-vanillia};
+    --bs-secondary-text-emphasis: #{$secondary-text-emphasis-vanillia};
+    --bs-success-text-emphasis: #{$success-text-emphasis-vanillia};
+    --bs-info-text-emphasis: #{$info-text-emphasis-vanillia};
+    --bs-warning-text-emphasis: #{$warning-text-emphasis-vanillia};
+    --bs-danger-text-emphasis: #{$danger-text-emphasis-vanillia};
+    --bs-light-text-emphasis: #{$light-text-emphasis-vanillia};
+    --bs-dark-text-emphasis: #{$dark-text-emphasis-vanillia};
+
+    --bs-primary-bg-subtle: #{$primary-bg-subtle-vanillia};
+    --bs-secondary-bg-subtle: #{$secondary-bg-subtle-vanillia};
+    --bs-success-bg-subtle: #{$success-bg-subtle-vanillia};
+    --bs-info-bg-subtle: #{$info-bg-subtle-vanillia};
+    --bs-warning-bg-subtle: #{$warning-bg-subtle-vanillia};
+    --bs-danger-bg-subtle: #{$danger-bg-subtle-vanillia};
+    --bs-light-bg-subtle: #{$light-bg-subtle-vanillia};
+    --bs-dark-bg-subtle: #{$dark-bg-subtle-vanillia};
+
+    --bs-primary-border-subtle: #{$primary-border-subtle-vanillia};
+    --bs-secondary-border-subtle: #{$secondary-border-subtle-vanillia};
+    --bs-success-border-subtle: #{$success-border-subtle-vanillia};
+    --bs-info-border-subtle: #{$info-border-subtle-vanillia};
+    --bs-warning-border-subtle: #{$warning-border-subtle-vanillia};
+    --bs-danger-border-subtle: #{$danger-border-subtle-vanillia};
+    --bs-light-border-subtle: #{$light-border-subtle-vanillia};
+    --bs-dark-border-subtle: #{$dark-border-subtle-vanillia};
+
+
+    // Navigation links
+    --bs-navbar-link-color: #{$navbar-link-color-vanillia};
+    --bs-navbar-link-hover-color: #{$navbar-link-hover-color-vanillia};
+    --bs-navbar-link-active-color: #{$navbar-link-active-color-vanillia};
+
+    .navbar-toggler-icon {
+        --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-nav .nav-link {
+        color: var(--bs-navbar-link-color);
+
+        &:hover,
+        &:focus {
+            color: var(--bs-navbar-link-hover-color);
+        }
+
+        &.active {
+            color: var(--bs-navbar-link-active-color);
+        }
+    }
+
+
+    .btn-primary {
+        --bs-btn-color: #{$body-bg-vanillia};
+        --bs-btn-bg: #{$primary-vanillia};
+        --bs-btn-border-color: #{$primary-vanillia};
+        --bs-btn-hover-color: #{$body-bg-vanillia};
+        --bs-btn-hover-bg: #{rgba($primary-vanillia, .95)};
+        --bs-btn-hover-border-color: #{$body-bg-vanillia};
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #{$body-bg-vanillia};
+        --bs-btn-active-bg: #{rgba($primary-vanillia, .8)};
+        --bs-btn-active-border-color: #{$body-bg-vanillia};
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #{$body-bg-vanillia};
+        --bs-btn-disabled-bg: #{rgba($primary-vanillia, .9)};
+        --bs-btn-disabled-border-color: #{$primary-vanillia};
+      }
+
+      .accordion {
+        --bs-accordion-active-color: #{$body-bg-vanillia};
+      }
+
+
+}
+
 
