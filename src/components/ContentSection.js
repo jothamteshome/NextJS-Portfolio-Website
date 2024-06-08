@@ -20,7 +20,7 @@ const ContentSection = function ({ section_title, children, variants}) {
         <motion.div variants={animation_variant}>
             <Row className="w-100 mx-auto justify-content-center">
                 <Col xs={12}>
-                    <h1 className="fs-1 text-primary mt-5">{section_title}</h1>
+                    <h1 className="fs-1 text-primary-emphasis mt-5">{section_title}</h1>
                 </Col>
                 <Col className="mx-auto mt-2" xs={12} lg={11}>
                     {children}
