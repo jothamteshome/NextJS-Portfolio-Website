@@ -1,0 +1,92 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import "./variables-dark-blue";
+
+
+[data-bs-theme="dark-blue"] {
+    --bs-body-color: #{$body-color-dark-blue};
+    --bs-body-color-rgb: #{to-rgb($body-color-dark-blue)};
+    --bs-body-bg: #{$body-bg-dark-blue};
+    --bs-body-bg-rgb: #{to-rgb($body-bg-dark-blue)};
+    --bs-secondary-color: #{$body-secondary-color-dark-blue};
+    --bs-secondary-color-rgb: #{to-rgb($body-secondary-color-dark-blue)};
+    --bs-secondary-bg: #{$body-secondary-bg-dark-blue};
+    --bs-secondary-bg-rgb: #{to-rgb($body-secondary-bg-dark-blue)};
+    --bs-tertiary-bg: #{$body-tertiary-bg-dark-blue};
+    --bs-tertiary-bg-rgb: #{to-rgb($body-tertiary-bg-dark-blue)};
+
+    // Text Emphasis
+    --bs-primary-text-emphasis: #{$primary-text-emphasis-dark-blue};
+    --bs-secondary-text-emphasis: #{$secondary-text-emphasis-dark-blue};
+    --bs-success-text-emphasis: #{$success-text-emphasis-dark-blue};
+    --bs-info-text-emphasis: #{$info-text-emphasis-dark-blue};
+    --bs-warning-text-emphasis: #{$warning-text-emphasis-dark-blue};
+    --bs-danger-text-emphasis: #{$danger-text-emphasis-dark-blue};
+    --bs-light-text-emphasis: #{$light-text-emphasis-dark-blue};
+    --bs-dark-text-emphasis: #{$dark-text-emphasis-dark-blue};
+
+    --bs-primary-bg-subtle: #{$primary-bg-subtle-dark-blue};
+    --bs-secondary-bg-subtle: #{$secondary-bg-subtle-dark-blue};
+    --bs-success-bg-subtle: #{$success-bg-subtle-dark-blue};
+    --bs-info-bg-subtle: #{$info-bg-subtle-dark-blue};
+    --bs-warning-bg-subtle: #{$warning-bg-subtle-dark-blue};
+    --bs-danger-bg-subtle: #{$danger-bg-subtle-dark-blue};
+    --bs-light-bg-subtle: #{$light-bg-subtle-dark-blue};
+    --bs-dark-bg-subtle: #{$dark-bg-subtle-dark-blue};
+
+    --bs-primary-border-subtle: #{$primary-border-subtle-dark-blue};
+    --bs-secondary-border-subtle: #{$secondary-border-subtle-dark-blue};
+    --bs-success-border-subtle: #{$success-border-subtle-dark-blue};
+    --bs-info-border-subtle: #{$info-border-subtle-dark-blue};
+    --bs-warning-border-subtle: #{$warning-border-subtle-dark-blue};
+    --bs-danger-border-subtle: #{$danger-border-subtle-dark-blue};
+    --bs-light-border-subtle: #{$light-border-subtle-dark-blue};
+    --bs-dark-border-subtle: #{$dark-border-subtle-dark-blue};
+
+
+    // Navigation links
+    --bs-navbar-link-color: #{$navbar-link-color-dark-blue};
+    --bs-navbar-link-hover-color: #{$navbar-link-hover-color-dark-blue};
+    --bs-navbar-link-active-color: #{$navbar-link-active-color-dark-blue};
+
+    .navbar-toggler-icon {
+        --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-nav .nav-link {
+        color: var(--bs-navbar-link-color);
+
+        &:hover,
+        &:focus {
+            color: var(--bs-navbar-link-hover-color);
+        }
+
+        &.active {
+            color: var(--bs-navbar-link-active-color);
+        }
+    }
+
+
+    .btn-primary {
+        --bs-btn-color: #{$body-bg-dark-blue};
+        --bs-btn-bg: #{$primary-dark-blue};
+        --bs-btn-border-color: #{$primary-dark-blue};
+        --bs-btn-hover-color: #{$body-bg-dark-blue};
+        --bs-btn-hover-bg: #{rgba($primary-dark-blue, .95)};
+        --bs-btn-hover-border-color: #{$body-bg-dark-blue};
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #{$body-bg-dark-blue};
+        --bs-btn-active-bg: #{rgba($primary-dark-blue, .8)};
+        --bs-btn-active-border-color: #{$body-bg-dark-blue};
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #{$body-bg-dark-blue};
+        --bs-btn-disabled-bg: #{rgba($primary-dark-blue, .9)};
+        --bs-btn-disabled-border-color: #{$primary-dark-blue};
+      }
+
+      .accordion {
+        --bs-accordion-active-color: #{$body-bg-dark-blue};
+      }
+
+
+}
+
