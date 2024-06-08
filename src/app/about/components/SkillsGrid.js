@@ -22,7 +22,7 @@ import Row from 'react-bootstrap/Row';
 const SkillCard = function ({ skill }) {
     return (
         <motion.div variants={about__page_skill_card_variant}>
-            <Card className={`bg-body-secondary ${styles.skill_card}`}>
+            <Card className={`bg-body-tertiary ${styles.skill_card}`}>
                 <Card.Img className={styles.icon} src={skill.icon} alt={`Icon for ${skill.name}`} />
                 <Card.Footer className={`d-flex align-items-center justify-content-center ${styles.skill_card_footer}`}>
                     <p className='mb-0 text-body text-center'>{skill.name}</p>

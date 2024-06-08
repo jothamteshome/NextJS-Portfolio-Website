@@ -26,7 +26,7 @@ const EducationCard = function ({ education }) {
     }
 
     return (
-        <Card className="bg-body-tertiary">
+        <Card className="bg-body-secondary">
             <Row lg={2} md={1} sm={1} xs={1}>
                 <Col lg={4} className='d-flex justify-content-center align-items-center'>
                     <Card.Img className={styles.logo} variant="top" alt={`Logo for ${education.institution}`} src={education.logo} />
