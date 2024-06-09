@@ -15,14 +15,15 @@ import Stack from 'react-bootstrap/Stack';
 const ThemeProvider = function ({ children }) {
     // Set the current state of the document to use the stored theme if it exists
     // otherwise default to dark-blue
-    const [theme, setTheme] = useState(() => { 
-        return localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark-blue'; 
-    }
-    );
+    const [theme, setTheme] = useState('dark-blue');
 
     // Set the attribute of the body element to be the same as currently toggled theme
     // and store the value locally
     useEffect(() => {
+        setTheme(() => {
+            return localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark-blue';
+        })
+
         document.getElementsByTagName('body')[0].setAttribute('data-bs-theme', theme);
 
         localStorage.setItem('theme', theme);
