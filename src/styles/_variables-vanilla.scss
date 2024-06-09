@@ -1,0 +1,58 @@
+// _variables-vanilla.scss
+$primary-vanilla:         #111827;
+$secondary-vanilla:       #ffefd8;
+
+// Define additional custom variables as needed
+$primary-text-emphasis-vanilla: $primary-vanilla !default;
+$secondary-text-emphasis-vanilla: tint-color($secondary-vanilla, 40%) !default;
+$success-text-emphasis-vanilla: tint-color($success, 40%) !default;
+$info-text-emphasis-vanilla: tint-color($info, 40%) !default;
+$warning-text-emphasis-vanilla: tint-color($warning, 40%) !default;
+$danger-text-emphasis-vanilla: tint-color($danger, 40%) !default;
+$light-text-emphasis-vanilla: $gray-100 !default;
+$dark-text-emphasis-vanilla: $gray-300 !default;
+
+// Define background and border variables as needed
+$primary-bg-subtle-vanilla: $primary-vanilla !default;
+$secondary-bg-subtle-vanilla: shade-color($secondary-vanilla, 80%) !default;
+$success-bg-subtle-vanilla: shade-color($success, 80%) !default;
+$info-bg-subtle-vanilla: shade-color($info, 80%) !default;
+$warning-bg-subtle-vanilla: shade-color($warning, 80%) !default;
+$danger-bg-subtle-vanilla: shade-color($danger, 80%) !default;
+$light-bg-subtle-vanilla: $gray-800 !default;
+$dark-bg-subtle-vanilla: #3182ce !default;
+
+$primary-border-subtle-vanilla: $primary-vanilla !default;
+$secondary-border-subtle-vanilla: shade-color($secondary-vanilla, 40%) !default;
+$success-border-subtle-vanilla: shade-color($success, 40%) !default;
+$info-border-subtle-vanilla: shade-color($info, 40%) !default;
+$warning-border-subtle-vanilla: shade-color($warning, 40%) !default;
+$danger-border-subtle-vanilla: shade-color($danger, 40%) !default;
+$light-border-subtle-vanilla: $gray-700 !default;
+$dark-border-subtle-vanilla: $gray-800 !default;
+
+
+$body-color-vanilla:                   #111827 !default;
+$body-bg-vanilla:                      #ffefd8 !default;
+$body-secondary-color-vanilla:         rgba($body-color-vanilla, .75) !default;
+$body-secondary-bg-vanilla:            #A68C9C !default;
+$body-tertiary-color-vanilla:          rgba($body-color-vanilla, .5) !default;
+$body-tertiary-bg-vanilla:             #374151 !default;
+$body-emphasis-color-vanilla:          $white !default;
+$border-color-vanilla:                 $gray-700 !default;
+$border-color-translucent-vanilla:     rgba($white, .15) !default;
+$headings-color-vanilla:               inherit !default;
+$link-color-vanilla:                   tint-color($primary, 40%) !default;
+$link-hover-color-vanilla:             shift-color($link-color-vanilla, -$link-shade-percentage) !default;
+$code-color-vanilla:                   tint-color($code-color, 40%) !default;
+$mark-color-vanilla:                   $body-color-vanilla !default;
+$mark-bg-vanilla:                      $yellow-800 !default;
+
+
+// // Navbar
+
+$navbar-link-color-vanilla: rgba($white, .65) !default;
+$navbar-link-hover-color-vanilla: rgba($white, .8) !default;
+$navbar-link-active-color-vanilla: $white !default;
+
+$accordion-border-color: $body-color-vanilla !default;

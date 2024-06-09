@@ -34,8 +34,8 @@ const TriangleBackground = function ({ children }) {
         }
     }
 
-    // Settings for background when theme is "vanillia"
-    const vanillia_settings = {
+    // Settings for background when theme is "vanilla"
+    const vanilla_settings = {
         colors: ['#FFFFFF', '#FFE5BE', '#3884cc'],
         triangleSize: 100,
         maxFps: 30,
@@ -51,9 +51,9 @@ const TriangleBackground = function ({ children }) {
         
         let settings = dark_blue_settings;
 
-        // Set settings to vanillia settings if vanillia theme is activated
-        if (theme === "vanillia") {
-            settings = vanillia_settings;
+        // Set settings to vanilla settings if vanilla theme is activated
+        if (theme === "vanilla") {
+            settings = vanilla_settings;
         }
         
         const canvas = document.getElementById('triangleBackground');
