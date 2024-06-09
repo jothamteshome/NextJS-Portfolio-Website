@@ -13,7 +13,7 @@ const ThemeSwitch = function ({ theme, setTheme }) {
 
     return (
         <Form>
-            <Form.Switch id="theme-switch" onClick={toggleTheme} checked={theme === "vanilla" ? true : false}/>
+            <Form.Switch id="theme-switch" onClick={toggleTheme} defaultChecked={theme === "vanilla" ? true : false}/>
         </Form>
     );
 };
