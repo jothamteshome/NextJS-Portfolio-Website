@@ -10,9 +10,12 @@ import ThemeSwitch from "@/components/ThemeSwitch";
 
 /**
  * Represents the navigation bar displayed at the top of the page
+ * @param {object} props - The props object
+ * @param {string} props.theme - The current state for the theme of the page
+ * @param {Dispatch<SetStateAction<string>>} props.setTheme - The state setter for the current theme
  * @returns {JSX.Element} Returns a Navbar element containing the navigation links for the website
  */
-const NavigationBar = function () {
+const NavigationBar = function ({ theme, setTheme }) {
     // Get the pathname for the current page
     const pathname = usePathname();
 
@@ -30,7 +33,7 @@ const NavigationBar = function () {
                     }
                 </Nav>
             </Navbar.Collapse>
-            <ThemeSwitch />
+            <ThemeSwitch theme={theme} setTheme={setTheme} />
         </Navbar>
     );
 };

@@ -45,9 +45,7 @@ const TriangleBackground = function ({ children }) {
     }
 
     useEffect(() => {
-        // Get theme value from html tag
-        const html = document.getElementsByTagName('html')[0];
-        const theme = html.attributes['data-bs-theme'].value;
+        const theme = localStorage.getItem('theme') || 'dark-blue';
         
         let settings = dark_blue_settings;
 

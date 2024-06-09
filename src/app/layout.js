@@ -1,14 +1,13 @@
 import "@/styles/main.scss";
 import "@/styles/global.css";
 
-import Container from "react-bootstrap/Container";
-import NavigationBar from "@/components/NavigationBar";
-import Stack from 'react-bootstrap/Stack';
+
+import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata = {
   title: "Jotham Teshome",
   description: "Welcome to Jotham's Portfolio Website. Here you can find a variety of projects I have worked on, as well as the different skills and technologies I know. Please feel free to reach out to discuss more!",
-  keywords: ['next.js 14','portfolio', 'app', 'react', 'bootstrap', 'javascript', 'css'],
+  keywords: ['next.js 14', 'portfolio', 'app', 'react', 'bootstrap', 'javascript', 'css'],
 };
 
 
@@ -20,13 +19,10 @@ export const metadata = {
  */
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-bs-theme="dark-blue">
-      <Stack as="body">
-        <NavigationBar />
-        <Container as="main" className='bg-body' fluid>
-          {children}
-        </Container>
-      </Stack>
+    <html lang="en">
+      <ThemeProvider>
+        {children}
+      </ThemeProvider>
     </html>
   )
 };
