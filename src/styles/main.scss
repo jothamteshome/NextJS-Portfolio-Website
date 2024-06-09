@@ -112,12 +112,13 @@
 
         .form-check-input:focus {
             --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+            background-color: #0b0a19;
         }
 
         .form-check-input:checked {
             background-position: right center;
-            background-color: #{$secondary-dark-blue};
-            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffe5be'/%3e%3c/svg%3e");
+            background-color: #ffefd8;
+            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
         }
 
         .form-check-reverse {
@@ -242,12 +243,13 @@
 
         .form-check-input:focus {
             --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+            background-color: #0b0a19;
         }
 
         .form-check-input:checked {
             background-position: right center;
-            background-color: #{$secondary-dark-blue};
-            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffe5be'/%3e%3c/svg%3e");
+            background-color: #ffefd8;
+            --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
         }
 
         .form-check-reverse {
