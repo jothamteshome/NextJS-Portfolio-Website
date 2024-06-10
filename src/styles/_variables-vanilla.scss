@@ -37,7 +37,7 @@ $body-bg-vanilla:                      #ffefd8 !default;
 $body-secondary-color-vanilla:         rgba($body-color-vanilla, .75) !default;
 $body-secondary-bg-vanilla:            #A68C9C !default;
 $body-tertiary-color-vanilla:          rgba($body-color-vanilla, .5) !default;
-$body-tertiary-bg-vanilla:             #374151 !default;
+$body-tertiary-bg-vanilla:             $gray-500 !default;
 $body-emphasis-color-vanilla:          $white !default;
 $border-color-vanilla:                 $gray-700 !default;
 $border-color-translucent-vanilla:     rgba($white, .15) !default;

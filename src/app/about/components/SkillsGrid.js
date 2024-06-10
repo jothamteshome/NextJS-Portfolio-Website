@@ -28,9 +28,9 @@ const SkillCard = function ({ skill }) {
                         <Card.Img className={` ${styles.icon}`} src={skill.icon} alt={`Icon for ${skill.name}`} />
                     </Col>
                     <Col xs={7} className='p-0'>
-                        <Card.Footer className={`d-flex align-items-center justify-content-center px-0 ${styles.skill_card_footer}`}>
+                        <Card.Body className={`d-flex align-items-center justify-content-center px-0 ${styles.skill_card_footer}`}>
                             <p className='mb-0 text-body text-center'>{skill.name}</p>
-                        </Card.Footer>
+                        </Card.Body>
                     </Col>
                 </Row>
             </Card>
