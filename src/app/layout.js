@@ -1,8 +1,9 @@
 import "@/styles/main.scss";
 import "@/styles/global.css";
 
-
-import ThemeProvider from "@/components/ThemeProvider";
+import Container from "react-bootstrap/Container";
+import NavigationBar from "@/components/NavigationBar";
+import Stack from 'react-bootstrap/Stack';
 
 export const metadata = {
   title: "Jotham Teshome",
@@ -20,9 +21,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ThemeProvider>
-        {children}
-      </ThemeProvider>
+      <Stack as="body" data-bs-theme="dark-blue">
+        <NavigationBar />
+        <Container as="main" className='bg-body' fluid>
+          {children}
+        </Container>
+      </Stack>
     </html>
   )
 };
