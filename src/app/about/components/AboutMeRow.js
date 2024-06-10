@@ -33,7 +33,7 @@ const AboutMeDescriptionCol = function () {
         <Col lg={{ span: 6 }} className={`mt-3 mt-lg-0 ${styles.description_col} overflow-y-auto d-flex flex-column justify-content-center`}>
             {
                 aboutMeDescription.about_me.map((paragraph, i) => (
-                    <p key={i}>{paragraph}</p>
+                    <p key={i} className='fs-5'>{paragraph}</p>
                 ))
             }
         </Col>
