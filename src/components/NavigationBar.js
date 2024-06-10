@@ -17,7 +17,7 @@ const NavigationBar = function () {
     const pathname = usePathname();
 
     return (
-        <Navbar fixed="top" expand="lg" className="bg-dark-subtle px-2" as="nav">
+        <Navbar fixed="top" expand="lg" className="bg-dark-subtle px-2 navigation-bar" as="nav">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav variant="underline" activeKey={pathname}>

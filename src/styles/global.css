@@ -33,8 +33,8 @@ main {
     transform: scale(1.2);
 }
 
-/* Styling for the theme switching toggle in NavigationBar */
-#theme-switch {
-    width: 4em;
-    height: 2em;
+/* Styling to add box shadow and opacity to NavigationBar */
+.navigation-bar {
+    opacity: 0.95;
+    box-shadow: 0 0.05rem 0.3rem black;
 }
