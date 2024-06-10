@@ -166,7 +166,14 @@ export const educationItems = [
         end_date: "Dec 2022",
         degree_aquired: "BS, Computer Science",
         gpa: "3.69",
-        coursework: [],
+        coursework: [
+            "Data Structures & Algorithms",
+            "Operating Systems",
+            "Computer Networks",
+            "Algorithm Engineering",
+            "Web Application Development",
+            "Database Systems",
+        ],
         logo: "https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg"
     }
 ];

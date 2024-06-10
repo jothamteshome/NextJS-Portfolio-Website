@@ -36,5 +36,5 @@ main {
 /* Styling to add box shadow and opacity to NavigationBar */
 .navigation-bar {
     opacity: 0.95;
-    box-shadow: 0 0.05rem 0.3rem black;
+    box-shadow: 0 0.05rem 0.3rem #000000;
 }
