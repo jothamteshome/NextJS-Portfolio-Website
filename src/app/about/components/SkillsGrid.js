@@ -23,10 +23,16 @@ const SkillCard = function ({ skill }) {
     return (
         <motion.div variants={about__page_skill_card_variant}>
             <Card className={`bg-body-tertiary ${styles.skill_card}`}>
-                <Card.Img className={styles.icon} src={skill.icon} alt={`Icon for ${skill.name}`} />
-                <Card.Footer className={`d-flex align-items-center justify-content-center ${styles.skill_card_footer}`}>
-                    <p className='mb-0 text-body text-center'>{skill.name}</p>
-                </Card.Footer>
+                <Row className='w-100 mx-auto justify-content-around'>
+                    <Col className='d-flex flex-column align-items-center justify-content-center px-0' xs={4}>
+                        <Card.Img className={` ${styles.icon}`} src={skill.icon} alt={`Icon for ${skill.name}`} />
+                    </Col>
+                    <Col xs={7} className='p-0'>
+                        <Card.Footer className={`d-flex align-items-center justify-content-center px-0 ${styles.skill_card_footer}`}>
+                            <p className='mb-0 text-body text-center'>{skill.name}</p>
+                        </Card.Footer>
+                    </Col>
+                </Row>
             </Card>
         </motion.div>
     );
@@ -40,15 +46,13 @@ const SkillCard = function ({ skill }) {
 const SkillsGrid = function () {
     return (
         <motion.div variants={about__page_skill_grid_variant}>
-            <Row className="gy-5" xxl={6} xl={5} lg={4} md={3} sm={2} xs={2}>
+            <div className={styles.skill_grid}>
                 {
                     skills.map((skill, i) => (
-                        <Col key={i} className='d-flex justify-content-center'>
-                            <SkillCard key={i} skill={skill} />
-                        </Col>
+                        <SkillCard key={i} skill={skill} />
                     ))
                 }
-            </Row>
+            </div>
         </motion.div>
     );
 };

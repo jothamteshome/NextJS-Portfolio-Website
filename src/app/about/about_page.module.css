@@ -1,7 +1,7 @@
 /* Styling for a SkillCard element in the SkillsGrid */
 .skill_card {
     border-radius: 0.75rem;
-    width: 7rem;
+    width: 8rem;
 }
 
 
@@ -19,4 +19,16 @@
 /* Styling for the description text column */
 .description_col {
     text-align: justify;
+}
+
+.icon {
+    width: 2rem;
+}
+
+.skill_grid {
+    display: grid;
+    row-gap: 1em;
+    justify-content: space-evenly;
+    column-gap: 1em;
+    grid-template-columns: repeat(auto-fill, 8rem);
 }
