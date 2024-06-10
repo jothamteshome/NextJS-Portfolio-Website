@@ -22,7 +22,7 @@ because of the background being absolutely positioned */
 
 /* Styling for the background circle for the image on the HomePage */
 .content_overlay .image_background {
-  width: min(20rem, 100%);
+  width: min(20rem, 60vw);
   border-radius: 50%;
   overflow: hidden;
   background-color: rgba(43,48,53,0.5)

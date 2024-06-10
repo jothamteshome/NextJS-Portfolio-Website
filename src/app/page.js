@@ -111,8 +111,8 @@ const HomePage = function () {
                     <h1 className="mt-2 fw-bold text-center">Hi, I&apos;m {generalInfo.contact_info.name}</h1>
                     <Typewriter
                         options={{
-                            wrapperClassName: "h1",
-                            cursorClassName: "h1",
+                            wrapperClassName: "h2",
+                            cursorClassName: "h2",
                             strings: generalInfo.typewriter_strings,
                             autoStart: true,
                             loop: true,
