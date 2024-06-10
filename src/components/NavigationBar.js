@@ -33,7 +33,6 @@ const NavigationBar = function ({ theme, setTheme }) {
                     }
                 </Nav>
             </Navbar.Collapse>
-            <ThemeSwitch theme={theme} setTheme={setTheme} />
         </Navbar>
     );
 };
