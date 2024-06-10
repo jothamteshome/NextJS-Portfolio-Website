@@ -45,7 +45,7 @@ const ExperiencesPageCardList = function ({ list_items, ListCard }) {
  */
 const ExperiencesPage = function () {
     return (
-        <Container className="d-flex flex-column w-75" fluid="lg">
+        <Container className="d-flex flex-column w-md-75 w-xs-100" fluid="lg">
             <motion.div
                 variants={route_page_variant}
                 initial="initial"

@@ -47,7 +47,7 @@ const ReachMeRow = function ({ display_classes, flex_row_reverse, children }) {
  */
 const ContactPage = function () {
     return (
-        <Container className="d-flex flex-column" fluid="lg">
+        <Container className="d-flex flex-column w-md-75 w-xs-100" fluid="lg">
             <motion.div
                 variants={route_page_variant}
                 initial="initial"
