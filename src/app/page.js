@@ -76,7 +76,7 @@ const TriangleBackground = function ({ children }) {
  */
 const HomeContainerLinks = function () {
     return (
-        <Row className={`${styles.media_icons} d-flex justify-content-around mt-2`} xs="auto" >
+        <Row className={`${styles.media_icons} d-flex justify-content-around mt-3`} xs="auto" >
             {
                 socialMediaLinks.map((link, i) => (
                     <Col key={i}>
@@ -102,17 +102,17 @@ const HomePage = function () {
     return (
         <TriangleBackground>
             <Container className={`m-0 ${styles.content_overlay} d-flex align-items-center justify-content-center`} fluid>
-                <div className="d-flex flex-column align-items-center justify-content-center h-50">
+                <div className="d-flex flex-column align-items-center justify-content-center">
                     {/* Container for the styling of the image background */}
                     <div className={`border border-primary-subtle border-3 ${styles.image_background}`}>
                         <Image alt={home_image.alt} src={home_image.src} className={styles.image} />
                     </div>
 
-                    <h1 className="mt-2 fw-bold">Hi, I&apos;m {generalInfo.contact_info.name}</h1>
+                    <h1 className="mt-2 fw-bold text-center">Hi, I&apos;m {generalInfo.contact_info.name}</h1>
                     <Typewriter
                         options={{
-                            wrapperClassName: styles.typewriter_wrapper,
-                            cursorClassName: styles.typewriter_wrapper,
+                            wrapperClassName: "h1",
+                            cursorClassName: "h1",
                             strings: generalInfo.typewriter_strings,
                             autoStart: true,
                             loop: true,
