@@ -12,7 +12,7 @@ import Form from 'react-bootstrap/Form';
 const FormField = function ({ field_data }) {
     return (
         <FloatingLabel className='mb-3' controlId={field_data.id} label={field_data.label}>
-            <Form.Control type={field_data.type} placeholder={field_data.placeholder} required disabled />
+            <Form.Control type={field_data.type} placeholder={field_data.placeholder} required />
         </FloatingLabel>
     );
 };
@@ -30,16 +30,52 @@ const FeedbackForm = function () {
         { id: 'floatingComments', label: 'Comments?', type: 'textarea', placeholder: "Comments?" }
     ]
 
-    return (
-            <Form>
-                {form_fields.map((field, i) => (
-                    <FormField key={i} field_data={field} />
-                ))
+
+    const processForm = (event) => {
+        event.preventDefault();
+
+        const form_data = {
+            name: document.getElementById('floatingName').value,
+            email: document.getElementById('floatingEmail').value,
+            comments: document.getElementById('floatingComments').value
+        }
+
+
+        // Send form data to fabform.io form endpoint
+        fetch(`https://fabform.io/f/${process.env.NEXT_PUBLIC_FABFORM_ID}`,
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(form_data)
+            }
+        )
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true") {
+                    document.getElementById('form-success-msg').innerHTML = "<p class='text-success m-0'>Form submitted successfully!</p>"
+                } else {
+                    throw new Error('Server response indicates failure');
                 }
-                <Form.Group className='mb-3 d-flex justify-content-end' controlId='formGroupSubmitButton'>
-                    <Button as="input" type="submit" value="Submit" className='btn-primary' disabled />
-                </Form.Group>
-            </Form>
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('form-success-msg').innerHTML = "<p class='text-danger m-0'>An error occurred while submitting the form.</p>"
+            })
+    }
+
+    return (
+        <Form id="feedback-form">
+            {form_fields.map((field, i) => (
+                <FormField key={i} field_data={field} />
+            ))
+            }
+            <Form.Group className='mb-3 d-flex justify-content-between' controlId='formGroupSubmitButton'>
+                <div id="form-success-msg" className='my-auto'></div>
+                <Button as="input" type="submit" value="Submit" className='btn-primary' onClick={processForm} />
+            </Form.Group>
+        </Form>
     );
 };
 
