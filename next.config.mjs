@@ -8,6 +8,9 @@ const __dirname = path.dirname(__filename);
 
 const nextConfig = {
     output: "export",
+    env: {
+      NEXT_PUBLIC_FABFORM_ID: process.env.NEXT_PUBLIC_FABFORM_ID,
+    },
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
       },
