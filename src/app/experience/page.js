@@ -51,16 +51,16 @@ const ExperiencesPage = function () {
                 initial="initial"
                 animate="animate"
             >
-                <ContentSection section_title="Experiences">
-                    <ExperiencesPageCardList
-                        list_items={experienceItems}
-                        ListCard={({ item }) => <ExperienceCard experience={item} />} />
-                </ContentSection>
-
                 <ContentSection section_title="Education">
                     <ExperiencesPageCardList
                         list_items={educationItems}
                         ListCard={({ item }) => <EducationCard education={item} />} />
+                </ContentSection>
+
+                <ContentSection section_title="Experiences">
+                    <ExperiencesPageCardList
+                        list_items={experienceItems}
+                        ListCard={({ item }) => <ExperienceCard experience={item} />} />
                 </ContentSection>
             </motion.div>
         </Container>
