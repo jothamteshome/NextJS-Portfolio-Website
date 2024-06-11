@@ -55,6 +55,9 @@ const FeedbackForm = function () {
             .then(data => {
                 if (data.success === "true") {
                     document.getElementById('form-success-msg').innerHTML = "<p class='text-success m-0'>Form submitted successfully!</p>"
+
+                    // Reset the form if content is submitted successfully
+                    document.getElementById('feedback-form').reset();
                 } else {
                     throw new Error('Server response indicates failure');
                 }
