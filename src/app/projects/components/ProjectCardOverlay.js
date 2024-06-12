@@ -1,11 +1,14 @@
+import styles from '../projects_page.module.css';
 import { projects__page_project_card_overlay_variant } from '@/constants/animationVariants';
 
 import { motion } from 'framer-motion';
 
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ProjectBadgeRow from './ProjectBadgeRow';
 import ProjectLinksRow from './ProjectLinksRow';
+import Row from 'react-bootstrap/Row';
 import Stack from 'react-bootstrap/Stack';
 
 
@@ -22,15 +25,20 @@ const ProjectCardOverlay = function ({ project }) {
         <motion.div
             variants={projects__page_project_card_overlay_variant}
             className='d-none d-md-block'>
-            <Card.ImgOverlay className='bg-dark bg-opacity-50 text-white'>
-                <Stack direction="horizontal" className='d-flex justify-content-between'>
-                    <Card.Title className='mb-1'>{project.name}</Card.Title>
-                    <ProjectBadgeRow project={project} projectBadgeClassName="mb-2" />
-                </Stack>
-                <Container className='h-100 p-0 pb-4 d-flex flex-column justify-content-between'>
-                    <Card.Text className='text-wrap text-truncate'>{project.description}</Card.Text>
+            <Card.ImgOverlay className='d-flex flex-column h-100 bg-dark bg-opacity-50 text-white'>
+                <Row>
+                    <Col md={{ span: 9 }}>
+                        <Card.Title className="mb-1">{project.name}</Card.Title>
+                    </Col>
+                    <Col md={{ span: 3 }} className='d-flex justify-content-end pe-3'>
+                        <ProjectBadgeRow project={project} projectBadgeClassName="mb-2" />
+                    </Col>
+                </Row>
+
+                <div className='d-flex flex-column flex-grow-1 justify-content-between'>
+                    <Card.Text className='text-truncate m-0'>{project.description}</Card.Text>
                     <ProjectLinksRow project={project} />
-                </Container>
+                </div>
             </Card.ImgOverlay>
         </motion.div>
     );
