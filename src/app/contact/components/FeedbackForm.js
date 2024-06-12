@@ -69,14 +69,14 @@ const FeedbackForm = function () {
     }
 
     return (
-        <Form id="feedback-form">
+        <Form id="feedback-form" onSubmit={processForm}>
             {form_fields.map((field, i) => (
                 <FormField key={i} field_data={field} />
             ))
             }
             <Form.Group className='mb-3 d-flex justify-content-between' controlId='formGroupSubmitButton'>
                 <div id="form-success-msg" className='my-auto'></div>
-                <Button as="input" type="submit" value="Submit" className='btn-primary' onClick={processForm} />
+                <Button as="input" type="submit" value="Submit" className='btn-primary' />
             </Form.Group>
         </Form>
     );
