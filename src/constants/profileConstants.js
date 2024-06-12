@@ -15,7 +15,7 @@ export const navigationRoutes = [
  */
 export const generalInfo = {
     resume: {
-        src: '/files/2024-04__Jotham_Teshome_Resume.pdf',
+        src: '/files/2024-06__Jotham_Teshome_Resume.pdf',
         name: 'Jotham Teshome Resume.pdf'
     },
     images: {
