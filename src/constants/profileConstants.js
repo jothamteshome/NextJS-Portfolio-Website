@@ -20,8 +20,8 @@ export const generalInfo = {
     },
     images: {
         home_image: {
-            src: "/images/jotham-teshome-avatar.png",
-            alt: "Jotham's avatar image"
+            src: "/images/jotham-teshome-glasses.png",
+            alt: "Jotham's image with glasses"
         },
         about_image: {
             src: "/images/jotham-teshome.jpg",
