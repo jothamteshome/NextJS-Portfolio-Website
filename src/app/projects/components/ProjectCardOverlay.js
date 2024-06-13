@@ -1,15 +1,12 @@
-import styles from '../projects_page.module.css';
 import { projects__page_project_card_overlay_variant } from '@/constants/animationVariants';
 
 import { motion } from 'framer-motion';
 
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
 import ProjectBadgeRow from './ProjectBadgeRow';
 import ProjectLinksRow from './ProjectLinksRow';
 import Row from 'react-bootstrap/Row';
-import Stack from 'react-bootstrap/Stack';
 
 
 /**
@@ -35,10 +32,11 @@ const ProjectCardOverlay = function ({ project }) {
                     </Col>
                 </Row>
 
-                <div className='d-flex flex-column flex-grow-1 justify-content-between'>
-                    <Card.Text className='text-truncate m-0'>{project.description}</Card.Text>
-                    <ProjectLinksRow project={project} />
+                <div className='d-flex flex-column flex-grow-1 justify-content-between overflow-hidden'>
+                    <Card.Text className="m-0" style={{ maxHeight: '85%', overflow: 'hidden', textOverflow: 'ellipsis' }}>{project.description}</Card.Text>
                 </div>
+                
+                <ProjectLinksRow className="mt-auto" project={project} />
             </Card.ImgOverlay>
         </motion.div>
     );
