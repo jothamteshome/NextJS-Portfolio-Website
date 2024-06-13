@@ -122,6 +122,21 @@ export const projectItems = [
         links: {
             github: "https://github.com/jothamteshome/Classification-of-Pokemon-Sprites"
         }
+    },
+    {
+        name: "Predicting NFL Betting Odds",
+        description: "In this project, we aim to predict the points spread of an NFL game using many different factors, \
+        including home and away team records and average per game metrics. To make these predictions effectively, \
+        we tested various regression models, including linear regression, ridge regression, lasso regression, \
+        random forest regression, voting regression, support vector regression, and a neural network. \
+        We believe training all of these various models will give us better insight into where we can \
+        improve model performance by introducing a different feature set, as well as being able to \
+        compare the accuracy of a purely linear model with a non-linear model.",
+        image: "/images/projects/predicting-nfl-betting-odds.jpg",
+        badges: ["ML"],
+        links: {
+            github: "https://github.com/jothamteshome/Predicting-NFL-Betting-Odds"
+        }
     }
 ];
 
