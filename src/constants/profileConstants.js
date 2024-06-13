@@ -55,7 +55,7 @@ export const aboutMeDescription = {
     about_me: [
         "I'm Jotham, a recent Computer Science graduate with a Master of Science from Michigan State University. \
         I specialize in Software Engineering and Machine Learning, with my current interests being Natural \
-        Language Processing and Computer Vision.", 
+        Language Processing and Computer Vision.",
         "Driven by curiosity, I enjoy the challenge of tackling projects, both large and small. Each one provides me a unique \
         opportunity to expand my knowledge on new technologies.",
         "I'm always excited to explore new opportunities and discuss how I can contribute to innovative projects. If you're \
@@ -92,8 +92,10 @@ export const skills = [
  * Object containing details for different project badge types
  */
 export const projectBadgeDetails = {
-    "Web": { bg_color: "orange", txt_color: "white" },
-    "ML": { bg_color: "blue", txt_color: "white" }
+    "Web": { bg_color: "#EC4E20", txt_color: "#FFFFFF" },
+    "ML": { bg_color: "#1A535C", txt_color: "#FFFFFF" },
+    "CV": { bg_color: "#C20114", txt_color: "#FFFFFF" },
+    "NLP": { bg_color: "#55286F", txt_color: "#FFFFFF" }
 }
 
 
@@ -108,6 +110,17 @@ export const projectItems = [
         badges: ["Web"],
         links: {
             github: "https://github.com/jothamteshome/NextJS-Portfolio-Website"
+        }
+    },
+    {
+        name: "Classification of Pokemon Sprites",
+        description: "Collaborated with a team of four students to design and implement a convolutional neural network model. \
+        Successfully utilized image processing and machine learning techniques to classify Pokémon sprites within a set of images, \
+        achieving up to 86% accuracy in classifying sprites from battle images.",
+        image: "/images/projects/classification-of-pokemon-sprites.png",
+        badges: ["CV", "ML"],
+        links: {
+            github: "https://github.com/jothamteshome/Classification-of-Pokemon-Sprites"
         }
     }
 ];
