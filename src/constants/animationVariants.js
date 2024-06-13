@@ -6,9 +6,7 @@ export const route_page_variant = {
     animate: {
         transition: {
             ease: "easeIn",
-            staggerChildren: 0.3,
             type: "spring",
-            when: "beforeChildren"
         }
     },
 
@@ -19,9 +17,9 @@ export const route_page_variant = {
  * Base animation variant for a ContentSection element
  */
 export const content_section_variant = {
-    initial: { x: "-200%" },
+    initial: { opacity: 0 },
     animate: {
-        x: "0%",
+        opacity: 1,
         transition: {
             duration: 1.4,
             ease: "easeIn",
@@ -185,7 +183,7 @@ export const experience__page_card_list_variant = {
 export const experience__page_card_variant = {
     initial: {
         opacity: 0,
-        scale: 0
+        scale: 0.3
     },
     animate: {
         opacity: 1,
