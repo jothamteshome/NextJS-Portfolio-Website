@@ -84,8 +84,29 @@
         --bs-btn-disabled-border-color: #{$primary-dark-blue};
     }
 
+    .btn-close {
+        --bs-btn-close-color: #{$btn-close-color-dark-blue};
+        --bs-btn-close-bg: #{$btn-close-bg-dark-blue};
+        --bs-btn-close-opacity: #{$btn-close-opacity-dark-blue};
+        color: var(--bs-btn-close-color);
+        background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+        opacity: var(--bs-btn-close-opacity);
+    }
+
     .accordion {
         --bs-accordion-active-color: #{$body-bg-dark-blue};
+        --bs-accordion-btn-icon: #{$accordion-btn-icon-collapsed-dark-blue};
+        --bs-accordion-btn-active-icon: #{$accordion-btn-icon-active-dark-blue};
+
+        .accordion-button {
+            &::after {
+                background-image: var(--bs-accordion-btn-icon);
+            }
+
+            &:not(.collapsed)::after {
+                background-image: var(--bs-accordion-btn-active-icon);
+            }
+        }
     }
 
 
