@@ -8,9 +8,10 @@ import Row from 'react-bootstrap/Row';
  * @param {object} props - The props object
  * @param {object} props.project - An object containing information about a project
  * @param {string} props.className - A string identifying classes to pass to the row component
+ * @param {boolean} props.addDescriptionModal - A boolean denoting if the description modal button should be added
  * @returns {JSX.Element} A Row element containing links related to a project if they exist
  */
-const ProjectLinksRow = function ({ project, className }) {
+const ProjectLinksRow = function ({ project, className, addDescriptionModal}) {
     // Store a list of project links associated with a given project
     const project_links = [];
 
@@ -32,7 +33,7 @@ const ProjectLinksRow = function ({ project, className }) {
                     <ProjectLink key={i} link_info={link} />
                 ))
             }
-            <ProjectDescriptionModal project={project} />
+            {addDescriptionModal ? <ProjectDescriptionModal project={project} /> : ""}
         </Row>
     );
 };

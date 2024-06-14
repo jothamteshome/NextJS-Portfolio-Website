@@ -36,7 +36,7 @@ const ProjectCardOverlay = function ({ project }) {
                     <Card.Text className="m-0" style={{ maxHeight: '85%', overflow: 'hidden', textOverflow: 'ellipsis' }}>{project.description}</Card.Text>
                 </div>
                 
-                <ProjectLinksRow className="mt-auto" project={project} />
+                <ProjectLinksRow className="mt-auto" project={project} addDescriptionModal/>
             </Card.ImgOverlay>
         </motion.div>
     );
