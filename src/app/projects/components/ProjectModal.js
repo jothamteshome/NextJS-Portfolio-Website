@@ -65,6 +65,38 @@ const ProjectModalFooterRow = function ({ project }) {
 
 
 /**
+ * Represents the inside of a Modal.Body element for a project
+ * @param {object} props - The props object
+ * @param {object} props.project - An object containing information about a project 
+ * @returns {JSX.Element} Returns an element containing the description and techonolgies
+ * used for a particular project
+ */
+const ModalBodyContent = function ({ project }) {
+    return (
+        <>
+            <h3 className='text-decoration-underline fw-bold'>Description</h3>
+            <p className='fs-5 mb-4 text-body-secondary'>{project.description}</p>
+
+            {/* Only add 'Technologies Used' section if field exists in project */}
+            {project.technologies ?
+                <>
+                    <h3 className='text-decoration-underline fw-bold'>Technologies Used</h3>
+                    <ul>
+                        {
+                            project.technologies.map((tech, i) => (
+                                <li className="fs-5 text-body-secondary" key={i}>{tech}</li>
+                            ))
+                        }
+                    </ul>
+                </>
+                : ""
+            }
+        </>
+    );
+};
+
+
+/**
  * Represents an icon button that can be clicked to bring up a modal dialog
  * @param {object} props - The props object
  * @param {object} props.project - An object containing information about a project 
@@ -86,12 +118,15 @@ const ProjectDescriptionModal = function ({ project }) {
             </Col>
 
             <Modal show={show} onHide={handleClose} centered>
-                <Modal.Header closeButton><Modal.Title>{project.name}</Modal.Title></Modal.Header>
-                <Modal.Body>{project.description}</Modal.Body>
+                <Modal.Header closeButton><Modal.Title className='fw-bold fs-2'>{project.name}</Modal.Title></Modal.Header>
+
+                <Modal.Body className={styles.modal_body}>
+                    <ModalBodyContent project={project} />
+                </Modal.Body>
+
                 <Modal.Footer className={`justify-content-start ${styles.modal_footer}`}>
                     <ProjectModalFooterRow project={project} />
                 </Modal.Footer>
-
             </Modal>
         </>
     );
