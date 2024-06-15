@@ -21,6 +21,13 @@
     cursor: pointer;
 }
 
+/* Styling for a modal body */
+.modal_body {
+    min-height: 20vh;
+    max-height: 30vh;
+    overflow-y: auto;
+}
+
 /* Styling for a modal footer that is a descendant of a ProjectCard */
 .project_card .modal_footer {
     height: 5rem;
