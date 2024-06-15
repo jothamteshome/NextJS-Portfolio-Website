@@ -75,7 +75,7 @@ const ModalBodyContent = function ({ project }) {
     return (
         <>
             <h3 className='text-decoration-underline fw-bold'>Description</h3>
-            <p className='fs-5 mb-4 text-body-secondary'>{project.description}</p>
+            <p className={`fs-5 mb-4 text-body-secondary ${styles.modal_body_description}`}>{project.description}</p>
 
             {/* Only add 'Technologies Used' section if field exists in project */}
             {project.technologies ?

@@ -28,6 +28,10 @@
     overflow-y: auto;
 }
 
+.modal_body .modal_body_description {
+    text-align: justify;
+}
+
 /* Styling for a modal footer that is a descendant of a ProjectCard */
 .project_card .modal_footer {
     height: 5rem;
