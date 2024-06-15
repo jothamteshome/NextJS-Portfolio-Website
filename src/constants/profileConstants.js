@@ -112,7 +112,8 @@ export const projectItems = [
         badges: ["Web"],
         links: {
             github: "https://github.com/jothamteshome/NextJS-Portfolio-Website"
-        }
+        },
+        technologies: ["Bootstrap", "CSS", "Javascript", "React", "Next.js", "Framer Motion"]
     },
     {
         name: "Classification of Pokemon Sprites",
@@ -123,7 +124,8 @@ export const projectItems = [
         badges: ["CV", "ML"],
         links: {
             github: "https://github.com/jothamteshome/Classification-of-Pokemon-Sprites"
-        }
+        },
+        technologies: ["CNN", "OpenCV", "Python", "Pytorch"]
     },
     {
         name: "Predicting NFL Betting Odds",
@@ -138,7 +140,8 @@ export const projectItems = [
         badges: ["ML"],
         links: {
             github: "https://github.com/jothamteshome/Predicting-NFL-Betting-Odds"
-        }
+        },
+        technologies: ["Python", "Pytorch", "Sci-Kit Learn", "BeautifulSoup"]
     }
 ];
 
