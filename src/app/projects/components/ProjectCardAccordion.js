@@ -1,4 +1,7 @@
+import styles from '../projects_page.module.css';
+
 import Accordion from 'react-bootstrap/Accordion';
+import BodyContent from './BodyContent';
 import Col from 'react-bootstrap/Col';
 import ProjectBadgeRow from './ProjectBadgeRow';
 import ProjectLinksRow from './ProjectLinksRow';
@@ -15,10 +18,10 @@ import Stack from 'react-bootstrap/Stack';
  */
 const ProjectCardAccordionBody = function ({ project }) {
     return (
-        <Accordion.Body>
+        <Accordion.Body className={styles.accordion_body}>
             <Row className='justify-content-sm-between'>
                 <Col xs={{ span: 9 }}>
-                    {project.description}
+                    <BodyContent project={project} />
                 </Col>
                 <Col xs={{ span: 2 }}>
                     <ProjectLinksRow project={project} />
@@ -43,7 +46,7 @@ const ProjectCardAccordion = function ({ project }) {
             <Accordion.Item eventKey={1}>
                 <Accordion.Header>
                     <Stack>
-                        {project.name}
+                        <h5 className='fw-bold'>{project.name}</h5>
                         <ProjectBadgeRow project={project} projectBadgeClassName='mb-1' />
                     </Stack>
                 </Accordion.Header>
