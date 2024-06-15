@@ -28,7 +28,7 @@
     overflow-y: auto;
 }
 
-.modal_body .modal_body_description {
+.modal_body .body_description, .accordion_body .body_description{
     text-align: justify;
 }
 
