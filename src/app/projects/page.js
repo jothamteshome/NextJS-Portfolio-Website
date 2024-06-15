@@ -20,7 +20,7 @@ const ProjectCardList = function () {
         <motion.div variants={projects__page_card_list_variant}
             initial="initial"
             animate="animate">
-            <Row xl={3} lg={2} xs={1} className='gy-4'>
+            <Row xl={3} md={2} xs={1} className='gy-4'>
                 {
                     projectItems.map((project, i) => (
                         <ProjectCard key={i} project={project} />
