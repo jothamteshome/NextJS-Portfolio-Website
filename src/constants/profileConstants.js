@@ -15,7 +15,7 @@ export const navigationRoutes = [
  */
 export const generalInfo = {
     resume: {
-        src: '/files/2024-06__Jotham_Teshome_Resume.pdf',
+        src: '/files/2024-07__Jotham_Teshome_Resume.pdf',
         name: 'Jotham Teshome Resume.pdf'
     },
     images: {
@@ -121,7 +121,7 @@ export const projectItems = [
         Successfully utilized image processing and machine learning techniques to classify Pokémon sprites within a set of images, \
         achieving up to 86% accuracy in classifying sprites from battle images.",
         image: "/images/projects/classification-of-pokemon-sprites.png",
-        badges: ["CV", "ML"],
+        badges: ["CV"],
         links: {
             github: "https://github.com/jothamteshome/Classification-of-Pokemon-Sprites"
         },
@@ -142,6 +142,18 @@ export const projectItems = [
             github: "https://github.com/jothamteshome/Predicting-NFL-Betting-Odds"
         },
         technologies: ["Python", "Pytorch", "Sci-Kit Learn", "BeautifulSoup"]
+    },
+    {
+        name: "Identifying and Removing Toxic Comments",
+        description: "In this project, we propose a method to detect toxic statements and identify specific toxic words within \
+        these statements. Additionally, we developed a method to completely censor these harmful words to prevent their negative \
+        impact in online spaces.",
+        image: "/images/projects/identifying-and-removing-toxic-comments.png",
+        badges: ["NLP"],
+        links: {
+            github: "https://github.com/jothamteshome/Identifying-And-Removing-Toxic-Comments"
+        },
+        technologies: ["Python", "Tensorflow", "NLTK", "FastText"]
     }
 ];
 
