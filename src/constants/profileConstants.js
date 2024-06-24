@@ -94,10 +94,10 @@ export const skills = [
  * Object containing details for different project badge types
  */
 export const projectBadgeDetails = {
-    "Web": { bg_color: "#EC4E20", txt_color: "#FFFFFF" },
-    "ML": { bg_color: "#1A535C", txt_color: "#FFFFFF" },
-    "CV": { bg_color: "#C20114", txt_color: "#FFFFFF" },
-    "NLP": { bg_color: "#55286F", txt_color: "#FFFFFF" }
+    "Web": { bg_color: "#EC4E20", txt_color: "#FFFFFF", title: "Web Development" },
+    "ML": { bg_color: "#1A535C", txt_color: "#FFFFFF", title: "Machine Learning" },
+    "CV": { bg_color: "#C20114", txt_color: "#FFFFFF", title: "Computer Vision" },
+    "NLP": { bg_color: "#55286F", txt_color: "#FFFFFF", title: "Natural Language Processing" }
 }
 
 

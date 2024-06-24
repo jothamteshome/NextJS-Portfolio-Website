@@ -18,7 +18,7 @@ const ProjectBadge = function ({ badge_type, className }) {
         <span style={{
             color: `${badge_details.txt_color}`,
             backgroundColor: `${badge_details.bg_color}`
-        }} className={`${className ? className : ""} me-1 badge`}>
+        }} className={`${className ? className : ""} me-1 badge`} title={badge_details.title}>
             {badge_type}
         </span>
     );
