@@ -30,8 +30,8 @@ export const generalInfo = {
     },
     contact_info: {
         name: "Jotham Teshome",
-        email: "jothamteshome@gmail.com",
-        location: "East Lansing, Michigan"
+        email: "teshomejotham@gmail.com",
+        location: "West Bloomfield, Michigan"
     },
     typewriter_strings: ["Software Engineer", "Machine Learning Engineer", "Full-stack Developer"]
 }
@@ -163,23 +163,59 @@ export const projectItems = [
  */
 export const experienceItems = [
     {
+        employer: "Stefanini Group",
+        start_date: "April 2025",
+        end_date: "Present",
+        role: "Purolator Apps SCP Intern",
+        tasks_completed: ["Refactored legacy C# AI chatbot logic into modular Python functions, enhancing code maintainability and enabling easier future development",
+            "Engineered and deployed AWS Lambda functions to expose business logic as scalable, reusable APIs across chatbot platforms",
+            "Automated the generation of SAP Business Process Documents (BPDs) using Python APIs, reducing manual workload and increasing consistency",
+            "Analyzed and translated complex monolithic codebases to ensure accurate cross-language functionality and alignment with business requirements"
+        ],
+        logo: "https://media.licdn.com/dms/image/v2/D560BAQGxw8ejZKpVTA/company-logo_200_200/company-logo_200_200/0/1689014804966/stefanini_logo?e=1750896000&v=beta&t=47v-7Ci0rcYFhtUavSnQO2PkaiPoCy3l65AuVtk1wRs"
+    },
+    {
+        employer: "Versive",
+        start_date: "Jun 2024",
+        end_date: "Dec 2024",
+        role: "Machine Learning Engineer",
+        tasks_completed: ["Developed CNN-based vision models using PyTorch to detect tumors in MRI scans, improving diagnostic accuracy and assisting doctors in providing patients with better outcomes",
+            "Leveraged transfer learning with pretrained models (ImageNet) to enhance model precision and reduce training time",
+            "Utilized YOLOv8 for image segmentation to precisely localize tumor regions within MRI scans, leading to a 10% increase in detection accuracy by focusing on relevant areas"
+        ],
+        logo: "https://versive.ca/img/widi/logo.svg"
+    },
+    {
         employer: "Michigan State Univerity",
         start_date: "Aug 2023",
         end_date: "May 2024",
         role: "Graduate Teaching Assistant",
         tasks_completed: ["Evaluated assignments to uphold rigorous academic standards in the Web Application Development course",
-            "Provided students with helpful insight on GitLab by describing the uses for HTML, CSS, and JavaScript in front-end design, including topics such as responsive sizing and dynamic retrieval of data",
+            "Assisted students with helpful insight on GitLab by describing the uses for HTML, CSS, and JavaScript in front-end design, including topics such as responsive sizing and dynamic retrieval of data",
             "Improved students’ understanding of Flask for back-end development by 7% through hosting regularly scheduled office hour sessions"
         ],
         logo: "https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg"
+    },
+    {
+        employer: "Versive",
+        start_date: "Jan 2023",
+        end_date: "Jul 2023",
+        role: "Software Development Engineer",
+        tasks_completed: ["Developed a secure web application for hospitals powered by AWS services (Amplify, RDS), allowing doctors to verify tumors detected in patient MRI scans",
+            "Implemented encryption, role-based access control, and multifactor authentication to ensure patient data security",
+            "Designed backend architecture using Flask to manage communications between MySQL database and React frontend"
+        ],
+        logo: "https://versive.ca/img/widi/logo.svg"
     },
     {
         employer: "Michigan State University Federal Credit Union",
         start_date: "Aug 2022",
         end_date: "Dec 2022",
         role: "Software Engineering Intern",
-        tasks_completed: ["Developed a software project, primarily using Flutter, Dart, and the iOS SDK, for a customer by working with a team of six students to enhance customers’ banking experience",
-            "Designed and implemented Digital Transformation of Member Data by working closely with the customer to bring their vision for the product to life"
+        tasks_completed: ["Collaborated with colleagues to enhance MSU Federal Credit Union’s mobile banking apps using Flutter, Dart, and SQL",
+            "Designed an aesthetically pleasing user interface using Flutter and Dart to enhance customers’ banking experience",
+            "Implemented a modern peer-to-peer transfer system featuring usernames, QR codes, and NFC to increase usability",
+            "Created a system using Google Places API to notify users of deals at local businesses based on shopping patterns"
         ],
         logo: "https://assets.bizclikmedia.net/576/9e74408088209589917c0ec30d0f5898:9fddd8f3760b713e18c51d4cde47fa63/404no22rkiiusfca101220200429.jpeg"
     }
