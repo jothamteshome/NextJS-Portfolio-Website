@@ -229,7 +229,7 @@ export const educationItems = [
     {
         institution: "Michigan State University",
         start_date: "Jan 2023",
-        end_date: "April 2024",
+        end_date: "August 2024",
         degree_aquired: "MS, Computer Science",
         gpa: "3.85",
         coursework: ["Natural Language Processing",
