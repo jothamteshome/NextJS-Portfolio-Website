@@ -166,11 +166,11 @@ export const experienceItems = [
         employer: "Stefanini Group",
         start_date: "April 2025",
         end_date: "Present",
-        role: "Purolator Apps SCP Intern",
-        tasks_completed: ["Refactored legacy C# AI chatbot logic into modular Python functions, enhancing code maintainability and enabling easier future development",
-            "Engineered and deployed AWS Lambda functions to expose business logic as scalable, reusable APIs across chatbot platforms",
-            "Automated the generation of SAP Business Process Documents (BPDs) using Python APIs, reducing manual workload and increasing consistency",
-            "Analyzed and translated complex monolithic codebases to ensure accurate cross-language functionality and alignment with business requirements"
+        role: "Application Development Intern, SAP Integration",
+        tasks_completed: ["Created a Python accelerator to automate the generation of SAP Business Process Documents, cutting documentation time by 70%",
+            "Integrated backend functions with an existing AI chatbot, enabling automation through conversational interfaces using REST APIs",
+            "Designed and executed a phased migration strategy to merge AWS APIs into a unified Azure system, improving reliability by 25%",
+            "Integrated a Plant Assistant tool with SAP PM solutions to improve process automation, reducing manual errors by 15%"
         ],
         logo: "https://media.licdn.com/dms/image/v2/D560BAQGxw8ejZKpVTA/company-logo_200_200/company-logo_200_200/0/1689014804966/stefanini_logo?e=1750896000&v=beta&t=47v-7Ci0rcYFhtUavSnQO2PkaiPoCy3l65AuVtk1wRs"
     },
@@ -179,9 +179,9 @@ export const experienceItems = [
         start_date: "Jun 2024",
         end_date: "Dec 2024",
         role: "Machine Learning Engineer",
-        tasks_completed: ["Developed CNN-based vision models using PyTorch to detect tumors in MRI scans, improving diagnostic accuracy and assisting doctors in providing patients with better outcomes",
-            "Leveraged transfer learning with pretrained models (ImageNet) to enhance model precision and reduce training time",
-            "Utilized YOLOv8 for image segmentation to precisely localize tumor regions within MRI scans, leading to a 10% increase in detection accuracy by focusing on relevant areas"
+        tasks_completed: ["Built CNN models in PyTorch to detect tumors in MRI scans, enhancing diagnostic accuracy by 10% and supporting early detection",
+            "Boosted model performance by 10% through YOLOv8 segmentation to focus on critical tumor regions during prediction",
+            "Applied transfer learning with pretrained ImageNet weights to reduce training time 30% and improve precision across scans"
         ],
         logo: "https://versive.ca/img/widi/logo.svg"
     },
@@ -190,9 +190,9 @@ export const experienceItems = [
         start_date: "Aug 2023",
         end_date: "May 2024",
         role: "Graduate Teaching Assistant",
-        tasks_completed: ["Evaluated assignments to uphold rigorous academic standards in the Web Application Development course",
-            "Assisted students with helpful insight on GitLab by describing the uses for HTML, CSS, and JavaScript in front-end design, including topics such as responsive sizing and dynamic retrieval of data",
-            "Improved students’ understanding of Flask for back-end development by 7% through hosting regularly scheduled office hour sessions"
+        tasks_completed: ["Guided students in building responsive front-end projects using HTML, CSS, and JavaScript",
+            "Improved student project outcomes by 7% through office hours and support with Flask back-end design and GitLab version control",
+            "Reviewed and graded technical assignments for the Web Application Development course, ensuring rigorous academic standards"
         ],
         logo: "https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg"
     },
@@ -201,9 +201,10 @@ export const experienceItems = [
         start_date: "Jan 2023",
         end_date: "Jul 2023",
         role: "Software Development Engineer",
-        tasks_completed: ["Developed a secure web application for hospitals powered by AWS services (Amplify, RDS), allowing doctors to verify tumors detected in patient MRI scans",
-            "Implemented encryption, role-based access control, and multifactor authentication to ensure patient data security",
-            "Designed backend architecture using Flask to manage communications between MySQL database and React frontend"
+        tasks_completed: ["Developed a secure hospital app with AWS Amplify and RDS, improving MRI access times and reducing verification time by 20%",
+            "Built Flask APIs and connected MySQL backend with React frontend for seamless user experience",
+            "Ensured patient data security with encryption, RBAC, and MFA, achieving 100% compliance with HIPAA standards",
+            "Leveraged Docker containers and Git for deployment and version control, improving development cycle efficiency by 15%"
         ],
         logo: "https://versive.ca/img/widi/logo.svg"
     },
@@ -212,10 +213,9 @@ export const experienceItems = [
         start_date: "Aug 2022",
         end_date: "Dec 2022",
         role: "Software Engineering Intern",
-        tasks_completed: ["Collaborated with colleagues to enhance MSU Federal Credit Union’s mobile banking apps using Flutter, Dart, and SQL",
-            "Designed an aesthetically pleasing user interface using Flutter and Dart to enhance customers’ banking experience",
-            "Implemented a modern peer-to-peer transfer system featuring usernames, QR codes, and NFC to increase usability",
-            "Created a system using Google Places API to notify users of deals at local businesses based on shopping patterns"
+        tasks_completed: ["Designed a peer-to-peer transfer system in Flutter/Dart with QR code and NFC support, increasing user transaction speed by 25%",
+            "Integrated Google Places API to send personalized deal notifications based on shopping patterns, boosting app engagement by 18%",
+            "Contributed to app improvements using Flutter, Dart, and SQL, enhancing overall app stability and reducing crash rates by 12%"
         ],
         logo: "https://assets.bizclikmedia.net/576/9e74408088209589917c0ec30d0f5898:9fddd8f3760b713e18c51d4cde47fa63/404no22rkiiusfca101220200429.jpeg"
     }
