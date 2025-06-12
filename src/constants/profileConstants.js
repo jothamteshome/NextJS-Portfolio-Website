@@ -97,7 +97,8 @@ export const projectBadgeDetails = {
     "Web": { bg_color: "#EC4E20", txt_color: "#FFFFFF", title: "Web Development" },
     "ML": { bg_color: "#1A535C", txt_color: "#FFFFFF", title: "Machine Learning" },
     "CV": { bg_color: "#C20114", txt_color: "#FFFFFF", title: "Computer Vision" },
-    "NLP": { bg_color: "#55286F", txt_color: "#FFFFFF", title: "Natural Language Processing" }
+    "NLP": { bg_color: "#55286F", txt_color: "#FFFFFF", title: "Natural Language Processing" },
+    "Cloud": {bg_color: "#87e2ff", txt_color: "#000000", title: "Cloud Engineering/Deployment"}
 }
 
 
@@ -154,7 +155,17 @@ export const projectItems = [
             github: "https://github.com/jothamteshome/Identifying-And-Removing-Toxic-Comments"
         },
         technologies: ["Python", "Tensorflow", "NLTK", "FastText"]
-    }
+    },
+    {
+    name: "ChatGPT API with AWS CDK",
+    description: "A serverless REST API that integrates OpenAI's GPT-4.1-mini model using AWS CDK, Lambda, and API Gateway. Designed for scalable, secure deployment of chat-based AI services.",
+    image: "/images/projects/aws-chatgpt-api.png",
+    badges: ["Cloud", "NLP"],
+    links: {
+        github: "https://github.com/jothamteshome/AWS-ChatGPT-API"
+    },
+    technologies: ["AWS CDK", "Lambda", "API Gateway", "OpenAI", "Python"]
+}
 ];
 
 
