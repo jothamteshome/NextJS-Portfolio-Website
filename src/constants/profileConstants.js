@@ -44,7 +44,9 @@ export const icons = {
     file_pdf: '/icons/file-pdf.svg',
     github: '/icons/github.svg',
     linkedin: '/icons/linkedin.svg',
-    live_demo: '/icons/link-45deg.svg'
+    live_demo: '/icons/link-45deg.svg',
+    aws_cloud_development_kit: '/icons/aws-cloud-development-kit.svg',
+    hugging_face_logo: '/icons/hugging-face-logo.svg'
 }
 
 
@@ -53,13 +55,9 @@ export const icons = {
  */
 export const aboutMeDescription = {
     about_me: [
-        "I'm Jotham, a recent Computer Science graduate with a Master of Science from Michigan State University. \
-        I specialize in Software Engineering and Machine Learning, with my current interests being Natural \
-        Language Processing and Computer Vision.",
-        "Driven by curiosity, I enjoy the challenge of tackling projects, both large and small. Each one provides me a unique \
-        opportunity to expand my knowledge on new technologies.",
-        "I'm always excited to explore new opportunities and discuss how I can contribute to innovative projects. If you're \
-        a recruiter or a professional looking to collaborate, feel free to reach out. I look forward to hearing from you!"
+        "Hi, I'm Jotham — a Computer Science graduate with a Master of Science from Michigan State University. My work sits at the intersection of Software Engineering, AI, and Cloud Infrastructure, with a strong focus on building scalable backend systems and intelligent applications.",
+        "I thrive on solving complex technical problems and enjoy experimenting with new tools, whether it's deploying serverless architectures on AWS or fine-tuning machine learning models for NLP and Computer Vision tasks.",
+        "I'm always open to new challenges and meaningful collaborations. If you're a recruiter, engineer, or founder looking to build something impactful, I’d love to connect."
     ]
 };
 
@@ -68,25 +66,50 @@ export const aboutMeDescription = {
  * List containing skill names and icons that I am familiar with
  */
 export const skills = [
+    // Languages
     { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
     { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
+    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+    { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+    { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+    { name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
+    { name: "Bash", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" },
+
+    // Web & Frontend
+    { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
     { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
     { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
-    { name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
-    { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg" },
-    { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
-    { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
-    { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
-    { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
-    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
-    { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
-    { name: "Javascript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
-    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
-    { name: "NextJS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
-    { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
-    { name: "Pytorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" },
     { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
-    { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" }
+    { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+    { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
+    { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
+
+    // Backend/API/Frameworks
+    { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+    { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
+    { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" },
+    { name: "Pytest", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original.svg" },
+
+    // AI/ML/DL
+    { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" },
+    { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" },
+    { name: "Scikit-learn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" },
+    { name: "Hugging Face", icon: icons.hugging_face_logo },
+
+    // Databases
+    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" },
+    { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+    { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+
+    // Cloud & DevOps
+    { name: "AWS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+    { name: "AWS CDK", icon: icons.aws_cloud_development_kit },
+    { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" },
+    { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
+    { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+    { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
+    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+    { name: "CI/CD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" },
 ];
 
 
@@ -98,7 +121,7 @@ export const projectBadgeDetails = {
     "ML": { bg_color: "#1A535C", txt_color: "#FFFFFF", title: "Machine Learning" },
     "CV": { bg_color: "#C20114", txt_color: "#FFFFFF", title: "Computer Vision" },
     "NLP": { bg_color: "#55286F", txt_color: "#FFFFFF", title: "Natural Language Processing" },
-    "Cloud": {bg_color: "#87e2ff", txt_color: "#000000", title: "Cloud Engineering/Deployment"}
+    "Cloud": { bg_color: "#87e2ff", txt_color: "#000000", title: "Cloud Engineering/Deployment" }
 }
 
 
@@ -114,7 +137,7 @@ export const projectItems = [
         links: {
             github: "https://github.com/jothamteshome/NextJS-Portfolio-Website"
         },
-        technologies: ["Bootstrap", "CSS", "Javascript", "React", "Next.js", "Framer Motion"]
+        technologies: ["Bootstrap", "CSS", "JavaScript", "React", "Next.js", "Framer Motion"]
     },
     {
         name: "Classification of Pokemon Sprites",
@@ -126,7 +149,7 @@ export const projectItems = [
         links: {
             github: "https://github.com/jothamteshome/Classification-of-Pokemon-Sprites"
         },
-        technologies: ["CNN", "OpenCV", "Python", "Pytorch"]
+        technologies: ["CNN", "OpenCV", "Python", "PyTorch"]
     },
     {
         name: "Predicting NFL Betting Odds",
@@ -142,7 +165,7 @@ export const projectItems = [
         links: {
             github: "https://github.com/jothamteshome/Predicting-NFL-Betting-Odds"
         },
-        technologies: ["Python", "Pytorch", "Sci-Kit Learn", "BeautifulSoup"]
+        technologies: ["Python", "PyTorch", "Sci-Kit Learn", "BeautifulSoup"]
     },
     {
         name: "Identifying and Removing Toxic Comments",
@@ -157,15 +180,15 @@ export const projectItems = [
         technologies: ["Python", "Tensorflow", "NLTK", "FastText"]
     },
     {
-    name: "ChatGPT API with AWS CDK",
-    description: "A serverless REST API that integrates OpenAI's GPT-4.1-mini model using AWS CDK, Lambda, and API Gateway. Designed for scalable, secure deployment of chat-based AI services.",
-    image: "/images/projects/aws-chatgpt-api.png",
-    badges: ["Cloud", "NLP"],
-    links: {
-        github: "https://github.com/jothamteshome/AWS-ChatGPT-API"
-    },
-    technologies: ["AWS CDK", "Lambda", "API Gateway", "OpenAI", "Python"]
-}
+        name: "ChatGPT API with AWS CDK",
+        description: "A serverless REST API that integrates OpenAI's GPT-4.1-mini model using AWS CDK, Lambda, and API Gateway. Designed for scalable, secure deployment of chat-based AI services.",
+        image: "/images/projects/aws-chatgpt-api.png",
+        badges: ["Cloud", "NLP"],
+        links: {
+            github: "https://github.com/jothamteshome/AWS-ChatGPT-API"
+        },
+        technologies: ["AWS CDK", "Lambda", "API Gateway", "OpenAI", "Python"]
+    }
 ];
 
 
