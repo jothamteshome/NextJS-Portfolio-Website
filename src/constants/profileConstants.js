@@ -15,7 +15,7 @@ export const navigationRoutes = [
  */
 export const generalInfo = {
     resume: {
-        src: '/files/Jotham_Teshome_Resume.pdf',
+        src: '/files/Jotham_Teshome_resume.pdf',
         name: 'Jotham_Teshome_resume.pdf'
     },
     images: {
@@ -89,6 +89,7 @@ export const skills = [
     { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
     { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" },
     { name: "Pytest", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original.svg" },
+    { name: "RabbitMQ", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg" },
 
     // AI/ML/DL
     { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" },
@@ -107,9 +108,13 @@ export const skills = [
     { name: "Azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" },
     { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
     { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+    { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" },
     { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
     { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
-    { name: "CI/CD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" },
+    { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" },
+    { name: "Helm", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg" },
+    { name: "ArgoCD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original.svg" }
+    
 ];
 
 
@@ -200,13 +205,14 @@ export const experienceItems = [
         employer: "Stefanini Group",
         start_date: "April 2025",
         end_date: "Present",
-        role: "Application Development Intern, SAP Integration",
-        tasks_completed: ["Created a Python accelerator to automate the generation of SAP Business Process Documents, cutting documentation time by 70%",
-            "Integrated backend functions with an existing AI chatbot, enabling automation through conversational interfaces using REST APIs",
-            "Designed and executed a phased migration strategy to merge AWS APIs into a unified Azure system, improving reliability by 25%",
-            "Integrated a Plant Assistant tool with SAP PM solutions to improve process automation, reducing manual errors by 15%"
+        role: "Application Development Intern",
+        tasks_completed: [
+            "Created a globally deployed Python tool to automate SAP BPD and Technical Specification documents, cutting creation time by 70%",
+            "Automated document pipeline with FastAPI, RabbitMQ, OpenAI API, and Azure Blob Storage, handling hundreds of requests monthly",
+            "Integrated an AI chatbot by designing dialog flows and routing requests via REST APIs to trigger SAP document generation pipelines",
+            "Deployed containerized services in Kubernetes with Helm and ArgoCD, ensuring consistency and cutting deployment effort by 40%"
         ],
-        logo: "https://media.licdn.com/dms/image/v2/D560BAQGxw8ejZKpVTA/company-logo_200_200/company-logo_200_200/0/1689014804966/stefanini_logo?e=1750896000&v=beta&t=47v-7Ci0rcYFhtUavSnQO2PkaiPoCy3l65AuVtk1wRs"
+        logo: "/images/stefanini_logo.jpg"
     },
     {
         employer: "Versive",
