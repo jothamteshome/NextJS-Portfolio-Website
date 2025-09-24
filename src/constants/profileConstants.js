@@ -55,7 +55,7 @@ export const icons = {
  */
 export const aboutMeDescription = {
     about_me: [
-        "Hi, I'm Jotham — a Computer Science graduate with a Master of Science from Michigan State University. My work sits at the intersection of Software Engineering, AI, and Cloud Infrastructure, with a strong focus on building scalable backend systems and intelligent applications.",
+        "Hi, I'm Jotham, a Computer Science graduate with a Master of Science from Michigan State University. My work sits at the intersection of Software Engineering, AI, and Cloud Infrastructure, with a strong focus on building scalable backend systems and intelligent applications.",
         "I thrive on solving complex technical problems and enjoy experimenting with new tools, whether it's deploying serverless architectures on AWS or fine-tuning machine learning models for NLP and Computer Vision tasks.",
         "I'm always open to new challenges and meaningful collaborations. If you're a recruiter, engineer, or founder looking to build something impactful, I’d love to connect."
     ]
@@ -83,9 +83,12 @@ export const skills = [
     { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
     { name: "Framer Motion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
     { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
+    { name: "TailwindCSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"},
+    { name: "Socket.IO", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg"},
 
     // Backend/API/Frameworks
     { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+    { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"},
     { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
     { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" },
     { name: "Pytest", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytest/pytest-original.svg" },
@@ -114,7 +117,7 @@ export const skills = [
     { name: "GitHub Actions", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" },
     { name: "Helm", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/helm/helm-original.svg" },
     { name: "ArgoCD", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/argocd/argocd-original.svg" }
-    
+
 ];
 
 
@@ -193,6 +196,19 @@ export const projectItems = [
             github: "https://github.com/jothamteshome/AWS-ChatGPT-API"
         },
         technologies: ["AWS CDK", "Lambda", "API Gateway", "OpenAI", "Python"]
+    },
+    {
+        name: "Watch Together",
+        description: "A full-stack application that allows users to watch YouTube videos together in real time. Features include synchronized playback, \
+        video queuing, and room-based collaboration. Built with React on the frontend and a Node.js/Express backend, \
+        with WebSockets enabling live synchronization between users.",
+        image: "/images/projects/watch-together.png",
+        badges: ["Web"],
+        links: {
+            github: "https://github.com/jothamteshome/watch-together",
+            live_demo: "https://watch-together.whymighta.net"
+        },
+        technologies: ["React", "TypeScript", "Node.js", "Express", "Socket.IO", "TailwindCSS"]
     }
 ];
 
